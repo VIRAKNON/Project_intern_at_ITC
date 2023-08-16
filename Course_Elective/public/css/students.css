@@ -75,36 +75,88 @@
 }
 .box2{
     padding-left: 10px;
-}
-.inputBox_container {
     display: flex;
-    align-items: center;
-    flex-direction: row;
-    max-width: 14em;
-    width: fit-content;
-    height: fit-content;
+}
+.selectOp{
+    width: 140px;
+    height: 30px;
+    font-size: 14px;
+}
+.selectOp:focus{
+    border: 2px solid #00ABE4;
+    outline: none !important;
+}
+option:checked{
     background-color: #00ABE4;
-    border-radius: 0.3em;
-    overflow: hidden;
-}
-.search_icon {
-    height: 1em;
-    padding: 0 0.5em 0 0.8em;
-    fill: #ffffff;
-}
-.inputBox {
-    background-color: transparent;
     color: #ffffff;
+}
+/* option:hover{
+    background-color: #00ABE4;
+} */
+.box2Left{
+    width: 70%;
+}
+.degree{
+    width: 150px;
+}
+.grade{
+    width: 90px;
+}
+.department{
+    width: 120px;
+}
+.gender{
+    width: 100px;
+}
+.box2Right{
+    width: 30%;
+}
+.search{
+    float: right;
+}
+.container-input {
+    position: relative;
+}
+
+.input {
+    width: 200px;
+    padding: 4px 0px 4px 40px;
+    border-radius: 99999px;
+    border: solid 1px #333;
+    transition: all .2s ease-in-out;
     outline: none;
-    width: 100%;
-    border: 0;
-    padding: 0.3em 1.5em 0.3em 0;
-    font-size: 1em;
+    opacity: 0.8;
+    background-color: #00ABE4;
 }
-::placeholder {
-    color: #ffffff;
+
+.container-input svg {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(0, -50%);
 }
+.input:focus {
+    width: 250px;
+    border: 1px solid #00ABE4;
+    background-color: #ffffff;
+}
+.input::placeholder{
+    color: black;
+}
+
 .box3{
     padding-top: 7px;
     padding-left: 10px;
+}
+.semester{
+    width: 100px;
+}
+.origin{
+    width: 300px;
+}
+.group{
+    width: 80px;
+}
+.abc{
+    width: 130px;
 }
