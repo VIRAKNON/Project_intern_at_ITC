@@ -113,6 +113,7 @@ option:checked{
 }
 .search{
     float: right;
+
 }
 .container-input {
     position: relative;
@@ -120,13 +121,12 @@ option:checked{
 
 .input {
     width: 200px;
-    padding: 4px 0px 4px 40px;
-    border-radius: 99999px;
-    border: solid 1px #333;
+    padding: 3px 0px 3px 40px;
+    border-radius: 5px;
+    border: solid 1px #00ABE4;
     transition: all .2s ease-in-out;
     outline: none;
     opacity: 0.8;
-    background-color: #00ABE4;
 }
 
 .container-input svg {
@@ -136,8 +136,8 @@ option:checked{
     transform: translate(0, -50%);
 }
 .input:focus {
-    width: 250px;
-    border: 1px solid #00ABE4;
+    width: 280px;
+    border: 1px solid #F69A36;
     background-color: #ffffff;
 }
 .input::placeholder{
