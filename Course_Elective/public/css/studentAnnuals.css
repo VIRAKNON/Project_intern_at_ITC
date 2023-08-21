@@ -19,6 +19,16 @@
 }
 .addStu{
     background-color:#00ABE4 ;
+    border: none;
+    appearance: none;
+    font-size: 15px;
+    color: #ffffff;
+    padding: 5px;
+}
+.addStu:focus{
+    background-color: #0080aa;
+    border: none;
+    appearance: none;
 }
 .addStu:hover{
     color :#ffffff;
@@ -26,9 +36,14 @@
 }
 .someLink{
     background-color: #00ABE4;
+    border: none;
+    appearance: none;
 }
 .someLink:hover{
     color :#ffffff;
+    background-color: #0080aa;
+}
+.someLink:focus{
     background-color: #0080aa;
 }
 .updateSchStu{
