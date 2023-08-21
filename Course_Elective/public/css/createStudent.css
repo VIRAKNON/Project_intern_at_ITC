@@ -1,6 +1,13 @@
 *{
     font-family: 'Catamaran', sans-serif;
 }
+strong{
+    color: red;
+    font-size: 15px;
+}
+sup{
+    color: red;
+}
 .content{
     width: 100%;
     height: 100vh;
@@ -12,37 +19,226 @@
     margin: 0;
     color: rgb(202, 202, 202);
 }
-/* Style the tab */
-.tab {
-    overflow: hidden;
-    border-bottom: 1px solid #d7d7d7;
-}
-  /* Style the buttons inside the tab */
-.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    border-radius: 10px 10px 0px 0px;
-    outline: none;
-    cursor: pointer;
-    padding: 8px 10px;
-    transition: 0.3s;
+
+.barTabs a{
     font-size: 15px;
 }
+.col-4{
 
-  /* Change background color of buttons on hover */
-.tab button:hover {
-    background-color:#dbdbdb;
+}
+.uploadProfile {
+    height: 290px;
+    width: 260px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px;
+    gap: 5px;
+    background-color: #ffffff;
 }
 
-/* Create an active/current tablink class */
-.tab button.active {
-    background-color:#00ABE4;
-    color: #ffffff;
+.header {
+    flex: 1;
+    width: 100%;
+    border: 2px dashed royalblue;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-  /* Style the tab content */
-.tabcontent {
+.header img{
+    width: 150px;
+}
+
+.header p {
+    text-align: center;
+    color: black;
+    font-size: 18px;
+    margin: 0;
+}
+
+.footer {
+    background-color: rgba(67, 149, 255, 0.418);
+    width: 100%;
+    height: 32px;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    border: none;
+    margin: 0;
+}
+
+#file {
     display: none;
-    border-top: none;
 }
+/* btn cancel */
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 25px;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+            7px 7px 20px 0px rgba(0, 0, 0, .1),
+            4px 4px 5px 0px rgba(0, 0, 0, .1);
+    outline: none;
+}
+
+.btn {
+    background: linear-gradient(0deg, rgba(255, 151, 0, 1) 0%, rgba(251, 75, 2, 1) 100%);
+    line-height: 42px;
+    padding: 0;
+    border: none;
+}
+
+.btn span {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.btn:before,
+.btn:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    background: rgba(251, 75, 2, 1);
+    box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, .9),
+            -4px -4px 5px 0px rgba(255, 255, 255, .9),
+            7px 7px 20px 0px rgba(0, 0, 0, .2),
+            4px 4px 5px 0px rgba(0, 0, 0, .3);
+    transition: all 0.3s ease;
+}
+
+.btn:before {
+    height: 0%;
+    width: 2px;
+}
+
+.btn:after {
+    width: 0%;
+    height: 2px;
+}
+
+.btn:hover {
+    color: rgba(251, 75, 2, 1);
+    background: transparent;
+}
+
+.btn:hover:before {
+    height: 100%;
+}
+
+.btn:hover:after {
+    width: 100%;
+}
+
+.btn span:before,
+.btn span:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    background: rgba(251, 75, 2, 1);
+    box-shadow: -7px -7px 20px 0px rgba(255, 255, 255, .9),
+            -4px -4px 5px 0px rgba(255, 255, 255, .9),
+            7px 7px 20px 0px rgba(0, 0, 0, .2),
+            4px 4px 5px 0px rgba(0, 0, 0, .3);
+    transition: all 0.3s ease;
+}
+
+.btn span:before {
+    width: 2px;
+    height: 0%;
+}
+
+.btn span:after {
+    height: 2px;
+    width: 0%;
+}
+
+.btn span:hover:before {
+    height: 100%;
+}
+
+.btn span:hover:after {
+    width: 100%;
+}
+
+/* btn create */
+.btnCreate {
+    width: 130px;
+    height: 40px;
+    position: relative;
+    outline: 0;
+    border: none;
+    appearance: none;
+    background-color: #0000FF;
+    color: #ffffff;
+    line-height: 1rem;
+    text-transform: uppercase;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    overflow: hidden;
+    box-shadow: 0 4px 6px -1px #488aec31, 0 2px 4px -1px #488aec17;
+}
+
+.btnCreate span {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    transition: all .4s ease;
+}
+
+.btnCreate #svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.btnCreate span:nth-child(2),.btnCreate span:nth-child(3) {
+    position: absolute;
+    top: 40px;
+    color: #fff;
+}
+
+.btnCreate span:nth-child(2) {
+    background-color: #000080;
+}
+
+.btnCreate span:nth-child(3) {
+    background-color: #008000;
+}
+
+.btnCreate:hover span:nth-child(2), .btnCreate:focus span:nth-child(3) {
+    top: 0;
+}
+
+.btnCreate:focus {
+    box-shadow: none;
+}
+
