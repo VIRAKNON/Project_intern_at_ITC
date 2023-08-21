@@ -4,16 +4,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{{asset('css/coures_annuall.css')}}">
-    <title>students page</title>
+    <title>Course annually</title>
 </head>
 <body>
     <div class="container-fluid bg-light vh-100">
         <header class="py-2">
-            <span class="fs-3">Students</span>
-            <span class="px-3">All existing students</span>
+            <span class="fs-3">Course Annually</span>
+            <span class="px-3">All existing course</span>
         </header>
         <div class="content">
             <div class="box1">
@@ -37,43 +38,33 @@
                             <li><a class="dropdown-item" href="#">Separated link</a></li>
                         </ul>
                     </div>
-                    <button type="button" class="btn btn-success updateSchStu "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-                    </svg>Disable Scoring</button>
-                    <button type="button" class="btn cloneSem btn-sm"> Enable Scoring</button>
+                    <button class="btn btn-success btn-sm" id="btn_disable_scoring"><i class="fa fa-toggle-on"></i> Disable Scoring</button>
+                    <button class="btn btn-warning btn-sm" id="btn_enable_scoring"><i class="fa fa-toggle-off"></i> Enable Scoring</button>
                     <button type="button" class="btn refresh btn-light btn-sm"> Only Retake Score</button>
                 </span>
                 <span class="float-end px-2">
-                    <span class="dropdown">
-                        <button class="btn action btn-sm " type="button"  aria-expanded="false">
-                            Course Assignment
-                        </button>
-                    </span>
-                    <span class="dropdown">
-                        <button class="btn reporting btn-sm " type="button"  aria-expanded="false">
-                            View Total Score
-                        </button>
-                    </span>
+                    <button class="btn btn-primary btn-sm" id="course_assignment"><i class="fa fa-map-signs"></i> Course Assignment</button>
+                    <button class="btn btn-warning btn-sm" id="all_score_course_annual"><i class="fa fa-eye"></i> View Total Score </button>p
                 </span>
             </div>
             <hr>
-           <div class="box-body">
+           <div class="box_body">
                 <div class="row">
                     <div class="col-md-7" style="min-height: 15px; padding: 0 30px 15px 30px;" id="filter_panel">
                         <select class="" id="filter_academic_year" name="academic_year">
-                            <option value="2023">2022-2023</option>
-                            <option value="2022">2021-2022</option>
-                            <option value="2021">2020-2021</option>
-                            <option value="2020">2019 - 2020</option>
-                            <option value="2019">2018 - 2019</option>
-                            <option value="2018">2017 - 2018</option>
-                            <option value="2017">2016-2017</option>
-                            <option value="2016">2015-2016</option>
-                            <option value="2015">2014-2015</option>
-                            <option value="2014">2013-2014</option>
-                            <option value="2013">2012-2013</option>
-                            option value="2012">2011-2012</option>
-                            <option value="2011">2010-2011</option>
+                            <option value="2023">២០២២-២០២៣</option>
+                            <option value="2022">២០២១-២០២២</option>
+                            <option value="2021">២០២០-២០២១</option>
+                            <option value="2020">២០១៩-២០២០</option>
+                            <option value="2019">២០១៨-២០១៩</option>
+                            <option value="2018">២០១៧-២០១៨</option>
+                            <option value="2017">២០១៦-២០១៧</option>
+                            <option value="2016">២០១៥-២០១៦</option>
+                            <option value="2015">២០១៤-២០១៥</option>
+                            <option value="2014">២០១៣-២០១៤</option>
+                            <option value="2013">២០១២-២០១៣</option>
+                            <option value="2012">២០១១-២០១២</option>
+                            <option value="2011">២០១០-២០១១</option>
                         </select>
                         <select class="" id="filter_department" name="department">
                             <option selected="selected" value="">Dept.</option>
@@ -213,7 +204,6 @@
                         <span class="selection">
                             <span class="select2-selection select2-selection--single" role="combobox" aria-autocomplete="list" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-labelledby="select2-filter_lecturer-container">
                                 <span class="select2-selection__rendered" id="select2-filter_lecturer-container">
-                                    <span class="select2-selection__placeholder">Lecturer</span>
                                 </span>
                                 <span class="select2-selection__arrow" role="presentation">
                                     <b role="presentation"></b>
@@ -224,39 +214,299 @@
                             </span>
                         </span>
                         <div id="courseAnnuals-table_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer"></div>
-                        <div class="row">
-                            <div class="col-sm-6 mt-2 ">
-                               <div class="table_data">
-                                    <label for="">
-                                        Show
-                                        <select name="" id="">
-                                            <option value="">10</option>
-                                            <option value="">25</option>
-                                            <option value="">50</option>
-                                            <option value="">100</option>
-                                        </select>
-                                        entries
-                                    </label>
-                               </div>
-                            </div>
-                            <div class="col-sm-6 mt-2">
-                                <div id="courseAnnuals-table_filter" class="dataTables_filter">
-                                    <label>Search:
-                                        <input type="search" class="form-control input-sm" placeholder="" aria-controls="courseAnnuals-table">
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                     <div class="col-md-5">
                         <h3 class="text-center">Course Sessions</h3>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-7 pt-2 in_left">
+                        <div class="row ">
+                            <div class="col-sm-6">
+                               <div class="table_data">
+                                    <label for="">
+                                        Show
+                                        <select name="" id="" class="px-2">
+                                            <option value="10">10</option>
+                                            <option value="25">25</option>
+                                            <option value="50">50</option>
+                                            <option value="100">100</option>
+                                        </select>
+                                        entries
+                                    </label>
+                               </div>
+                            </div>
+                            <div class="col-sm-6 mr-0">
+                                <div class="box2Right">
+                                    <div class="search">
+                                        <div class="container-input">
+                                            <input type="text" placeholder="Search" name="text" class="input">
+                                            <svg fill="black" width="15px" height="15px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z" fill-rule="evenodd"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row pt-2">
+                                <div class="col-sm-12">
+                                    <table class="table border table-striped mr-2 table-sm bg-light flex-column align-items-stretch">
+                                        <thead>
+                                            <tr>
+                                                <th class="sorting_asc" style="width: 0.2px;" aria-label=""></th>
+                                                <th style="width: 250px;">Name</th>
+                                                <th class="sorting_asc" style="width: 0.2px;" aria-label=""></th>
+                                                <th>Lecturer</th>
+                                                <th class="sorting_asc" style="width: 0.2px;" aria-label=""></th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr role="row" class="odd">
+                                                <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
+                                                <td  style="width: 50px;">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Advanced Computer Architecture</span>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <span>(C=32 | TD=0 | TP= 0)</span>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <span>ឆមាសទី១ | ២០២២-២០២៣</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td style="width: 190px; padding-left:50px;">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            I3GCA <br> AB
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td colspan="2">CHUN Thavorac</td>
+                                                <td>
+                                                    <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
+                                                    <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
+                                                    <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
+                                                    <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr role="row" class="even">
+                                                <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
+                                                <td  style="width: 50px;">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Physical Chemistry</span>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <span>(C=32 | TD=0 | TP= 0)</span>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <span>ឆមាសទី១ | ២០២២-២០២៣</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td style="width: 190px; padding-left:50px;">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            I3GCA <br> AB
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td colspan="2">CHUN Thavorac</td>
+                                                <td>
+                                                    <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
+                                                    <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
+                                                    <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
+                                                    <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr role="row" class="odd">
+                                                <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
+                                                <td  style="width: 50px;">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Discrete Mathematics</span>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <span>(C=32 | TD=0 | TP= 0)</span>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <span>ឆមាសទី១ | ២០២២-២០២៣</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td style="width: 190px; padding-left:50px;">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            I3GCA <br> AB
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td colspan="2">CHUN Thavorac</td>
+                                                <td>
+                                                    <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
+                                                    <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
+                                                    <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
+                                                    <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr role="row" class="even">
+                                                <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
+                                                <td  style="width: 50px;">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Mathematical Modeling</span>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <span>(C=32 | TD=0 | TP= 0)</span>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <span>ឆមាសទី១ | ២០២២-២០២៣</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td style="width: 190px; padding-left:50px;">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            I3GCA <br> AB
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td colspan="2">CHUN Thavorac</td>
+                                                <td>
+                                                    <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
+                                                    <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
+                                                    <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
+                                                    <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr role="row" class="odd">
+                                                <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
+                                                <td  style="width: 50px;">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Mathematical Modeling</span>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <span>(C=32 | TD=0 | TP= 0)</span>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <span>ឆមាសទី១ | ២០២២-២០២៣</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td style="width: 190px; padding-left:50px;">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            I3GCA <br> AB
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td colspan="2">CHUN Thavorac</td>
+                                                <td>
+                                                    <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
+                                                    <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
+                                                    <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
+                                                    <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr role="row" class="even">
+                                                <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
+                                                <td  style="width: 20px;">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Object-Oriented Programming</span>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <span>(C=32 | TD=0 | TP= 0)</span>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <span>ឆមាសទី១ | ២០២២-២០២៣</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td style="width: 190px; padding-left:50px;">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            I3GCA <br> AB
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td colspan="2">CHUN Thavorac</td>
+                                                <td>
+                                                    <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
+                                                    <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
+                                                    <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
+                                                    <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr role="row" class="odd">
+                                                <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
+                                                <td  style="width: 50px;">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <span style="font-size: 18px;  font-weight: bold; width:200px">Professional Practice</span>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <span>(C=32 | TD=0 | TP= 0)</span>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <span>ឆមាសទី១ | ២០២២-២០២៣</span>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td style="width: 190px; padding-left:50px;">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            I3GCA <br> AB
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td colspan="2">CHUN Thavorac</td>
+                                                <td>
+                                                    <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
+                                                    <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
+                                                    <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
+                                                    <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-5">
+                                <div class="dataTables_info" id="courseAnnuals-table_info" role="status" aria-live="polite">Showing 1 to 25 of 778 entries</div>
+                            </div>
+                            <div class="col-sm-7">
+                                <div class="dataTables_paginate paging_simple_numbers" id="courseAnnuals-table_paginate">
+                                    <ul class="pagination">
+                                        <li class="paginate_button previous disabled" id="courseAnnuals-table_previous"><a href="#" aria-controls="courseAnnuals-table" data-dt-idx="0" tabindex="0">Previous</a></li>
+                                        <li class="paginate_button active"><a href="#" aria-controls="courseAnnuals-table" data-dt-idx="1" tabindex="0">1</a></li>
+                                        <li class="paginate_button "><a href="#" aria-controls="courseAnnuals-table" data-dt-idx="2" tabindex="0">2</a></li>
+                                        <li class="paginate_button "><a href="#" aria-controls="courseAnnuals-table" data-dt-idx="3" tabindex="0">3</a></li>
+                                        <li class="paginate_button "><a href="#" aria-controls="courseAnnuals-table" data-dt-idx="4" tabindex="0">4</a></li>
+                                        <li class="paginate_button "><a href="#" aria-controls="courseAnnuals-table" data-dt-idx="5" tabindex="0">5</a></li>
+                                        <li class="paginate_button disabled" id="courseAnnuals-table_ellipsis"><a href="#" aria-controls="courseAnnuals-table" data-dt-idx="6" tabindex="0">…</a></li>
+                                        <li class="paginate_button "><a href="#" aria-controls="courseAnnuals-table" data-dt-idx="7" tabindex="0">32</a></li>
+                                        <li class="paginate_button next" id="courseAnnuals-table_next"><a href="#" aria-controls="courseAnnuals-table" data-dt-idx="8" tabindex="0">Next</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="course_session_message col-sm-12 box-body with-border text-muted well well-sm no-shadow btn-success mt-2" style="padding: 20px; min-height: 50px;">
+                            <center><h4>Please select any course on the left.</h4></center>
+                        </div>
+                        <div class="course_session_wrapper" style="display: none;"></div>
+
+                    </div>
+                </div>
            </div>
-
-
-
-        </div>
     </div>
 </body>
 </html>
