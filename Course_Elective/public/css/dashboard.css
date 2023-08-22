@@ -1,0 +1,486 @@
+body{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+.container{
+    width: 100%;
+    height: auto;
+}
+.main{
+    width: 100%;
+    height: 9%;
+    background-color:#2E86C1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.main_left{
+    width: 19.1%;
+    height: 100%;
+    background-color: #2874A6 ;
+    font-size: 25px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main_right{
+    width: 85%;
+    background-color: #2E86C1;
+    display: flex;
+}
+.box_left{
+    width: 60%;
+    height: 100%;
+}
+.box_right{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.right_a{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#box{
+    width: 100px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right_a #box i{
+    font-size: 17px;
+    color: white;
+}
+#box:hover{
+    background-color:#2874A6 ;
+    border-bottom: 1px solid #FFFFFF;
+    transition: none;
+    padding: none;
+}
+.right_a:hover span{
+    background-color: #2874A6;
+}
+.right_a span{
+    width: 33.3%;
+    height: 100%;
+}
+.right_b{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.right_b i{
+    color: white;
+    font-size: 25px;
+}
+.right_b p{
+    padding-left: 15px;
+    font-size: 20px;
+    color: white;
+}
+.right_b:hover{
+    background-color: #2874A6;
+}
+.sub_main{
+    width: 100%;
+    display: flex;
+}
+.sub_left{
+    width: 18.35%;
+    height: auto;
+    background-color: #283747;
+}
+.admin{
+    width: 100%;
+    position: relative;
+}
+.admin svg{
+    width:70px;
+    height: 70px;
+    padding: 15px;
+    color: gray;
+}
+.admin p{
+    color: white;
+    font-size: 18px;
+    position: absolute;
+    top: 8px;
+    left: 33%;
+}
+.active{
+    position: absolute;
+    top: 55px;
+    left: 33%;
+}
+.active i{
+    font-size: 14px;
+    color: rgb(19, 156, 19);
+}
+.active span{
+    color: white;
+    font-size: 14px;
+}
+.nav{
+    width: 260px;
+    height: auto;
+    padding: 10px 15px;
+    color: #000;
+}
+/* this is a recreation of twitter search in css */
+.form {
+    --input-text-color: #fff;
+    --input-bg-color: #283542;
+    --focus-input-bg-color: transparent;
+    --text-color: #949faa;
+    --active-color: #1b9bee;
+    --width-of-input: 200px;
+    --inline-padding-of-input: 1.9em;
+    --gap: 0.9rem;
+  }
+  /* form style */
+  .form {
+    font-size: 0.5rem;
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+    width: var(--width-of-input);
+    position: relative;
+    isolation: isolate;
+  }
+  /* a fancy bg for showing background and border when focus. */
+  .fancy-bg {
+    position: absolute;
+    width: 240px;
+    inset: 0;
+    background: black;
+    border-radius: 15px;
+    height: 90%;
+    z-index: -1;
+    pointer-events: none;
+    box-shadow: rgba(34, 33, 33, 0.16) 0px 1px 4px;
+  }
+  /* label styling */
+  label {
+    width: 100%;
+    padding: 0.9em;
+    height: 40px;
+    padding-inline: var(--inline-padding-of-input);
+    display: flex;
+    align-items: center;
+  }
+  
+  .search,.close-btn {
+    position: absolute;
+  }
+  /* styling search-icon */
+  .search {
+    fill: var(--text-color);
+    left: var(--inline-padding-of-input);
+  }
+  /* svg -- size */
+  svg {
+    width: 17px;
+    display: block;
+  }
+  /* styling of close button */
+  .close-btn {
+    border: none;
+    right: -20px;
+    /* right: var(--inline-padding-of-input); */
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 0.2em;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--active-color);
+    opacity: 0;
+    visibility: hidden;
+  }
+  /* styling of input */
+  .input {
+    color: var(--input-text-color);
+    width: 100%;
+    margin-inline: min(2em,calc(var(--inline-padding-of-input) + var(--gap)));
+    background: none;
+    border: none;
+  }
+  .input:focus {
+    outline: none;
+  }
+  .input::placeholder {
+    color: var(--text-color)
+  }
+  /* input background change in focus */
+  .input:focus ~ .fancy-bg {
+    border: 1px solid var(--active-color);
+    background: var(--focus-input-bg-color);
+  }
+  /* search icon color change in focus */
+  .input:focus ~ .search {
+    fill: var(--active-color);
+  }
+  /* showing close button when typing */
+  .input:valid ~ .close-btn {
+    opacity: 1;
+    visibility: visible;
+  }
+  /* this is for the default background in input,when selecting autofill options -- you can remove this code if you do not want to override the browser style.  */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+    -webkit-transition-delay: 9999s;
+  }
+.nav_link {
+    margin-left: -40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.1rem;
+    list-style: none;
+    transition: 200ms ease;
+    cursor: pointer;
+}
+.nav_link li{
+    width: 250px;
+    padding: 10px;
+}
+.nav_link li:hover{
+    background-color: #21272d;
+    color: white;
+    border-left: 3px solid whitesmoke;
+}
+.nav_link li span{
+    font-size: 18px;
+    color:#CACFD2;
+    padding-left: 15px;
+    letter-spacing: 1px;
+    opacity: 1;
+    display: inline-block;
+}
+.nav_link li i{
+    font-size: 18px;
+    color:#CACFD2;
+}
+.sub_right{
+    width: 81.65%;
+    height: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.head{
+    width: 98%;
+    padding-top: 15px;
+    padding-left: 15px;
+    display: flex;
+}
+.head_left{
+    width: 92%;
+}
+.head_left span{
+    font-size: 30px;
+}
+.head_right{
+    width: 8%;
+    color: gray;
+    padding-top: 10px;
+}
+.sub_content{
+    width: 97%;
+    height: 100%;
+    margin-top: 5px;
+    background-color: #ECF0F1 ;
+    border-radius: 5px;
+    border-top: 4px solid #008000;
+}
+.sub_content span{
+    font-size: 23px;
+    padding-left: 10px;
+    margin-top: 5px;
+}
+.info{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+}
+.info_left{
+    width: 8%;
+    height: 100%;
+}
+.info_left i{
+    border-radius: 50%;
+    padding: 12px;
+    color: white;
+    background-color: #3498DB;
+    margin-left: 30%;
+}
+.line{
+    width: 5px;
+    height: 96%;
+    margin-left: 45%;
+    background-color:#a9acad;
+    position: relative;
+}
+.line i{
+    color: white;
+    background-color: #979A9A;
+    position: absolute;
+    bottom: -39px;
+    right: -18px;
+}
+.info_right{
+    width: 90%;
+    height: 1000px;
+    border-radius: 5px;
+    background-color: #D7DBDD;
+    padding: 10px;
+}
+.info_right a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color:  #0FA6F1;
+}
+.info_right a:hover{
+    color:#1b9bee;
+}
+.info_right span{
+    font-size: 19px;
+}
+.user{
+    width: 98%;
+    height: 95%;
+    margin-top: 18px;
+    border-radius: 5px;
+    background-color:#F4F6F7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user_info{
+    width: 98%;
+    height: 100%;
+    border-radius: 5px;
+    background-color:#F4F6F7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.user_top{
+    width: 96%;
+    height: 5%;
+    margin-top: 13px;
+    border-radius: 5px;
+    margin-left: 15px;
+    background-color: #F4F6F7;
+    display: flex;
+    flex-direction: row;
+}
+.user_top1{
+    width: 15%;
+    background-color: #FFFFFF ;
+    font-size: 20px;
+    color: #979A9A ;
+    border-radius: 5px;
+    padding-left: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #BDC3C7;
+    border-left: 1px solid #BDC3C7;
+    border-right: 1px solid #BDC3C7;
+}
+.user_top2{
+    width: 85%;
+    height: 100%;
+    border-bottom: 1px solid gray;
+}
+.user_down{
+    width: 98%;
+    height: 90%;
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.user_down1{
+    width: 100%;
+    height: 50%;
+    background-color: #E5E8E8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.user_down2{
+    width: 100%;
+    height: 50%;
+    border-radius: 5px;
+    background-color:#E5E8E8;
+}
+.user_down2 table{
+    width: 100%;
+}
+.user_down2 table td h3{
+    padding-top: 15px;
+}
+.user_down2 table td{
+    padding-left: 10px;
+}
+table tr td span button{
+    background-color:#2874A6;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+tr:nth-child(odd):hover{background-color:#E5E7E9;}
+tr:nth-child(even) {background: #E5E7E9}
+tr:nth-child(odd) {background: #F0F3F4}
+.btn1:hover{
+    background-color:#256087;
+}
+.btn2{
+    background-color: #E67E22;
+}
+.btn2:hover{
+    background-color:#d5843c;
+}
+.footer{
+    width: 100%;
+    height: 7%;
+    display: flex;
+    align-items: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.footer span{
+    padding-left: 15px;
+    font-size: 20px;
+}
+.footer span a{
+    text-decoration: none;
+    color: #0FA6F1;
+}
+
+
+
+
+
+
