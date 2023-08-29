@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    // return view('studentAnnuals');
+Route::get('/', function(){
+    return view('dashboard');
 });
 
 //route using controller resource Student
@@ -28,6 +28,6 @@ Route::get('/coursesAnnually', function () {
     return view('coursesAnnually');
 });
 
-Route::get('/', function(){
-    return view('dashboard');
+Route::get('/showStudent', function () {
+    return view("showStudent");
 });
