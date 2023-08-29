@@ -174,3 +174,30 @@ option:checked{
 .abc{
     width: 130px;
 }
+table .btnAction .edit svg{
+    width: 20px;
+    color: #ffffff;
+}
+table .btnAction .edit svg:hover{
+    background-color:#0080aa ;
+    color: #ffffff;
+    border-radius: 5px;
+}
+table .btnAction .delete svg{
+    width: 20px;
+    color: #ffffff;
+}
+table .btnAction .delete svg:hover{
+    color: #ffffff;
+    border-radius: 5px;
+    background-color:#E42217 ;
+}
+table .btnAction .view svg{
+    width: 20px;
+    color: #ffffff;
+}
+table .btnAction .view svg:hover{
+    color: #ffffff;
+    background-color:#1F45FC ;
+    border-radius: 5px;
+}

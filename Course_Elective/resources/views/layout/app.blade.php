@@ -11,6 +11,8 @@
 <body>
     @yield('students')
     @yield('createStudent')
+    @yield('editStudent')
+    @yield('showStudent')
 </body>
 </html>
 
