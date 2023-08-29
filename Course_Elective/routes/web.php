@@ -12,10 +12,6 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-<<<<<<< HEAD
-
-=======
->>>>>>> ca9169bfef7398336cab20360de2e22243312abc
 Route::get('/', function(){
     return view('dashboard');
 });
@@ -39,9 +35,6 @@ Route::get('/changepw', function () {
     return view('changepass');
 });
 
-<<<<<<< HEAD
 Route::get('/showStudent', function () {
     return view("showStudent");
 });
-=======
->>>>>>> ca9169bfef7398336cab20360de2e22243312abc

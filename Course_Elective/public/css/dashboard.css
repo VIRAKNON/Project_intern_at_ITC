@@ -307,7 +307,7 @@ nav .sidebar-button i {
     font-size: 15px;
 }
 .text span{
-  font-size: 17px;
+    font-size: 17px;
 }
 .right_b{
     width: 60%;
@@ -316,7 +316,6 @@ nav .sidebar-button i {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
 .right_b .button1 i{
     color: white;
@@ -400,7 +399,6 @@ nav .sidebar-button i {
 .view button{
   width: 6rem;
 }
-<<<<<<< HEAD
 /* this is a recreation of twitter search in css */
 .form {
     --input-text-color: #fff;
@@ -412,105 +410,6 @@ nav .sidebar-button i {
     --inline-padding-of-input: 1.9em;
     --gap: 0.9rem;
 }
-  /* form style */
-.form {
-    font-size: 0.5rem;
-    display: flex;
-    gap: 0.9rem;
-    align-items: center;
-    width: var(--width-of-input);
-    position: relative;
-    isolation: isolate;
-}
-  /* a fancy bg for showing background and border when focus. */
-.fancy-bg {
-    position: absolute;
-    width: 240px;
-    inset: 0;
-    background: black;
-    border-radius: 15px;
-    height: 90%;
-    z-index: -1;
-    pointer-events: none;
-    box-shadow: rgba(34, 33, 33, 0.16) 0px 1px 4px;
-}
-  /* label styling */
-label {
-    width: 100%;
-    padding: 0.9em;
-    height: 40px;
-    padding-inline: var(--inline-padding-of-input);
-    display: flex;
-    align-items: center;
-}
-
-.search,.close-btn {
-    position: absolute;
-}
-  /* styling search-icon */
-.search {
-    fill: var(--text-color);
-    left: var(--inline-padding-of-input);
-}
-  /* svg -- size */
-svg {
-    width: 17px;
-    display: block;
-}
-  /* styling of close button */
-.close-btn {
-    border: none;
-    right: -20px;
-    /* right: var(--inline-padding-of-input); */
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    padding: 0.2em;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: var(--active-color);
-    opacity: 0;
-    visibility: hidden;
-}
-  /* styling of input */
-.input {
-    color: var(--input-text-color);
-    width: 100%;
-    margin-inline: min(2em,calc(var(--inline-padding-of-input) + var(--gap)));
-    background: none;
-    border: none;
-}
-.input:focus {
-    outline: none;
-}
-.input::placeholder {
-    color: var(--text-color)
-}
-  /* input background change in focus */
-.input:focus ~ .fancy-bg {
-    border: 1px solid var(--active-color);
-    background: var(--focus-input-bg-color);
-}
-  /* search icon color change in focus */
-.input:focus ~ .search {
-    fill: var(--active-color);
-}
-  /* showing close button when typing */
-.input:valid ~ .close-btn {
-    opacity: 1;
-    visibility: visible;
-}
-  /* this is for the default background in input,when selecting autofill options -- you can remove this code if you do not want to override the browser style.  */
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-    -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
-    -webkit-transition-delay: 9999s;
-}
 .nav_link {
     margin-left: -40px;
     display: flex;
@@ -520,14 +419,6 @@ input:-webkit-autofill:active {
     list-style: none;
     transition: 200ms ease;
     cursor: pointer;
-=======
-.contents p{
-  padding-top: 15px;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
->>>>>>> ca9169bfef7398336cab20360de2e22243312abc
 }
 .view{
   padding-top: 4rem;
