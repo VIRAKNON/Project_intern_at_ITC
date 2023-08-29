@@ -1,182 +1,230 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{asset('css/dashboard.css')}}">
-    <script src="{{asset('Js/dashboard.js')}}"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <title>Dashboard</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Dashboard</title>
 </head>
 <body>
-    <div class="container">
-        <div class="main">
-            <div class="main_left">ITC | SMIS</div>
-            <div class="main_right">
-                <div class="box_left"></div>
-                <div class="box_right">
-                    <div class="right_a">
-                        <div id="box"><i class="fas fa-envelope"></i></div>
-                        <div id="box"><i class="fas fa-bell"></i></div>
-                        <div id="box"><i class="fas fa-flag"></i></div>
-                    </div>
-                    <div class="right_b">
-                        <i class="fas fa-user"></i>
-                        <p>Admin Instator</p>
-                    </div>  
-                </div>  
-            </div>
+  <div class="sidebar">
+    <div class="logo-details">
+      <i class='bx'><img src="ITC.jpg" alt=""></i>
+      <span class="bx logo_name">ITC&nbsp;SMIS</span>
+    </div>
+    <ul class="nav-links">
+        <div class="admin">
+          <img src="https://dev.itc.edu.kh/img/profiles/avatar.png" class="user-profile-image">                      
+          <p>AdminInstator</p>
+          <div class="icon">
+              <i class="fas fa-circle"></i>
+              <span>Online</span>
+          </div>
+      </div> 
+      <li>
+        <a href="#" class="active">
+          <i class="fas fa-tachometer-alt"></i>
+          <span class="links_name">Dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-user"></i>
+          <span class="links_name">Student</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-user-secret"></i>
+          <span class="links_name">Students Section</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-user-astronaut"></i>
+          <span class="links_name">Employee</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-graduation-cap"></i>
+          <span class="links_name">Scholarship</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-user-plus"></i>
+          <span class="links_name">Access Managment</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-user-edit"></i>
+          <span class="links_name">Examination</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-book"></i>
+          <span class="links_name">Curse Managment</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="far fa-window-maximize"></i>
+          <span class="links_name">Manage Internship</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="far fa-calendar-alt"></i>
+          <span class="links_name">Schedual Management</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-file-invoice-dollar"></i>
+          <span class="links_name">Accounting</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class='bx bx-cog'></i>
+          <span class="links_name">Configuration</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-toolbox"></i>
+          <span class="links_name">Log Viewer</span>
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <i class="fas fa-exclamation-triangle"></i>
+          <span class="links_name">System Rounting</span>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+      </div>
+      <div class="main_right">
+        <div class="box_left">
+          <div class="InputContainer">
+            <input type="text" name="text" class="input" id="input" placeholder="Search">
+            <label for="input" class="labelforsearch">
+            <svg viewBox="0 0 512 512" class="searchIcon"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"></path></svg>
+            </label>
+            <div class="border"></div>
+            <button class="micButton"><svg viewBox="0 0 384 512" class="micIcon"><path d="M192 0C139 0 96 43 96 96V256c0 53 43 96 96 96s96-43 96-96V96c0-53-43-96-96-96zM64 216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 89.1 66.2 162.7 152 174.4V464H120c-13.3 0-24 10.7-24 24s10.7 24 24 24h72 72c13.3 0 24-10.7 24-24s-10.7-24-24-24H216V430.4c85.8-11.7 152-85.3 152-174.4V216c0-13.3-10.7-24-24-24s-24 10.7-24 24v40c0 70.7-57.3 128-128 128s-128-57.3-128-128V216z"></path></svg>
+            </button>
+          </div>
         </div>
-        <div class="sub_main">
-            <div class="sub_left">
-                <div class="admin">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-2 h-2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>                      
-                    <p>Admin Instator</p>
-                    <div class="active">
-                        <i class="fas fa-circle"></i>
-                        <span>Online</span>
-                    </div>
-                </div> 
-                <nav class="nav">
-                    <div class="nav_input">
-                        <form class="form">
-                            <label for="search">
-                                <input class="input" type="text" required="" placeholder="Search.." id="search">
-                                <div class="fancy-bg"></div>
-                                <div class="search">
-                                    <svg viewBox="0 0 24 24" aria-hidden="true" class="r-14j79pv r-4qtqp9 r-yyyyoo r-1xvli5t r-dnmrzs r-4wgw6l r-f727ji r-bnwqim r-1plcrui r-lrvibr">
-                                        <g>
-                                            <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
-                                        </g>
-                                    </svg>
-                                </div>
-                                <button class="close-btn" type="reset">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                                    </svg>
-                                </button>
-                            </label>
-                        </form>
-                    </div>
-                    <ul class="nav_link">
-                        <li>
-                            <i class="fas fa-tachometer-alt"></i>
-                            <span>Dashboard</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-user"></i>
-                            <span>Students</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-user-secret"></i>
-                            <span>Students Section</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-user-astronaut"></i>
-                            <span>Employyee</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-graduation-cap"></i>
-                            <span>Scholarship</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-user-plus"></i>
-                            <span>Access Managment</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-user-edit"></i>
-                            <span>Examination</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-book"></i>
-                            <span>Course Management</span>
-                        </li>
-                        <li>
-                            <i class="far fa-window-maximize"></i>
-                            <span>Manage Internship</span>
-                        </li>
-                        <li>
-                            <i class="far fa-calendar-alt"></i>
-                            <span>Schedual Management</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-file-invoice-dollar"></i>
-                            <span>Accounting</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-tools"></i>
-                            <span>Configuration</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-toolbox"></i>
-                            <span>Log Viewer</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-exclamation-triangle"></i>
-                            <span>System Rounting</span>
-                        </li>
-                    </ul>
-                </nav>
+        <div class="box_right">
+          <div class="right_a">
+              <div id="box"><i class="fas fa-envelope"></i></div>
+              <div id="box"><i class="fas fa-bell"></i></div>
+              <div id="box"><i class="fas fa-flag"></i></div>
+          </div>
+          <div class="right_b">
+            <div class="box1">
+              <a class="button1" href="#popup1">
+                <i class="fas fa-user"></i>
+                <span>Admin Instator</span>     
+              </a>
             </div>
-            <div class="sub_right">
-                <div class="head">
-                    <div class="head_left">
-                        <span>ITC | SMIS</span>
-                        <span style="font-size: 19px; color:gray; padding-left:10px">AdminIslators Dashboard</span>
-                    </div>
-                    <div class="head_right">Dashboard</div>
+            <div id="popup1" class="overlay">
+              <div class="popup2">
+                <a class="close1" href="#">&times;</a>
+                <div class="contents">
+                  <div class="pf"><img src="https://dev.itc.edu.kh/img/profiles/avatar.png" class="user-profile-image"></div>
+                  <p>Admin Islators-Web Developer</p>
+                  <div class="view">
+                    <button class="log_pf">Profile</button>
+                    <button class="log_out">logout</button>
+                  </div>
                 </div>
-                <div class="sub_content">
-                    <br><span>Welcome AdminIslator!</span>
-                    <hr>
-                    <div class="info">
-                        <div class="info_left">
-                            <i class="fa fa-user bg-purple"></i>
-                            <div class="line"><i class="fa fa-clock"></i></div>
-                        </div>
-                        <div class="info_right">
-                            <a href="">User Information</a>
-                            <span>view/update your information</span>
-                            <div class="user">
-                                <div class="user_info">
-                                    <div class="user_top">
-                                        <div class="user_top1">My Information</div>
-                                        <div class="user_top2"></div>
-                                    </div>
-                                    <div class="user_down">
-                                        <div class="user_down1">
-                                            <img src="https://dev.itc.edu.kh/img/profiles/avatar.png" class="user-profile-image">
-                                        </div>
-                                        <div class="user_down2">
-                                            <table>
-                                                <tr>
-                                                    <td><h3>Name</h3></td>
-                                                    <td><span>Admin Islator</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><h3>Email</h3></td>
-                                                    <td><span>admin@edu.itc.kh</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><h3>Created At</h3></td>
-                                                    <td><span>2016-04-26 07:19:26 (7 years ago)</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><h3>Last Updated</h3></td>
-                                                    <td><span>2023-08-11 09:56:17 (1 week ago)</span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td><h3>Actions</h3></td>
-                                                    <td>
-                                                        <span><button class="btn1">Edit Infomation</button></span>
-                                                        <span><button class="btn2">Change Password</button></span>
-                                                    </td>
-                                                </tr>
-                                            </table>
-                                        </div>
-                                    </div>
+              </div>
+            </div>
+        </div>  
+      </div>
+    </nav>
+    <div class="home-content">
+      <div class="sub_right">
+        <div class="head">
+            <div class="head_left">
+                <span>ITC | SMIS</span>
+                <span style="font-size: 19px; color:gray; padding-left:10px">AdminIslators Dashboard</span>
+            </div>
+            <div class="head_right">Dashboard</div>
+        </div>
+        <div class="sub_content">
+            <p>Welcome AdminIslator!</p>
+            <hr><br>
+            <div class="popup">
+              <button id="close">&times;</button>
+              <div class="text">
+                <h2>i Welcome to ITC-School Management Information System.</h2>
+                <span>
+                  This application is under construction with partial release. Please report the problems or your demanding to our developers by using this REPORTING SYSTEM. We appreciate your contributions and we hope to run this system in full scale very soon.
+                  <br>- Developer Team
+                </span>   
+              </div>             
+            </div>
+            <br>
+            <div class="info">
+                <div class="info_left">
+                    <i class="fa fa-user bg-purple"></i>
+                    <div class="line"><i class="fa fa-clock"></i></div>
+                </div>
+                <div class="info_right">
+                    <a href="">User Information</a>
+                    <span>view/update your information</span>
+                    <div class="user">
+                        <div class="user_info">
+                            <div class="user_top">
+                                <div class="user_top1">My Information</div>
+                                <div class="user_top2"></div>
+                            </div>
+                            <div class="user_down">
+                                <div class="user_down1">
+                                    <img src="https://dev.itc.edu.kh/img/profiles/avatar.png" class="user-profile-image">
+                                </div>
+                                <div class="user_down2">
+                                    <table>
+                                        <tr>
+                                            <td><h3>Name</h3></td>
+                                            <td><span>Admin Islator</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><h3>Email</h3></td>
+                                            <td><span>admin@edu.itc.kh</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><h3>Created At</h3></td>
+                                            <td><span>2016-04-26 07:19:26 (7 years ago)</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><h3>Last Updated</h3></td>
+                                            <td><span>2023-08-11 09:56:17 (1 week ago)</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><h3>Actions</h3></td>
+                                            <td>
+                                                <span><button class="btn1">Edit Infomation</button></span>
+                                                <span><button class="btn2">Change Password</button></span>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -185,9 +233,33 @@
             </div>
         </div>
     </div>
-    <div class="footer">
-        <span>Copyright © 2023 <a href="#">ITC | SMIS.</a></span>
-        <span>All Right Reserved.</span>
-    </div>
+  </div>
+  <div class="footer">
+    <span>Copyright © 2023 <a href="#">ITC | SMIS.</a></span>
+    <span>All Right Reserved.</span>
+  </div>
+  </section>
 </body>
+<script>
+  let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".sidebarBtn");
+    sidebarBtn.onclick = function() {
+      sidebar.classList.toggle("active");
+      if (sidebar.classList.contains("active")) {
+        sidebarBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+      } else
+        sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+    }
+    window.addEventListener("load", function(){
+    setTimeout(
+        function open(event){
+            document.querySelector(".popup").style.display = "block";
+        },
+        2000 
+    )
+});
+document.querySelector("#close").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "none";
+});
+</script>
 </html>

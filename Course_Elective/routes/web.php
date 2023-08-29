@@ -12,11 +12,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    // return view('studentAnnuals');
+Route::get('/', function(){
+    return view('dashboard');
 });
-
 //route using controller resource Student
 Route::resource('/studentAnnuals','App\Http\Controllers\Student');
 
@@ -27,7 +25,13 @@ Route::resource('/studentAnnuals','App\Http\Controllers\Student');
 Route::get('/coursesAnnually', function () {
     return view('coursesAnnually');
 });
-
-Route::get('/', function(){
-    return view('dashboard');
+Route::get('/profile', function () {
+    return view('profile');
 });
+Route::get('/info', function () {
+    return view('edit_info');
+});
+Route::get('/changepw', function () {
+    return view('changepass');
+});
+
