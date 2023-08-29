@@ -137,16 +137,15 @@
 }
 button {
     position: absolute;
-    right: 47vh;
+    right: 49vh;
     top: 19vh;
-    padding: 1.1em 3em;
+    padding: 1em 2em;
     font-size: 12px;
     letter-spacing: 2.5px;
     color: #fff;
     background-color: #3498DB;
     border: none;
     border-radius: 10px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
