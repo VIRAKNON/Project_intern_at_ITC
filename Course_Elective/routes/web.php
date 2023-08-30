@@ -28,6 +28,10 @@ Route::get('/studentAnnuals/create', function () {
     return view('createStudent');
 })->name('studentAnnuals/create');
 
+Route::get('/studentAnnuals/show', function () {
+    return view('showStudent');
+})->name('studentAnnuals/show');
+
 Route::get('/coursesAnnually', function () {
     return view('coursesAnnually');
 });
@@ -47,5 +51,4 @@ Route::get('/changepw', function () {
 
 Route::get('/showStudent', function () {
     return view("showStudent");
->>>>>>> 8b6924c745339f0feda4242c227e9b699b9cdd2b
 });

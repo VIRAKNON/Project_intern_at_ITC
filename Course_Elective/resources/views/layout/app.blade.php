@@ -166,6 +166,7 @@
     @yield('dashboard')
     @yield('students')
     @yield('createStudent')
+    @yield('showStudent')
 
 {{-- endcontent --}}
     </div>
