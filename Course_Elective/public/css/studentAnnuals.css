@@ -3,201 +3,41 @@
 }
 .contentStu{
     width: 100%;
-    height: 100vh;
-    /* padding: 10px; */
-    background-color:#ffffff ;
-    border-top: 4px solid #00ABE4;
+    height: auto !important ;
+    border-top: 4px solid #274afcf2;
     border-radius: 5px;
 }
-.contentStu button{
-    font-size: 15px;
-    color: #ffffff;
-}
-.box1{
-    padding-top: 15px;
-    padding-left: 10px;
-}
-.addStu{
-    background-color:#00ABE4 ;
-    border: none;
-    appearance: none;
-    font-size: 15px;
-    color: #ffffff;
-    padding: 5px;
-}
-.addStu:focus{
-    background-color: #0080aa;
-    border: none;
-    appearance: none;
-}
-.addStu:hover{
-    color :#ffffff;
-    background-color: #0080aa;
-}
-.someLink{
-    background-color: #00ABE4;
-    border: none;
-    appearance: none;
-}
-.someLink:hover{
-    color :#ffffff;
-    background-color: #0080aa;
-}
-.someLink:focus{
-    background-color: #0080aa;
-}
-.updateSchStu{
-    background-color: #F69A36;
-}
-.updateSchStu svg{
-    width: 16px;
-    height: 16px;
-}
-.updateSchStu:hover{
-    color: #ffffff;
-    background-color: #da8a34;
-}
-.cloneSem{
-    background-color:#F69A36 ;
-}
-.cloneSem:hover{
-    color: #ffffff;
-    background-color: #da8a34;
-}
-.refresh{
-    background-color: #b4b4b4;
-}
-.action{
-    background-color: #F69A36;
-}
-.action:hover{
-    background-color: #da8a34;
-    color: #ffffff;
-}
-.reporting{
-    background-color: #00ABE4;
-}
-.reporting:hover{
-    color: #ffffff;
-    background-color: #0080aa;
-}
-.export{
-    background-color: #F69A36;
-}
-.export:hover{
-    color: #ffffff;
-    background-color:#da8a34;
-}
-.box2{
-    padding-left: 10px;
+
+/* search */
+.searchStu {
     display: flex;
-}
-.selectOp{
-    width: 140px;
-    height: 30px;
-    font-size: 14px;
-}
-.selectOp:focus{
-    border: 2px solid #00ABE4;
-    outline: none !important;
-}
-option:checked{
-    background-color: #00ABE4;
-    color: #ffffff;
-}
-/* option:hover{
-    background-color: #00ABE4;
-} */
-.box2Left{
-    width: 70%;
-}
-.degree{
-    width: 150px;
-}
-.grade{
-    width: 90px;
-}
-.department{
-    width: 120px;
-}
-.gender{
-    width: 100px;
-}
-.box2Right{
-    width: 30%;
-}
-.search{
-    float: right;
-}
-.container-input {
-    position: relative;
+    align-items: center;
+    flex-direction: row;
+    max-width: 14em;
+    width: fit-content;
+    height: fit-content;
+    background-color: #5c6370;
+    border-radius: 0.8em;
+    overflow: hidden;
 }
 
-.input {
-    width: 200px;
-    padding: 3px 0px 3px 40px;
-    border-radius: 5px;
-    border: solid 1px #00ABE4;
-    transition: all .2s ease-in-out;
+.search_icon {
+    height: 1em;
+    padding: 0 0.5em 0 0.8em;
+    fill: #abb2bf;
+}
+
+.search_stu {
+    background-color: transparent;
+    color: #ffffff;
     outline: none;
-    opacity: 0.8;
+    width: 100%;
+    border: 0;
+    padding: 0.5em 1.5em 0.5em 0;
+    font-size: 1em;
 }
 
-.container-input svg {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translate(0, -50%);
-}
-.input:focus {
-    width: 280px;
-    border: 1px solid #F69A36;
-    background-color: #ffffff;
-}
-.input::placeholder{
-    color: black;
+::placeholder {
+    color: #abb2bf;
 }
 
-.box3{
-    padding-top: 7px;
-    padding-left: 10px;
-}
-.semester{
-    width: 100px;
-}
-.origin{
-    width: 300px;
-}
-.group{
-    width: 80px;
-}
-.abc{
-    width: 130px;
-}
-table .btnAction .edit svg{
-    width: 20px;
-    color: #ffffff;
-}
-table .btnAction .edit svg:hover{
-    background-color:#0080aa ;
-    color: #ffffff;
-    border-radius: 5px;
-}
-table .btnAction .delete svg{
-    width: 20px;
-    color: #ffffff;
-}
-table .btnAction .delete svg:hover{
-    color: #ffffff;
-    border-radius: 5px;
-    background-color:#E42217 ;
-}
-table .btnAction .view svg{
-    width: 20px;
-    color: #ffffff;
-}
-table .btnAction .view svg:hover{
-    color: #ffffff;
-    background-color:#1F45FC ;
-    border-radius: 5px;
-}

@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-  <link rel="stylesheet" href="{{ asset ('css/changepass.css') }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset ('css/changepass.css') }}">
     <title>Profile</title>
 </head>
 <body>
@@ -30,7 +30,7 @@
                     <div class="text">
                         <label for="form1"><p>Old Password <span style="color: red">*</span></p></label>
                         <label for="form2"><p>New Password <span style="color: red">*</span></p></label>
-                        <label for="form3"><p>New Password Confirmation <span style="color: red">*</span></p></label>  
+                        <label for="form3"><p>New Password Confirmation <span style="color: red">*</span></p></label>
                     </div>
                     <div class="fill">
                         <label class="wrapper">

@@ -22,64 +22,49 @@ sup{
 .barTabs a{
     font-size: 15px;
 }
-/* .col-4{
-
-} */
-.uploadProfile {
-    height: 290px;
-    width: 260px;
-    border-radius: 10px;
-    box-shadow: 4px 4px 30px rgba(0, 0, 0, .2);
+/* upload profile */
+.custom_file_upload_profile {
+    height: 230px;
+    width: 170px;
     display: flex;
     flex-direction: column;
+    align-items: space-between;
+    gap: 20px;
+    cursor: pointer;
     align-items: center;
-    justify-content: space-between;
-    padding: 15px 10px;
-    gap: 5px;
-    background-color: #ffffff;
+    justify-content: center;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #cacaca, #f0f0f0);
+    box-shadow:  8px 8px 16px #bebebe,
+            -8px -8px 16px #ffffff;
+    padding: 1.5rem;
 }
 
-.header {
-    flex: 1;
-    width: 100%;
-    border: 2px dashed royalblue;
-    border-radius: 10px;
+.custom_file_upload_profile .iconUploadProfile {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
 }
 
-.header img{
-    width: 150px;
+.custom_file_upload_profile .iconUploadProfile svg {
+    height: 80px;
+    fill: rgba(75, 85, 99, 1);
 }
 
-.header p {
-    text-align: center;
-    color: black;
-    font-size: 18px;
-    margin: 0;
-}
-
-.footer {
-    background-color: rgba(67, 149, 255, 0.418);
-    width: 100%;
-    height: 32px;
-    padding: 5px;
-    border-radius: 10px;
-    cursor: pointer;
+.custom_file_upload_profile .textUploadProfile {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    color: black;
-    border: none;
-    margin: 0;
+    justify-content: center;
 }
 
-#file {
+.custom_file_upload_profile .textUploadProfile span {
+    font-weight: 400;
+    color: rgba(75, 85, 99, 1);
+}
+
+.custom_file_upload_profile input {
     display: none;
 }
-
 /* btn cancel */
 .btnCancel {
     display: inline-block;

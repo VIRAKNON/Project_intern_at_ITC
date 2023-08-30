@@ -15,12 +15,18 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function(){
     return view('dashboard');
 });
-//route using controller resource Student
-Route::resource('/studentAnnuals','App\Http\Controllers\Student');
 
-// Route::get('/studentAnnuals/create', function () {
-//     return view('createStudent');
-// });
+Route::get('/dashboard', function(){
+    return view('dashboard');
+})->name('dashboard');
+
+Route::get('/studentAnnuals', function () {
+    return view('studentAnnuals');
+})->name('studentAnnuals');
+
+Route::get('/studentAnnuals/create', function () {
+    return view('createStudent');
+})->name('studentAnnuals/create');
 
 Route::get('/coursesAnnually', function () {
     return view('coursesAnnually');

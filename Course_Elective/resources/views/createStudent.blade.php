@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{-- CDN --}}
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
@@ -12,10 +18,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    {{-- endCDN --}}
     <link rel="stylesheet" href="{{asset('css/createStudent.css')}}">
     <script src="{{asset("js/createStudent.js")}}"></script>
 
     <title>Document</title>
+    <style>
+        @import 'path/to/bootstrap-source/_reboot.scss';
+        /* Override Bootstrap styles */
+        ol, ul {
+            padding-left:0;
+        }
+    </style>
 </head>
 <body>
     {{-- header content --}}
@@ -45,6 +60,7 @@
 
                 <!--general info Tab panes content-->
                 <div class="tab-content">
+                    {{-- GeneralInfo --}}
                     <div id="GeneralInfo" class="tab-pane active"><br>
 
                         <span class="fs-5">
@@ -60,34 +76,15 @@
                         <div class="row">
                             <div class="col-4 d-flex justify-content-center pt-5">
                                 <div class="uploadProfile">
-                                    <div class="header">
-                                        <label for="file" class="text-center">
-                                            <img src="{{asset("image/nonProfile.jpg")}}" alt="nonprofile">
-
-                                        <p>Browse File to upload!</p>
-                                    </label>
-                                    </div>
-
-                                    <label for="file" class="footer">
-                                        <span>
-                                            <svg width="30" height="30" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M11.25 19.25h-3.5a2 2 0 0 1-2-2V6.75a2 2 0 0 1 2-2H14L18.25 9v2.25"></path>
-                                                <path d="M17 14.75v4.5"></path>
-                                                <path d="M19.25 17h-4.5"></path>
-                                                <path d="M18 9.25h-4.25V5"></path>
-                                            </svg>
-                                        </span>
-                                        <span class="text-dark">Not selected file</span>
-                                        <span>
-                                            <svg width="30" height="30" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="m6.75 7.75.841 9.673a2 2 0 0 0 1.993 1.827h4.832a2 2 0 0 0 1.993-1.827l.841-9.673"></path>
-                                                <path d="M9.75 7.5v-.75a2 2 0 0 1 2-2h.5a2 2 0 0 1 2 2v.75"></path>
-                                                <path d="M5 7.75h14"></path>
-                                            </svg>
-                                        </span>
-
-                                    </label>
-                                    <input id="file" type="file">
+                                    <label class="custom_file_upload_profile" for="file">
+                                        <div class="iconUploadProfile">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path fill="" d="M10 1C9.73478 1 9.48043 1.10536 9.29289 1.29289L3.29289 7.29289C3.10536 7.48043 3 7.73478 3 8V20C3 21.6569 4.34315 23 6 23H7C7.55228 23 8 22.5523 8 22C8 21.4477 7.55228 21 7 21H6C5.44772 21 5 20.5523 5 20V9H10C10.5523 9 11 8.55228 11 8V3H18C18.5523 3 19 3.44772 19 4V9C19 9.55228 19.4477 10 20 10C20.5523 10 21 9.55228 21 9V4C21 2.34315 19.6569 1 18 1H10ZM9 7H6.41421L9 4.41421V7ZM14 15.5C14 14.1193 15.1193 13 16.5 13C17.8807 13 19 14.1193 19 15.5V16V17H20C21.1046 17 22 17.8954 22 19C22 20.1046 21.1046 21 20 21H13C11.8954 21 11 20.1046 11 19C11 17.8954 11.8954 17 13 17H14V16V15.5ZM16.5 11C14.142 11 12.2076 12.8136 12.0156 15.122C10.2825 15.5606 9 17.1305 9 19C9 21.2091 10.7909 23 13 23H20C22.2091 23 24 21.2091 24 19C24 17.1305 22.7175 15.5606 20.9844 15.122C20.7924 12.8136 18.858 11 16.5 11Z" clip-rule="evenodd" fill-rule="evenodd"></path> </g></svg>
+                                        </div>
+                                        <div class="textUploadProfile">
+                                            <span class="text-center">Click to upload image</span>
+                                            </div>
+                                            <input type="file" id="file">
+                                        </label>
                                 </div>
                             </div>
 
@@ -485,7 +482,7 @@
 
                                     <div class="col-sm-12 d-flex justify-content-center">
 
-                                        <a type="button" href="{{route('studentAnnuals.index')}}"class="btn btnCancel shadow-none mr-2">Cancel</a>
+                                        <a type="button" href=""class="btn btnCancel shadow-none mr-2">Cancel</a>
 
                                         <button class="btnCreate">
                                             <span>Create</span>
@@ -505,13 +502,6 @@
                             </form>
 
                         </div>
-
-                        {{-- Footer --}}
-                        <div class="container-fluid p-0 m-0">
-                            <hr class="py-2">
-                            <span class="fw-bolder">Copyright © 2023 <a href="#" class="text-info px-2 text-decoration-none ">ITC / SMIS</a><span class="fw-normal">. All Right Reserved.</span></span>
-                        </div>
-
 
                     </div>
 
@@ -1042,7 +1032,7 @@
 
                                     <div class="col-sm-12 d-flex justify-content-center">
 
-                                        <a type="button" href="{{route('studentAnnuals.index')}}"class="btn btnCancel shadow-none mr-2">Cancel</a>
+                                        <a type="button" href=""class="btn btnCancel shadow-none mr-2">Cancel</a>
 
 
                                         <button class="btnCreate">
@@ -1062,12 +1052,6 @@
 
                             </form>
 
-                        </div>
-
-                        {{-- Footer --}}
-                        <div class="container-fluid footerNewAcIfo p-0">
-                            <hr class="py-2">
-                            <span class="fw-bolder">Copyright © 2023 <a href="#" class="text-info px-2 text-decoration-none ">ITC / SMIS</a><span class="fw-normal">. All Right Reserved.</span></span>
                         </div>
                     </div>
                 </div>
