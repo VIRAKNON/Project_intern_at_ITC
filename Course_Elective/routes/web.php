@@ -12,21 +12,40 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-
-Route::get('/', function () {
-    // return view('studentAnnuals');
+Route::get('/', function(){
+    return view('dashboard');
 });
 
-//route using controller resource Student
-Route::resource('/studentAnnuals','App\Http\Controllers\Student');
+Route::get('/dashboard', function(){
+    return view('dashboard');
+})->name('dashboard');
 
-// Route::get('/studentAnnuals/create', function () {
-//     return view('createStudent');
-// });
+Route::get('/studentAnnuals', function () {
+    return view('studentAnnuals');
+})->name('studentAnnuals');
+
+Route::get('/studentAnnuals/create', function () {
+    return view('createStudent');
+})->name('studentAnnuals/create');
 
 Route::get('/coursesAnnually', function () {
     return view('coursesAnnually');
 });
+<<<<<<< HEAD
 Route::get('/create_Coures', function () {
     return view('/create_Coures');
+=======
+Route::get('/profile', function () {
+    return view('profile');
+});
+Route::get('/info', function () {
+    return view('edit_info');
+});
+Route::get('/changepw', function () {
+    return view('changepass');
+});
+
+Route::get('/showStudent', function () {
+    return view("showStudent");
+>>>>>>> 8b6924c745339f0feda4242c227e9b699b9cdd2b
 });
