@@ -1,0 +1,83 @@
+*{
+    font-family: 'Catamaran', sans-serif;
+}
+strong{
+    color: red;
+}
+
+sup{
+    color: red;
+}
+
+.content{
+    width: 100%;
+    height: 100vh;
+    background-color:#ffffff ;
+    border-top: 4px solid #00ABE4;
+    border-radius: 5px;
+}
+
+.content hr{
+    margin: 0;
+
+}
+
+.form-select option[disabled]:first-child {
+    display: none;
+}
+
+#select_lecturer{
+    width: 39.7rem;
+}
+
+.box {
+    position: relative;
+    border-radius: 3px;
+    background: #ffffff;
+    border-top: 3px solid #d2d6de;
+    margin-bottom: 20px;
+    height: 270px;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.box-header {
+    color: #444;
+    display: block;
+    padding: 10px;
+    position: relative;
+}
+
+.box-body {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    padding: 10px;
+}
+
+.box.box-success {
+    border-top-color: #00a65a;
+}
+
+.box {
+    position: relative;
+    border-radius: 3px;
+    background: #ffffff;
+    border-top: 3px solid #d2d6de;
+    margin-bottom: 20px;
+    width: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.btn {
+    border-radius: 3px;
+    box-shadow: none;
+    border: 1px solid transparent;
+}
+
+.btn {
+    border-radius: 3px;
+    box-shadow: none;
+    border: 1px solid transparent;
+}
