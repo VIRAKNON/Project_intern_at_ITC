@@ -27,3 +27,9 @@ Route::resource('/studentAnnuals','App\Http\Controllers\Student');
 Route::get('/coursesAnnually', function () {
     return view('coursesAnnually');
 });
+Route::get('/coursesProgram', function () {
+    return view('coursesProgram');
+});
+Route::get('/coursesProgram/createCoursesProgram', function () {
+    return view('createCoursesProgram');
+});

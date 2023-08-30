@@ -11,6 +11,7 @@
 <body>
     @yield('students')
     @yield('createStudent')
+    @yield('coursesProgram')
 </body>
 </html>
 
