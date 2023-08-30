@@ -215,7 +215,7 @@
                                             <path d="M14 11v6"></path>
                                         </svg>
                                     </button>
-                                    <a href="" class="btn p-0 border-0">
+                                    <a href="{{ route('studentAnnuals/show') }}" class="btn p-0 border-0">
                                         <svg width="30" height="30" fill="#00aaff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" d="M16 8c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4ZM4 18c0-2.66 5.33-4 8-4s8 1.34 8 4v2H4v-2Z" clip-rule="evenodd"></path>
                                         </svg>
