@@ -4,23 +4,25 @@
     margin: 0px;
     box-sizing: border-box;
 }
-.content {
+.contentShowStu {
     width: 100%;
     height: auto;
     display: flex;
     justify-content: space-around;
 }
-.profileStu {
+.showProfileStu {
     width:25% ;
     height: auto;
     border-radius: 5px;
 }
-.image_container img{
+.image_showProfileStu img{
     width: 88px;
     height: 117px;
     object-fit: cover;
+    border: 1px solid black;
+
 }
-.topInfo{
+.topShowStuInfo{
     border-top: 3px solid #274afcf2;
     border-radius: 5px;
     box-shadow:  5px 5px 7px #d3d3d3,
@@ -33,7 +35,7 @@
     box-shadow:  5px 5px 7px #d3d3d3,
             -5px -5px 7px #ededed;
 }
-.infoStu {
+.showInfoStu {
     width:72% ;
     /* height: auto; */
     border-radius: 5px;
@@ -41,11 +43,13 @@
             -5px -5px 7px #ededed;
 }
 
-.nav_tab_custom > .nav-tabs > li.active {
+.navTab_showStu > .nav_tabs > li.active {
     border-top-color: #274afcf2;
     font-weight: bold;
+    color: black;
+    background-color: #ffffff;
 }
-.nav_tab_custom > .nav-tabs > li {
+.navTab_showStu > .nav_tabs > li {
     border-top: 3px solid transparent;
 }
 .leftContent {

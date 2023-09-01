@@ -5,20 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{-- CDN --}}
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
+
+    {{-- endCDN --}}
     <link rel="stylesheet" href="{{asset('css/showStudent.css')}}">
-    {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> --}}
     <title>show detail of student</title>
+    <style>
+        @import 'path/to/bootstrap-source/_reboot.scss';
+        /* Override Bootstrap styles */
+        ol, ul {
+            padding-left:0;
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid vh-100 pt-4">
 
-        <div class="content">
-            <div class="profileStu">
-                <div class="topInfo">
+        <div class="contentShowStu">
+            <div class="showProfileStu">
+                <div class="topShowStuInfo">
                     <div class="row py-2">
-                        <div class="col-12 image_container d-flex justify-content-center">
+                        <div class="col-12 image_showProfileStu d-flex justify-content-center">
                             <img src="" alt="profileStu">
                         </div>
                     </div>
@@ -80,16 +91,16 @@
                 </div>
 
             </div>
-            <div class="infoStu">
+            <div class="showInfoStu">
                 <div class="subInfoStu w-100 p-0 m-0">
-                    <nav class="nav_tab_custom">
-                        <ul class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <div class="navTab_showStu">
+                        <ul class="nav nav_tabs border-bottom-2 border-bottom border-primary" id="nav-tab" role="tablist">
                             <li class="nav-link active rounded-0 border-start-0" data-bs-toggle="tab" data-bs-target="#generalInfo" type="button">General Information</li>
 
                             <li class="nav-link rounded-0" data-bs-toggle="tab" data-bs-target="#academicYear" type="button">academicYear</li>
 
                         </ul>
-                    </nav>
+                    </div>
                     <div class="tab-content" id="nav-tabContent">
                         <div class="tab-pane fade show active p-2" id="generalInfo">
                             <div class="container-fluid d-flex justify-content-between">

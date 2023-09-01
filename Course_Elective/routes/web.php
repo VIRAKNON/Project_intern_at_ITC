@@ -28,10 +28,26 @@ Route::get('/studentAnnuals/create', function () {
     return view('createStudent');
 })->name('studentAnnuals/create');
 
+Route::get('/studentAnnuals/show', function () {
+    return view('showStudent');
+})->name('studentAnnuals/show');
+
 Route::get('/coursesAnnually', function () {
     return view('coursesAnnually');
 });
+<<<<<<< HEAD
 Route::get('/admin/profile', function () {
+=======
+<<<<<<< HEAD
+Route::get('/coursesProgram', function () {
+    return view('coursesProgram');
+});
+Route::get('/coursesProgram/createCoursesProgram', function () {
+    return view('createCoursesProgram');
+});
+=======
+Route::get('/profile', function () {
+>>>>>>> 8c5fb10b6f3442614644fe8d419ea70b33a8fb07
     return view('profile');
 })->name('admin/profile');
 
@@ -42,6 +58,4 @@ Route::get('/changepw', function () {
     return view('changepass');
 })->name('changepw');
 
-Route::get('/showStudent', function () {
-    return view("showStudent");
-});
+>>>>>>> 30d5bcde25cef4fd8a40f643cafe1d7966b5fcd9

@@ -172,6 +172,13 @@
     @yield('dashboard')
     @yield('students')
     @yield('createStudent')
+<<<<<<< HEAD
+    @yield('coursesProgram')
+</body>
+</html>
+=======
+    @yield('showStudent')
+>>>>>>> 30d5bcde25cef4fd8a40f643cafe1d7966b5fcd9
 
 {{-- endcontent --}}
     </div>
