@@ -62,27 +62,18 @@
   text-decoration: none;
   transition: all 0.1s ease;
 }
-.sidebar .nav_links li a.active{
-  background: #2C3E50;
-  border-left: 4px solid #157DEC;
-  color: #FFFFFF;
-}
-.sidebar .nav_links li a.active i{
-  color: #FFFFFF;
-}
-.sidebar .nav_links li a.active span{
-  color: #FFFFFF;
+.sidebar .nav_links li:hover {
+  background-color: #34434b;
 }
 .sidebar .nav_links li a:hover {
-  background: #2C3E50;
-  color: #fff;
+  color: #ffffff;
   border-left: 4px solid #157DEC;
 }
 .sidebar .nav_links li a:hover i{
-  color: white;
+  color: #FFFFFF;
 }
 .sidebar .nav_links li a:hover span{
-  color: white;
+  color: #FFFFFF;
 }
 .sidebar .nav_links li i {
   min-width: 60px;
@@ -90,7 +81,7 @@
   font-size: 18px;
   color: #B3B6B7;
 }
-.sidebar .nav_links li a .links_name {
+.sidebar .nav_links li a span{
   color:#B3B6B7;
   font-size: 16px;
   white-space: nowrap;
@@ -278,11 +269,11 @@ nav .sidebar-button i {
 
 .popup{
     background-color:#1E90FF;
-    width: 97%;
+    width: 99%;
     height: 120px;
     padding-top: -30px;
     border-radius: 5px;
-    margin-left: 20px;
+    margin-left: 15px;
     font-family: "Poppins",sans-serif;
 }
 .popup #close{
@@ -297,8 +288,8 @@ nav .sidebar-button i {
     border: none;
     outline: none;
     position: absolute;
-    top: 15.3%;
-    right:3.7%;
+    top: 16%;
+    right: 2%;
     cursor: pointer;
 }
 .popup .text{
@@ -381,34 +372,31 @@ nav .sidebar-button i {
   text-decoration: none;
   color: #fff;
 }
-.pf{
-  width: 15vh;
-  height: 15vh;
-  border-radius: 50%;
-  background-color: #ffffff;
-  margin: 0 auto;
-  margin-top: 15px;
+.profile, .sumuray{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.pf img{
-  width: 6rem;
-  height: 6rem;
-  margin: 15px 22px;
-  border-radius: 10px;
+.profile svg{
   color: #ffffff;
+}
+.sumuray p{
+  color: #ffffff;
+  padding-top: 1rem;
 }
 .view button{
   width: 6rem;
 }
 /* this is a recreation of twitter search in css */
 .form {
-    --input-text-color: #fff;
-    --input-bg-color: #283542;
-    --focus-input-bg-color: transparent;
-    --text-color: #949faa;
-    --active-color: #1b9bee;
-    --width-of-input: 200px;
-    --inline-padding-of-input: 1.9em;
-    --gap: 0.9rem;
+  --input-text-color: #fff;
+  --input-bg-color: #283542;
+  --focus-input-bg-color: transparent;
+  --text-color: #949faa;
+  --active-color: #1b9bee;
+  --width-of-input: 200px;
+  --inline-padding-of-input: 1.9em;
+  --gap: 0.9rem;
 }
 .nav_link {
     margin-left: -40px;
@@ -421,12 +409,13 @@ nav .sidebar-button i {
     cursor: pointer;
 }
 .view{
-  padding-top: 4rem;
+  padding-top: 3rem;
   display: flex;
   justify-content: center;
 }
 .view .log_pf{
-  padding: 10px;
+  width: 9vh;
+  padding: 10px 19px;
   border-radius: 5px;
   border: none;
   appearance: none;
@@ -438,8 +427,12 @@ nav .sidebar-button i {
 .view .log_pf:hover{
   background-color: #157dec;
 }
+.view a{
+  text-decoration: none;
+}
 .view .log_out{
-  padding: 10px;
+  width: 9vh;
+  padding: 10px 20px;
   cursor: pointer;
   border: none;
   appearance: none;
@@ -617,30 +610,39 @@ nav .sidebar-button i {
 .user_down2 table td{
   padding: 10px;
 }
-table tr td span button{
+table tr td .btn1{
   background-color:#157dece4;
   border: none;
-  padding: 7px;
+  padding: 5px;
+  font-size: 13px;
   border-radius: 4px;
-  color: white;
+  color: #ffffff;
   cursor: pointer;
+}
+.button .btn1:hover{
+  background-color: #157dec;
+  color: #ffffff;
 }
 tr:nth-child(odd):hover{background-color:#E5E7E9;}
 tr:nth-child(even) {background: #E5E7E9}
 tr:nth-child(odd) {background: #F0F3F4}
-.btn1:hover{
-  background-color: #157dec;
+table tr td .btn2{
+  background-color:#f28729;
+  border: none;
+  padding: 5px;
+  font-size: 13px;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
 }
-.btn2{
-  background-color: #f28729;
-}
-.btn2:hover{
+.button .btn2:hover{
+  color: #ffffff;
   background-color:#f97807;
 }
 .footer{
   width: 100%;
   height: 70px;
-  margin-top: 23px;
+  margin-top: 27px;
   padding-top: 7px;
   display: flex;
   align-items: center;

@@ -1,5 +1,6 @@
 @extends('layout.app')
 @section('dashboard')
+
 <div class="sub_right">
     <div class="head">
         <div class="head_left">
@@ -60,9 +61,9 @@
                                     </tr>
                                     <tr>
                                         <td><h3>Actions</h3></td>
-                                        <td>
-                                            <span><button class="btn1">Edit Infomation</button></span>
-                                            <span><button class="btn2">Change Password</button></span>
+                                        <td class="button">
+                                            <a href="{{ route("admin") }}" class="btn1">Edit Infomation</a>
+                                            <a href="{{ route("changepw") }}" class="btn2">Change Password</a>
                                         </td>
                                     </tr>
                                 </table>
