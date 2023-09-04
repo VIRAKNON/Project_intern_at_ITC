@@ -35,10 +35,16 @@
 <body>
     {{-- header content --}}
     <div class="container-fluid bg-light">
-        <header class="py-2">
-            <span class="fs-3">Students</span>
-            <span class="px-3 ">Register new student</span>
-        </header>
+        <div class="row bg-light mb-4" style="
+            border-radius: 5px;
+            background-color: #ffffff;
+            box-shadow:  5px 5px 7px #d6d6d6;
+        ">
+            <header class="py-2">
+                <span class="fs-3">Students</span>
+                <span class="px-3 ">Register new student</span>
+            </header>
+        </div>
 
         <div class="content">
             <div class="p-2 px-3 lead">
@@ -928,6 +934,7 @@
                                     <label for="selectWithSearch" class="col-sm-2 col-form-label col-form-label-sm text-end fw-bolder">Scholarships</label>
                                     <div class="col-sm-10">
                                         <select class="form-comtrol" style="width: 100%" name="" id="selectWithSearch">
+                                            <option selected value=""></option>
                                             <option value="1">Boursier Partielle</option>
                                             <option value="2">Boursier M</option>
                                             <option value="3">Boursier L</option>
