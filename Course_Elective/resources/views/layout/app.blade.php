@@ -27,7 +27,7 @@
                     <span>Online</span>
                 </div>
             </div>
-        <li>
+        <li class="active">
             <a href="{{ route('dashboard') }}">
                 <i class="fas fa-tachometer-alt"></i>
                 <span>Dashboard</span>
@@ -172,13 +172,9 @@
     @yield('dashboard')
     @yield('students')
     @yield('createStudent')
-<<<<<<< HEAD
     @yield('coursesProgram')
 </body>
 </html>
-=======
-    @yield('showStudent')
->>>>>>> 30d5bcde25cef4fd8a40f643cafe1d7966b5fcd9
 
 {{-- endcontent --}}
     </div>

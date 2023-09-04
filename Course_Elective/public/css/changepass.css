@@ -2,7 +2,7 @@
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
-  font-family: sans-serif;
+    font-family: sans-serif;
 }
 .profile{
     width: 100%;
@@ -137,7 +137,7 @@
 }
 button {
     position: absolute;
-    right: 49vh;
+    right: 50.5vh;
     top: 19vh;
     padding: 1em 2em;
     font-size: 12px;

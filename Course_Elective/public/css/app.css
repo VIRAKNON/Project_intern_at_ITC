@@ -129,6 +129,7 @@
   top: 22px;
   left: 89px;
 }
+
 /* Searching */
 .InputContainer {
   width: 75%;
@@ -415,7 +416,7 @@ nav .sidebar-button i {
 }
 .view .log_pf{
   width: 9vh;
-  padding: 10px 19px;
+  padding: 10px 25px;
   border-radius: 5px;
   border: none;
   appearance: none;
@@ -432,7 +433,7 @@ nav .sidebar-button i {
 }
 .view .log_out{
   width: 9vh;
-  padding: 10px 20px;
+  padding: 10px 26px;
   cursor: pointer;
   border: none;
   appearance: none;
