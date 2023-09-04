@@ -34,7 +34,7 @@
             </a>
         </li>
         <li>
-            <a href="{{ route('studentAnnuals') }}">
+            <a href="{{ route('studentAnnuals') }}" class="activeStudentAnnuals">
             <i class="fas fa-user"></i>
             <span class="links_name">Student</span>
             </a>
@@ -167,6 +167,7 @@
     @yield('students')
     @yield('createStudent')
     @yield('showStudent')
+    @yield('editStudent')
 
 {{-- endcontent --}}
     </div>

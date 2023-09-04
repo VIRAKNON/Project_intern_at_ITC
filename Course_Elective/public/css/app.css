@@ -62,7 +62,7 @@
   text-decoration: none;
   transition: all 0.1s ease;
 }
-.sidebar .nav_links li a.active{
+/* .sidebar .nav_links li a.active{
   background: #2C3E50;
   border-left: 4px solid #157DEC;
   color: #FFFFFF;
@@ -72,7 +72,7 @@
 }
 .sidebar .nav_links li a.active span{
   color: #FFFFFF;
-}
+} */
 .sidebar .nav_links li a:hover {
   background: #2C3E50;
   color: #fff;
