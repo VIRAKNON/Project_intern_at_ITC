@@ -28,7 +28,7 @@
                 </div>
             </div>
         <li>
-            <a href="{{ route('dashboard') }}">
+            <a href="{{ route('dashboard') }}" class="active">
                 <i class="fas fa-tachometer-alt"></i>
                 <span>Dashboard</span>
             </a>
@@ -63,7 +63,7 @@
                 <span>Scholarship</span>
             </a>
         </li>
-        <li>
+        {{-- <li>
             <a href="#">
                 <i class="fas fa-user-plus"></i>
                 <span>Access Managment</span>
@@ -110,7 +110,7 @@
                 <i class="fas fa-exclamation-triangle"></i>
                 <span>System Rounting</span>
             </a>
-        </li>
+        </li> --}}
     </ul>
 </div>
 <section class="home-section">
@@ -172,18 +172,9 @@
     @yield('dashboard')
     @yield('students')
     @yield('createStudent')
-<<<<<<< HEAD
     @yield('coursesProgram')
-</body>
-</html>
-=======
     @yield('showStudent')
-<<<<<<< HEAD
     @yield('editStudent')
-=======
->>>>>>> 30d5bcde25cef4fd8a40f643cafe1d7966b5fcd9
->>>>>>> 480c8febc377c9237f3e28cc5ac4c2908e97cd25
-
 {{-- endcontent --}}
     </div>
     <div class="footer">

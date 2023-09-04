@@ -76,6 +76,8 @@
 .sidebar .nav_links li a:hover {
   color: #ffffff;
   border-left: 4px solid #157DEC;
+  background: #2C3E50;
+
 }
 .sidebar .nav_links li a:hover i{
   color: #FFFFFF;
