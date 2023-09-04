@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', function(){
+Route::get('/admin/dashboard', function(){
     return view('dashboard');
 });
 
@@ -39,14 +39,31 @@ Route::get('/studentAnnuals/show', function () {
 Route::get('/coursesAnnually', function () {
     return view('coursesAnnually');
 });
+<<<<<<< HEAD
+Route::get('/admin/profile', function () {
+=======
+<<<<<<< HEAD
+Route::get('/coursesProgram', function () {
+    return view('coursesProgram');
+});
+Route::get('/coursesProgram/createCoursesProgram', function () {
+    return view('createCoursesProgram');
+});
+=======
 Route::get('/profile', function () {
+>>>>>>> 8c5fb10b6f3442614644fe8d419ea70b33a8fb07
     return view('profile');
-});
-Route::get('/info', function () {
+})->name('admin/profile');
+
+Route::get('/admin', function () {
     return view('edit_info');
-});
+})->name('admin');
 Route::get('/changepw', function () {
     return view('changepass');
-});
+})->name('changepw');
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 30d5bcde25cef4fd8a40f643cafe1d7966b5fcd9
+>>>>>>> 480c8febc377c9237f3e28cc5ac4c2908e97cd25
