@@ -27,13 +27,8 @@
                     <span>Online</span>
                 </div>
             </div>
-<<<<<<< HEAD
         <li class="active">
-            <a href="{{ route('dashboard') }}">
-=======
-        <li>
             <a href="{{ route('dashboard') }}" class="active">
->>>>>>> 79d81961257de351b4a10f7cb04a16dcb69965ab
                 <i class="fas fa-tachometer-alt"></i>
                 <span>Dashboard</span>
             </a>
@@ -163,7 +158,7 @@
                             </div>
                             <div class="view">
                                 <a href="{{ route("admin/profile") }}" type="button" class="log_pf" >Profile</a>
-                                <a href="{{ route("admin/profile") }}" type="button" class="log_out">logout</a>
+                                <a href="{{ route("login") }}" type="button" class="log_out">logout</a>    
                             </div>
                         </div>
                     </div>
@@ -178,14 +173,9 @@
     @yield('students')
     @yield('createStudent')
     @yield('coursesProgram')
-<<<<<<< HEAD
 </body>
 </html>
 
-=======
-    @yield('showStudent')
-    @yield('editStudent')
->>>>>>> 79d81961257de351b4a10f7cb04a16dcb69965ab
 {{-- endcontent --}}
     </div>
     <div class="footer">
