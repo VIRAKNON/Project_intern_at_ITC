@@ -38,6 +38,21 @@ Route::get('/studentAnnuals/show', function () {
 Route::get('/coursesAnnually', function () {
     return view('coursesAnnually');
 });
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+Route::get('/create_Coures', function () {
+    return view('create_Coures');
+});
+=======
+<<<<<<< HEAD
+Route::get('/admin/profile', function () {
+=======
+
+Route::get('/admin/profile', function () {
+
+>>>>>>> 79d81961257de351b4a10f7cb04a16dcb69965ab
+>>>>>>> 6d1d21008da3c30a81919ac24fbe45a5cb94bd69
 Route::get('/coursesProgram', function () {
     return view('coursesProgram');
 });
@@ -54,6 +69,7 @@ Route::get('/admin', function () {
 Route::get('/changepw', function () {
     return view('changepass');
 })->name('changepw');
+<<<<<<< HEAD
 
 //register
 Route::get('/register', [AuthController::class,'register'])->name('register');
@@ -62,3 +78,6 @@ Route::post('/register/submit/', [AuthController::class,'register_submit'])->nam
 //login
 Route::get('/', [AuthController::class,'login'])->name('login');
 Route::post('/login/submit/', [AuthController::class,'login_submit'])->name('login_submit');
+=======
+>>>>>>> f9b8af69e19630f91608520142cd2a14a13c14b1
+>>>>>>> 6d1d21008da3c30a81919ac24fbe45a5cb94bd69
