@@ -403,7 +403,6 @@
             $("#newAcInfo").removeClass("fade");
             $("#newAcInfo").addClass("active");
             
-
         });
         $("#Activate").click(function(){
             $("#Activate").find("a").addClass("active");
@@ -418,7 +417,6 @@
     });
 </script>
 </html>
-
 @endsection
 
    
