@@ -12,7 +12,9 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', function(){
+
+
+Route::get('/admin/dashboard', function(){
     return view('dashboard');
 });
 
@@ -28,6 +30,10 @@ Route::get('/studentAnnuals/create', function () {
     return view('createStudent');
 })->name('studentAnnuals/create');
 
+Route::get('/studentAnnuals/edit', function () {
+    return view('createStudent');
+})->name('studentAnnuals/edit');
+
 Route::get('/studentAnnuals/show', function () {
     return view('showStudent');
 })->name('studentAnnuals/show');
@@ -35,6 +41,31 @@ Route::get('/studentAnnuals/show', function () {
 Route::get('/coursesAnnually', function () {
     return view('coursesAnnually');
 });
+<<<<<<< HEAD
 Route::get('/create_Coures', function () {
     return view('create_Coures');
 });
+=======
+<<<<<<< HEAD
+Route::get('/admin/profile', function () {
+=======
+
+Route::get('/admin/profile', function () {
+
+>>>>>>> 79d81961257de351b4a10f7cb04a16dcb69965ab
+Route::get('/coursesProgram', function () {
+    return view('coursesProgram');
+});
+Route::get('/coursesProgram/createCoursesProgram', function () {
+    return view('createCoursesProgram');
+});
+    return view('profile');
+})->name('admin/profile');
+
+Route::get('/admin', function () {
+    return view('edit_info');
+})->name('admin');
+Route::get('/changepw', function () {
+    return view('changepass');
+})->name('changepw');
+>>>>>>> f9b8af69e19630f91608520142cd2a14a13c14b1

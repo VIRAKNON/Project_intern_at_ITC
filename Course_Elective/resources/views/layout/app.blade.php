@@ -15,103 +15,107 @@
 <body>
     <div class="sidebar">
         <div class="logo-details">
-        <i class='bx'><img src="{{asset('image/ITC.jpg')}}" alt="nonprofile"></i>
-        <span class="bx logo_name">ITC&nbsp;SMIS</span>
+            <i class='bx'><img src="{{asset('image/ITC.jpg')}}" alt="nonprofile"></i>
+            <span class="bx logo_name">ITC&nbsp;SMIS</span>
         </div>
         <ul class="nav_links">
             <div class="admin">
-            <img src="https://dev.itc.edu.kh/img/profiles/avatar.png" class="user-profile-image">
-            <p>AdminInstator</p>
-            <div class="icon">
-                <i class="fas fa-circle"></i>
-                <span>Online</span>
+                <img src="https://dev.itc.edu.kh/img/profiles/avatar.png" class="user-profile-image">
+                <p>AdminInstator</p>
+                <div class="icon">
+                    <i class="fas fa-circle"></i>
+                    <span>Online</span>
+                </div>
             </div>
-        </div>
+<<<<<<< HEAD
+        <li class="active">
+            <a href="{{ route('dashboard') }}">
+=======
         <li>
             <a href="{{ route('dashboard') }}" class="active">
-            <i class="fas fa-tachometer-alt"></i>
-            <span class="links_name">Dashboard</span>
+>>>>>>> 79d81961257de351b4a10f7cb04a16dcb69965ab
+                <i class="fas fa-tachometer-alt"></i>
+                <span>Dashboard</span>
             </a>
         </li>
         <li>
-            <a href="{{ route('studentAnnuals') }}">
+            <a href="{{ route('studentAnnuals') }}" class="activeStudentAnnuals">
             <i class="fas fa-user"></i>
             <span class="links_name">Student</span>
             </a>
         </li>
         <li>
             <a href="#">
-            <i class="fas fa-user-secret"></i>
-            <span class="links_name">Students Section</span>
+                <i class="fas fa-book"></i>
+                <span>Curses Annually</span>
             </a>
         </li>
         <li>
             <a href="#">
-            <i class="fas fa-user-astronaut"></i>
-            <span class="links_name">Employee</span>
+                <i class="fas fa-book-reader"></i>
+                <span>Courses Program</span>
             </a>
         </li>
         <li>
             <a href="#">
-            <i class="fas fa-graduation-cap"></i>
-            <span class="links_name">Scholarship</span>
+                <i class="fas fa-user-secret"></i>
+                <span>Students Section</span>
             </a>
         </li>
         <li>
             <a href="#">
-            <i class="fas fa-user-plus"></i>
-            <span class="links_name">Access Managment</span>
+                <i class="fas fa-graduation-cap"></i>
+                <span>Scholarship</span>
+            </a>
+        </li>
+        {{-- <li>
+            <a href="#">
+                <i class="fas fa-user-plus"></i>
+                <span>Access Managment</span>
             </a>
         </li>
         <li>
             <a href="#">
-            <i class="fas fa-user-edit"></i>
-            <span class="links_name">Examination</span>
+                <i class="fas fa-user-edit"></i>
+                <span>Examination</span>
             </a>
         </li>
         <li>
             <a href="#">
-            <i class="fas fa-book"></i>
-            <span class="links_name">Curse Managment</span>
+                <i class="far fa-window-maximize"></i>
+                <span>Manage Internship</span>
             </a>
         </li>
         <li>
             <a href="#">
-            <i class="far fa-window-maximize"></i>
-            <span class="links_name">Manage Internship</span>
+                <i class="far fa-calendar-alt"></i>
+                <span>Schedual Management</span>
             </a>
         </li>
         <li>
             <a href="#">
-            <i class="far fa-calendar-alt"></i>
-            <span class="links_name">Schedual Management</span>
+                <i class="fas fa-file-invoice-dollar"></i>
+                <span>Accounting</span>
             </a>
         </li>
         <li>
             <a href="#">
-            <i class="fas fa-file-invoice-dollar"></i>
-            <span class="links_name">Accounting</span>
+                <i class='bx bx-cog'></i>
+                <span>Configuration</span>
             </a>
         </li>
         <li>
             <a href="#">
-            <i class='bx bx-cog'></i>
-            <span class="links_name">Configuration</span>
+                <i class="fas fa-toolbox"></i>
+                <span>Log Viewer</span>
             </a>
         </li>
         <li>
             <a href="#">
-            <i class="fas fa-toolbox"></i>
-            <span class="links_name">Log Viewer</span>
+                <i class="fas fa-exclamation-triangle"></i>
+                <span>System Rounting</span>
             </a>
-        </li>
-        <li>
-            <a href="#">
-            <i class="fas fa-exclamation-triangle"></i>
-            <span class="links_name">System Rounting</span>
-            </a>
-        </li>
-
+        </li> --}}
     </ul>
 </div>
 <section class="home-section">
@@ -145,17 +149,24 @@
                 </a>
                 </div>
                 <div id="popup1" class="overlay">
-                <div class="popup2">
-                    <a class="close1" href="#">&times;</a>
-                    <div class="contents">
-                    <div class="pf"><img src="https://dev.itc.edu.kh/img/profiles/avatar.png" class="user-profile-image"></div>
-                    <p>Admin Islators-Web Developer</p>
-                    <div class="view">
-                        <button class="log_pf">Profile</button>
-                        <button class="log_out">logout</button>
+                    <div class="popup2">
+                        <a class="close1" href="#">&times;</a>
+                        <div class="contents">
+                            <div class="profile">
+                                <svg width="15vh" height="15vh" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8 8.8a4 4 0 1 1 8 0 4 4 0 0 1-8 0Z"></path>
+                                    <path fill-rule="evenodd" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0ZM1.6 12C1.6 6.256 6.256 1.6 12 1.6c5.744 0 10.4 4.656 10.4 10.4 0 2.96-1.236 5.63-3.22 7.524A5.6 5.6 0 0 0 13.6 14.4h-3.2a5.6 5.6 0 0 0-5.58 5.124A10.37 10.37 0 0 1 1.6 12Z" clip-rule="evenodd"></path>
+                                </svg>
+                            </div>
+                            <div class="sumuray">
+                                <p>Admin Islators-Web Developer</p>
+                            </div>
+                            <div class="view">
+                                <a href="{{ route("admin/profile") }}" type="button" class="log_pf" >Profile</a>
+                                <a href="{{ route("admin/profile") }}" type="button" class="log_out">logout</a>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                </div>
                 </div>
             </div>
         </div>
@@ -166,8 +177,15 @@
     @yield('dashboard')
     @yield('students')
     @yield('createStudent')
-    @yield('showStudent')
+    @yield('coursesProgram')
+<<<<<<< HEAD
+</body>
+</html>
 
+=======
+    @yield('showStudent')
+    @yield('editStudent')
+>>>>>>> 79d81961257de351b4a10f7cb04a16dcb69965ab
 {{-- endcontent --}}
     </div>
     <div class="footer">
@@ -194,8 +212,8 @@
         2000
     )
 });
-document.querySelector("#close").addEventListener("click", function(){
-    document.querySelector(".popup").style.display = "none";
-});
+    document.querySelector("#close").addEventListener("click", function(){
+        document.querySelector(".popup").style.display = "none";
+    });
 </script>
 </html>

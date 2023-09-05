@@ -54,9 +54,9 @@
                                             </tr>
                                             <tr>
                                                 <td><h3>Actions</h3></td>
-                                                <td>
-                                                    <span><button class="btn1">Edit Infomation</button></span>
-                                                    <span><button class="btn2">Change Password</button></span>
+                                                <td class="button">
+                                                    <a href="{{ route("admin") }}" type="button" class="log_pf" >Edit Information</a>
+                                                    <a href="{{ route("changepw") }}" type="button" class="log_out">Change Password</a>
                                                 </td>
                                             </tr>
                                         </table>
