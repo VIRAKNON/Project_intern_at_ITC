@@ -35,20 +35,6 @@ Route::get('/studentAnnuals/show', function () {
 Route::get('/coursesAnnually', function () {
     return view('coursesAnnually');
 });
-<<<<<<< HEAD
 Route::get('/create_Coures', function () {
-    return view('/create_Coures');
-=======
-Route::get('/profile', function () {
-    return view('profile');
-});
-Route::get('/info', function () {
-    return view('edit_info');
-});
-Route::get('/changepw', function () {
-    return view('changepass');
-});
-
-Route::get('/showStudent', function () {
-    return view("showStudent");
+    return view('create_Coures');
 });

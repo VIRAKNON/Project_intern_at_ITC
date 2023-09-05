@@ -248,14 +248,14 @@
                                 <div class="col-sm-12 scrollbar-primary">
                                     <div class="dataTable_scroll">
                                         <div class="dataTable_scrollHead" style="overflow: hidden; position: relative; border:0px; width: 100%;">
-                                            <div class="dataTable_scrollHeaderInner" style="box-sizing: content-box; width:803.5px;">
+                                            <div class="dataTable_scrollHeaderInner" style="box-sizing: content-box; width:1030px;">
                                                 <table class="table table-bordered table-hover dt-responsive nowrap dataTable no-footer" cellspacing="0" width="100%" role="grid">
                                                     <thead>
                                                         <tr role="row" style="height: 0px;">
-                                                            <th class="sorting_asc"  style="width: 37px;" aria-label=""></th>
-                                                            <th class="sorting" colspan="2" tabindex="0" aria-controls="courseAnnuals-table" style="width:9.75rem;">Name</th>
-                                                            <th width="0px;" class="sorting" tabindex="0" aria-controls="courseAnnuals-table" >Lecturer</th>
-                                                            <th width="0px;" colspan="2" class="sorting_disabled">Actions</th>
+                                                            <th class="sorting_asc"  style="width: 50px;" aria-label=""></th>
+                                                            <th class="sorting" colspan="2" tabindex="0" aria-controls="courseAnnuals-table" style="width:7.75rem;">Name</th>
+                                                            <th width="0px;" class="sorting" tabindex="0" aria-controls="courseAnnuals-table" style="width:17.75rem;" >Lecturer</th>
+                                                            <th width="0px;" colspan="2" class="sorting_disabled" style="width:4.3rem;">Actions</th>
                                                         </tr>
                                                     </thead>
                                                 </table>
@@ -273,8 +273,8 @@
                                                 </thead> --}}
                                                 <tbody>
                                                     <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td colspan="2">
+                                                        <td  style="width: 50px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
+                                                        <td colspan="2" style="width: 21.3rem;">
                                                             <div class="row">
                                                                 <div class="col-8">
                                                                     <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Advanced Computer Architecture</span>
@@ -290,1394 +290,372 @@
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                        <td style="width: 11.75rem;">CHUN Thavorac</td>
+                                                        <td style="width: 17.75rem;">CHUN Thavorac</td>
                                                         <td colspan="2">
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
+                                                            <a href="" class="btn p-0 border-0 mt-1" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Disable Scoring">
+                                                                <svg width="50" height="50" fill="#2dd100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" d="M7 7h10c2.76 0 5 2.24 5 5s-2.24 5-5 5H7c-2.76 0-5-2.24-5-5s2.24-5 5-5Zm-3 5c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3Z" clip-rule="evenodd"></path>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                                <svg width="29" height="29" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                                <svg width="25" height="25" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                                <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M3 6h18"></path>
+                                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                                    <path d="M10 11v6"></path>
+                                                                    <path d="M14 11v6"></path>
+                                                                </svg>
+                                                            </button>
                                                         </td>
                                                     </tr>
                                                     <tr role="row" class="even">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
+                                                        <td  style="width: 50px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
+                                                        <td colspan="2" style="width: 21.3rem;">
                                                             <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Physical Chemistry</span>
+                                                                <div class="col-8">
+                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Advanced Computer Architecture</span>
+                                                                    <span>(C=16 | TD=20 | TP= 12)</span>
                                                                 </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
+                                                                <div class="col-4">
+                                                                    I3GCA <br> AB
                                                                 </div>
+                                                            </div>
+                                                            <div class="row">
                                                                 <div class="col-12">
                                                                     <span>ឆមាសទី១ | ២០២២-២០២៣</span>
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                        <td style="width: 190px; padding-left:50px;">
+                                                        <td style="width: 17.75rem;">CHUN Thavorac</td>
+                                                        <td colspan="2">
+                                                            <a href="" class="btn p-0 border-0 mt-1" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Disable Scoring">
+                                                                <svg width="50" height="50" fill="#2dd100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" d="M7 7h10c2.76 0 5 2.24 5 5s-2.24 5-5 5H7c-2.76 0-5-2.24-5-5s2.24-5 5-5Zm-3 5c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3Z" clip-rule="evenodd"></path>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                                <svg width="29" height="29" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                                <svg width="25" height="25" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                                <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M3 6h18"></path>
+                                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                                    <path d="M10 11v6"></path>
+                                                                    <path d="M14 11v6"></path>
+                                                                </svg>
+                                                            </button>
+                                                        </td>
+                                                    </tr>                                                    <tr role="row" class="odd">
+                                                        <td  style="width: 50px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
+                                                        <td colspan="2" style="width: 21.3rem;">
                                                             <div class="row">
-                                                                <div class="col-12">
+                                                                <div class="col-8">
+                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Advanced Computer Architecture</span>
+                                                                    <span>(C=16 | TD=20 | TP= 12)</span>
+                                                                </div>
+                                                                <div class="col-4">
                                                                     I3GCA <br> AB
                                                                 </div>
                                                             </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
                                                             <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Discrete Mathematics</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
                                                                 <div class="col-12">
                                                                     <span>ឆមាសទី១ | ២០២២-២០២៣</span>
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="even">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Mathematical Modeling</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Mathematical Modeling</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
+                                                        <td style="width: 17.75rem;">CHUN Thavorac</td>
+                                                        <td colspan="2">
+                                                            <a href="" class="btn p-0 border-0 mt-1" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Disable Scoring">
+                                                                <svg width="50" height="50" fill="#2dd100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" d="M7 7h10c2.76 0 5 2.24 5 5s-2.24 5-5 5H7c-2.76 0-5-2.24-5-5s2.24-5 5-5Zm-3 5c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3Z" clip-rule="evenodd"></path>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                                <svg width="29" height="29" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                                <svg width="25" height="25" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                                <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M3 6h18"></path>
+                                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                                    <path d="M10 11v6"></path>
+                                                                    <path d="M14 11v6"></path>
+                                                                </svg>
+                                                            </button>
                                                         </td>
                                                     </tr>
                                                     <tr role="row" class="even">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 20px;">
+                                                        <td  style="width: 50px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
+                                                        <td colspan="2" style="width: 21.3rem;">
                                                             <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Object-Oriented Programming</span>
+                                                                <div class="col-8">
+                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Advanced Computer Architecture</span>
+                                                                    <span>(C=16 | TD=20 | TP= 12)</span>
                                                                 </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
+                                                                <div class="col-4">
+                                                                    I3GCA <br> AB
                                                                 </div>
+                                                            </div>
+                                                            <div class="row">
                                                                 <div class="col-12">
                                                                     <span>ឆមាសទី១ | ២០២២-២០២៣</span>
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
+                                                        <td style="width: 17.75rem;">CHUN Thavorac</td>
+                                                        <td colspan="2">
+                                                            <a href="" class="btn p-0 border-0 mt-1" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Disable Scoring">
+                                                                <svg width="50" height="50" fill="#2dd100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" d="M7 7h10c2.76 0 5 2.24 5 5s-2.24 5-5 5H7c-2.76 0-5-2.24-5-5s2.24-5 5-5Zm-3 5c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3Z" clip-rule="evenodd"></path>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                                <svg width="29" height="29" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                                <svg width="25" height="25" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                                <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M3 6h18"></path>
+                                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                                    <path d="M10 11v6"></path>
+                                                                    <path d="M14 11v6"></path>
+                                                                </svg>
+                                                            </button>
                                                         </td>
                                                     </tr>
                                                     <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
+                                                        <td  style="width: 50px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
+                                                        <td colspan="2" style="width: 21.3rem;">
                                                             <div class="row">
-                                                                <div class="col-12">
-                                                                    <span style="font-size: 18px;  font-weight: bold; width:200px">Professional Practice</span>
+                                                                <div class="col-8">
+                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Advanced Computer Architecture</span>
+                                                                    <span>(C=16 | TD=20 | TP= 12)</span>
                                                                 </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
+                                                                <div class="col-4">
+                                                                    I3GCA <br> AB
                                                                 </div>
+                                                            </div>
+                                                            <div class="row">
                                                                 <div class="col-12">
                                                                     <span>ឆមាសទី១ | ២០២២-២០២៣</span>
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Discrete Mathematics</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
+                                                        <td style="width: 17.75rem;">CHUN Thavorac</td>
+                                                        <td colspan="2">
+                                                            <a href="" class="btn p-0 border-0 mt-1" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Disable Scoring">
+                                                                <svg width="50" height="50" fill="#2dd100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" d="M7 7h10c2.76 0 5 2.24 5 5s-2.24 5-5 5H7c-2.76 0-5-2.24-5-5s2.24-5 5-5Zm-3 5c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3Z" clip-rule="evenodd"></path>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                                <svg width="29" height="29" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                                <svg width="25" height="25" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                                <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M3 6h18"></path>
+                                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                                    <path d="M10 11v6"></path>
+                                                                    <path d="M14 11v6"></path>
+                                                                </svg>
+                                                            </button>
                                                         </td>
                                                     </tr>
                                                     <tr role="row" class="even">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
+                                                        <td  style="width: 50px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
+                                                        <td colspan="2" style="width: 21.3rem;">
                                                             <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Mathematical Modeling</span>
+                                                                <div class="col-8">
+                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Advanced Computer Architecture</span>
+                                                                    <span>(C=16 | TD=20 | TP= 12)</span>
                                                                 </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
+                                                                <div class="col-4">
+                                                                    I3GCA <br> AB
                                                                 </div>
+                                                            </div>
+                                                            <div class="row">
                                                                 <div class="col-12">
                                                                     <span>ឆមាសទី១ | ២០២២-២០២៣</span>
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
+                                                        <td style="width: 17.75rem;">CHUN Thavorac</td>
+                                                        <td colspan="2">
+                                                            <a href="" class="btn p-0 border-0 mt-1" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Disable Scoring">
+                                                                <svg width="50" height="50" fill="#2dd100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" d="M7 7h10c2.76 0 5 2.24 5 5s-2.24 5-5 5H7c-2.76 0-5-2.24-5-5s2.24-5 5-5Zm-3 5c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3Z" clip-rule="evenodd"></path>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                                <svg width="29" height="29" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                                <svg width="25" height="25" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                                <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M3 6h18"></path>
+                                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                                    <path d="M10 11v6"></path>
+                                                                    <path d="M14 11v6"></path>
+                                                                </svg>
+                                                            </button>
                                                         </td>
                                                     </tr>
                                                     <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
+                                                        <td  style="width: 50px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
+                                                        <td colspan="2" style="width: 21.3rem;">
                                                             <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Mathematical Modeling</span>
+                                                                <div class="col-8">
+                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Advanced Computer Architecture</span>
+                                                                    <span>(C=16 | TD=20 | TP= 12)</span>
                                                                 </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
+                                                                <div class="col-4">
+                                                                    I3GCA <br> AB
                                                                 </div>
+                                                            </div>
+                                                            <div class="row">
                                                                 <div class="col-12">
                                                                     <span>ឆមាសទី១ | ២០២២-២០២៣</span>
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
+                                                        <td style="width: 17.75rem;">CHUN Thavorac</td>
+                                                        <td colspan="2">
+                                                            <a href="" class="btn p-0 border-0 mt-1" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Disable Scoring">
+                                                                <svg width="50" height="50" fill="#2dd100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" d="M7 7h10c2.76 0 5 2.24 5 5s-2.24 5-5 5H7c-2.76 0-5-2.24-5-5s2.24-5 5-5Zm-3 5c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3Z" clip-rule="evenodd"></path>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                                <svg width="29" height="29" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                                <svg width="25" height="25" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                                <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M3 6h18"></path>
+                                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                                    <path d="M10 11v6"></path>
+                                                                    <path d="M14 11v6"></path>
+                                                                </svg>
+                                                            </button>
                                                         </td>
                                                     </tr>
                                                     <tr role="row" class="even">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 20px;">
+                                                        <td  style="width: 50px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
+                                                        <td colspan="2" style="width: 21.3rem;">
                                                             <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Object-Oriented Programming</span>
+                                                                <div class="col-8">
+                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Advanced Computer Architecture</span>
+                                                                    <span>(C=16 | TD=20 | TP= 12)</span>
                                                                 </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
+                                                                <div class="col-4">
+                                                                    I3GCA <br> AB
                                                                 </div>
+                                                            </div>
+                                                            <div class="row">
                                                                 <div class="col-12">
                                                                     <span>ឆមាសទី១ | ២០២២-២០២៣</span>
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span style="font-size: 18px;  font-weight: bold; width:200px">Professional Practice</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
+                                                        <td style="width: 17.75rem;">CHUN Thavorac</td>
+                                                        <td colspan="2">
+                                                            <a href="" class="btn p-0 border-0 mt-1" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Disable Scoring">
+                                                                <svg width="50" height="50" fill="#2dd100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path fill-rule="evenodd" d="M7 7h10c2.76 0 5 2.24 5 5s-2.24 5-5 5H7c-2.76 0-5-2.24-5-5s2.24-5 5-5Zm-3 5c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3Z" clip-rule="evenodd"></path>
+                                                                </svg>
+                                                            </a>
+                                                            <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                                <svg width="29" height="29" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                                <svg width="25" height="25" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                                <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M3 6h18"></path>
+                                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                                    <path d="M10 11v6"></path>
+                                                                    <path d="M14 11v6"></path>
+                                                                </svg>
+                                                            </button>
                                                         </td>
                                                     </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Discrete Mathematics</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="even">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Mathematical Modeling</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Mathematical Modeling</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="even">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 20px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Object-Oriented Programming</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span style="font-size: 18px;  font-weight: bold; width:200px">Professional Practice</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Discrete Mathematics</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="even">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Mathematical Modeling</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Mathematical Modeling</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="even">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 20px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Object-Oriented Programming</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span style="font-size: 18px;  font-weight: bold; width:200px">Professional Practice</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Discrete Mathematics</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="even">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Mathematical Modeling</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Mathematical Modeling</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="even">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 20px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Object-Oriented Programming</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span style="font-size: 18px;  font-weight: bold; width:200px">Professional Practice</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Discrete Mathematics</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="even">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Mathematical Modeling</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Mathematical Modeling</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="even">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 20px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Object-Oriented Programming</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span style="font-size: 18px;  font-weight: bold; width:200px">Professional Practice</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Discrete Mathematics</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="even">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Mathematical Modeling</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Mathematical Modeling</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="even">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 20px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Object-Oriented Programming</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span style="font-size: 18px;  font-weight: bold; width:200px">Professional Practice</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Discrete Mathematics</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="even">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Mathematical Modeling</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Mathematical Modeling</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="even">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 20px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Object-Oriented Programming</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span style="font-size: 18px;  font-weight: bold; width:200px">Professional Practice</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Discrete Mathematics</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="even">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Mathematical Modeling</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Mathematical Modeling</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="even">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 20px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Object-Oriented Programming</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
-                                                    <tr role="row" class="odd">
-                                                        <td  style="width: 10px;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td  style="width: 50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span style="font-size: 18px;  font-weight: bold; width:200px">Professional Practice</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>(C=32 | TD=0 | TP= 0)</span>
-                                                                </div>
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 190px; padding-left:50px;">
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td colspan="2">CHUN Thavorac</td>
-                                                        <td>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-disable-enable-scoring/8514?operation=no" class="btn btn-sm btn-xs btn-success toggle_scoring"><i class="fa fa-toggle-off" data-toggle="tooltip" data-placement="top" title="" data-original-title="Disable Scoring"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course-annual/8514/form-input-score-course-annual" class="btn btn-sm btn-xs btn-info input_score_course"><i class="fa fa-area-chart" data-toggle="tooltip" data-placement="top" title="" data-original-title="input score"></i></a>
-                                                            <a href="https://dev.itc.edu.kh/admin/course/course_annual/8514/edit" class="btn btn-sm btn-xs btn-primary"><i class="fa fa-pencil" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit"></i></a>
-                                                            <button class="btn btn-sm btn-xs btn-danger btn-delete" data-remote="https://dev.itc.edu.kh/admin/course/course_annual/8514"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="" data-original-title="Delete"></i></button>
-                                                        </td>
-                                                    </tr>
+
                                                 </tbody>
                                             </table>
                                         </div>
@@ -1712,32 +690,32 @@
                         </div> --}}
                         <div class="course_session_wrapper">
                             {{-- <button class="btn btn-sm btn_add_course_session" >Add Course Session</button> --}}
-                            <button class="btn btn-sm btn_add_course_session" style=" margin-top:7px; background-color: rgb(206, 206, 206);">Add Course Session</button>
-                            <div class="col-sm-12 box-body with-border text-muted well well-sm no-shadow  mt-2" style="padding:0 70px; min-height: 50px; background-color: rgb(235, 235, 235);">
+                            <button class="btn btn-sm " style=" margin-top:7px; background-color: rgb(206, 206, 206); color:black;">Add Course Session</button>
+                            <div class="col-sm-12 p-3 no-shadow mt-2" style=" min-height: 60px; background-color: rgb(235, 235, 235);">
                                 <div class="form_add_session" >
                                     <div class="row">
                                         <div class="col-2" style="padding-left:3px; padding-right: 3px;">
                                             <div class="form-group">
-                                                <label for="session_time_course">Course</label>
-                                                <input type="number" name="time_course" min="0" max="16" value="16" class="form-control shadow-none" id="session_time_course">
+                                                <label for="session_time_course" class="fw-bold">Course</label>
+                                                <input type="number" name="time_course" min="0" max="16" value="16" class="form-control shadow-none form-control-sm" id="session_time_course">
                                                 <input type="hidden" name="course_annual_id" value="">
                                             </div>
                                         </div>
                                         <div class="col-2">
                                             <div class="form-group">
-                                                <label for="session_time_td">TD</label>
-                                                <input type="number" name="time_td" id="" class="form-control shadow-none">
+                                                <label for="session_time_td" class="fw-bold">TD</label>
+                                                <input type="number" name="time_td" id="" class="form-control shadow-none form-control-sm">
                                             </div>
                                         </div>
                                         <div class="col-2">
                                             <div class="form-group">
-                                                <label for="session_time_tp">TP</label>
-                                                <input type="number" name="time_tp" min="0" max="32" value="" id="session_time_tp" class="form-control shadow-none">
+                                                <label for="session_time_tp" class="fw-bold">TP</label>
+                                                <input type="number" name="time_tp" min="0" max="32" value="" id="session_time_tp" class="form-control shadow-none form-control-sm">
                                             </div>
                                         </div>
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <label for="select_lecturer">Lecturer</label>
+                                                <label for="select_lecturer" class="fw-bold">Lecturer</label>
                                                 <select name="" id="select_lecturer" class="form-select form-select-sm form-comtrol shadow-none" style="width: 100%;">
                                                     <option value=""></option>
                                                     <option value="1">Ava</option>
@@ -1767,18 +745,18 @@
                                     <div class="row" style="">
                                         <div class="col-md-8 mt-3" style="padding-left:3px; padding-right: 3px;">
                                             <div class="form_group">
-                                                <label for="groups">Group</label>
-                                                <label for="group">
-                                                    <input type="checkbox" class="each-check-box" name="groups[]" id="" value=""> A
+                                                <label for="groups" class="fw-bold">Group</label>
+                                                <label for="group" class="fw-bold">
+                                                    <input type="checkbox" class="each-check-box" name="" id="" value=""> A
                                                 </label>
-                                                <label for="group">
-                                                    <input type="checkbox" class="each-check-box" name="groups[]" id="" value=""> B
+                                                <label for="group" class="fw-bold">
+                                                    <input type="checkbox" class="each-check-box" name="" id="" value=""> B
                                                 </label>
                                             </div>
                                         </div>
                                         <div class="col-md-4 mt-3">
-                                            <button type="button" class="btn btn-xs pull-right btn_cancel_course_session" style="margin: 2px;">Cancel</button>
-                                            <button type="button" class="btn btn-xs btn-danger pull-right btn_save_course_session" style="margin: 2px;">Save</button>
+                                            <button type="button" class="btn pull-right p-0 px-2 mx-2 rounded-1" style="background-color: #FF4500">Cancel</button>
+                                            <button type="button" class="btn pull-right p-0 px-2 mx-2 rounded-1" style="background-color:#1E90FF">Save</button>
                                         </div>
                                     </div>
                                 </div>

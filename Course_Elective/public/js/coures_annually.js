@@ -41,6 +41,10 @@ $(document).ready(function() {
       $("#select_lecturer").val(null).trigger("change");
     });
   });
+  
+  $(document).ready(function() {
+    $('[data-bs-toggle="tooltip"]').tooltip();
+  });
 
 
 
