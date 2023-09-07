@@ -31,7 +31,7 @@ Route::get('/studentAnnuals/create', function () {
 })->name('studentAnnuals/create');
 
 Route::get('/studentAnnuals/edit', function () {
-    return view('createStudent');
+    return view('edit_Student');
 })->name('studentAnnuals/edit');
 
 Route::get('/studentAnnuals/show', function () {
@@ -47,6 +47,7 @@ Route::get('/admin/profile', function () {
 Route::get('/coursesProgram', function () {
     return view('coursesProgram');
 });
+
 Route::get('/coursesProgram/createCoursesProgram', function () {
     return view('createCoursesProgram');
 });

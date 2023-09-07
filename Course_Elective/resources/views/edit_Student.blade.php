@@ -41,7 +41,7 @@
             box-shadow:  5px 5px 7px #d6d6d6;
         ">
             <header class="py-2">
-                <span class="fs-3">Students</span>
+                <span class="fs-3">Edit Student</span>
                 <span class="px-3 ">Register new student</span>
             </header>
         </div>
