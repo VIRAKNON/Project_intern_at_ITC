@@ -41,11 +41,52 @@ $(document).ready(function() {
       $("#select_lecturer").val(null).trigger("change");
     });
   });
-  
+
   $(document).ready(function() {
     $('[data-bs-toggle="tooltip"]').tooltip();
   });
 
+
+  $(document).ready(function() {
+    const toggleButton = $('#toggleForm');
+    const courseForm = $('#courseForm');
+
+    toggleButton.click(function() {
+        if (courseForm.hasClass('hidden')) {
+            courseForm.removeClass('hidden');
+            toggleButton.text('Add Course Session');
+        } else {
+            courseForm.addClass('hidden');
+            toggleButton.text('Add Course Session');
+        }
+    });
+});
+
+
+$(document).ready(function () {
+    let scoringEnabled = false;
+
+    function toggleScoring() {
+        scoringEnabled = !scoringEnabled;
+        const button = $("#toggle-button");
+        const icon = $("#icon");
+        const status = $("#scoring-status");
+
+        if (scoringEnabled) {
+            button.removeClass("disabled").addClass("enabled");
+            icon.removeClass("fa-toggle-off").addClass("fa-toggle-on");
+            // Add your code to enable scoring for more data here
+        } else {
+            button.removeClass("enabled").addClass("disabled");
+            icon.removeClass("fa-toggle-on").addClass("fa-toggle-off");
+            // Add your code to disable scoring for more data here
+        }
+    }
+
+    $("#toggle-button").on("click", function () {
+        toggleScoring();
+    });
+});
 
 
 //         var $search_url = "https://dev.itc.edu.kh/admin/employee-search";
