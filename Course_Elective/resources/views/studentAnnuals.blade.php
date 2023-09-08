@@ -7,10 +7,11 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         {{-- CDN --}}
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
         <link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
         {{-- endCDN --}}
         <link rel="stylesheet" href="{{asset('css/studentAnnuals.css')}}">
+        <link rel="stylesheet" href="{{asset('js/studentAnnuals.js')}}">
         <title>Student Annuals</title>
         <style>
             @import 'path/to/bootstrap-source/_reboot.scss';
@@ -18,14 +19,31 @@
             ol, ul {
                 padding-left:0;
             }
+            .sidebar .nav_links li a.activeStudentAnnuals{
+                background: #2C3E50;
+                border-left: 4px solid #157DEC;
+                color: #FFFFFF;
+            }
+            .sidebar .nav_links li a.activeStudentAnnuals i{
+                color: #FFFFFF;
+            }
+            .sidebar .nav_links li a.activeStudentAnnuals span{
+                color: #FFFFFF;
+            }
         </style>
     </head>
     <body>
         <div class="container-fluid bg-light vh-100">
-            <header class="py-2">
-                <span class="fs-3">Students</span>
-                <span class="px-3">All existing students</span>
-            </header>
+            <div class="row bg-light mb-4" style="
+                border-radius: 5px;
+                background-color: #ffffff;
+                box-shadow:  5px 5px 7px #d6d6d6;
+            ">
+                <header class="py-2">
+                    <span class="fs-3">Students</span>
+                    <span class="px-3">All existing students</span>
+                </header>
+            </div>
             <div class="contentStu p-3">
                 <div class="row">
                     <div class="col-8">
@@ -45,7 +63,7 @@
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="#">Separated link</a></li>
                             </ul>
-                            <button class="btn btn-warning text-light mx-2 rounded-start-2 rounded-end-2" type="button">
+                            {{-- <button class="btn btn-warning text-light mx-2 rounded-start-2 rounded-end-2" type="button">
                                 <svg width="20" height="20" fill="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" d="M2.02 12c0-5.51 4.47-9.98 9.98-9.98 5.51 0 9.98 4.47 9.98 9.98 0 5.51-4.47 9.98-9.98 9.98-5.51 0-9.98-4.47-9.98-9.98Zm9.46 1.74V20l4.87-9.74H13V4l-5 9.74h3.48Z" clip-rule="evenodd"></path>
                                 </svg>
@@ -59,13 +77,13 @@
                                 <svg width="20" height="20" fill="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M17.645 6.35A7.958 7.958 0 0 0 11.995 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08a5.99 5.99 0 0 1-5.65 4c-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L12.995 11h7V4l-2.35 2.35Z"></path>
                                 </svg>
-                            </button>
+                            </button> --}}
 
                         </div>
 
                     </div>
                     <div class="col-4">
-                        <div class="btn-group float-end">
+                        {{-- <div class="btn-group float-end">
                             <div class="dropdown mx-2">
                                 <button class="btn text-light dropdown-toggle" style="background-color: #FF5F1F" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Action
@@ -96,7 +114,7 @@
                                     <li><a class="dropdown-item" href="#">Something else here</a></li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
 
                 </div>
@@ -201,13 +219,14 @@
                                 <td>Option</td>
                                 <td>Group</td>
                                 <td>
-                                    <a href="" class="btn p-0 border-0">
+                                    <a href="{{route('studentAnnuals/edit')}}" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit">
+
                                         <svg width="25" height="25" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
                                             <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
                                         </svg>
                                     </a>
-                                    <button class="btn p-0 px-2 border-0" type="button">
+                                    <button class="btn p-0 px-2 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
                                         <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3 6h18"></path>
                                             <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
@@ -215,7 +234,7 @@
                                             <path d="M14 11v6"></path>
                                         </svg>
                                     </button>
-                                    <a href="{{ route('studentAnnuals/show') }}" class="btn p-0 border-0">
+                                    <a href="{{ route('studentAnnuals/show') }}" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="View Detail">
                                         <svg width="30" height="30" fill="#00aaff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" d="M16 8c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4ZM4 18c0-2.66 5.33-4 8-4s8 1.34 8 4v2H4v-2Z" clip-rule="evenodd"></path>
                                         </svg>
@@ -226,10 +245,15 @@
                     </table>
                 </form>
 
-
             </div>
         </div>
-
+        <script>
+            // Initialize tooltips on button CRUD
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        </script>
     </body>
     </html>
 @endsection

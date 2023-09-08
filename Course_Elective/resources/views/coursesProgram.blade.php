@@ -361,8 +361,12 @@
             $("#GeneralInfo").addClass("fade");
             $("#newAcInfo").removeClass("fade");
             $("#newAcInfo").addClass("active");
+<<<<<<< HEAD
 
 
+=======
+            
+>>>>>>> faf90d767aaec2fc38c86e8253d5ee866ff19af8
         });
         $("#Activate").click(function(){
             $("#Activate").find("a").addClass("active");
@@ -377,6 +381,5 @@
     });
 </script>
 </html>
-
 @endsection
 

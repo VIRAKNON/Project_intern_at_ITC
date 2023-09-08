@@ -125,10 +125,11 @@
 .user_down2 table td{
     padding: 10px;
 }
-table tr td span button{
+.log_pf{
     background-color:#157dece4;
+    text-decoration: none;
     border: none;
-    padding: 7px;
+    padding: 5px 15px;
     border-radius: 4px;
     color: white;
     cursor: pointer;
@@ -136,12 +137,18 @@ table tr td span button{
 tr:nth-child(odd):hover{background-color:#E5E7E9;}
 tr:nth-child(even) {background: #E5E7E9}
 tr:nth-child(odd) {background: #F0F3F4}
-.btn1:hover{
+.log_pf:hover{
     background-color: #157dec;
 }
-.btn2{
+.log_out{
+    text-decoration: none;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
     background-color: #f28729;
 }
-.btn2:hover{
+.log_out:hover{
     background-color:#f97807;
 }
