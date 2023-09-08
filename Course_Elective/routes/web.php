@@ -39,10 +39,18 @@ Route::get('/coursesAnnually', function () {
     return view('coursesAnnually');
 });
 
+
 Route::get('/create_Coures', function () {
     return view('create_Coures');
 });
 
+Route::get('/coursesProgram', function () {
+    return view('coursesProgram');
+})->name('coursesProgram');
+
+Route::get('/coursesProgram/create', function () {
+    return view('createCoursesProgram');
+})->name('coursesProgram/create');
 Route::get('/coursesProgram', function () {
     return view('coursesProgram');
 });
@@ -68,4 +76,3 @@ Route::post('/register/submit/', [AuthController::class,'register_submit'])->nam
 //login
 Route::get('/', [AuthController::class,'login'])->name('login');
 Route::post('/login/submit/', [AuthController::class,'login_submit'])->name('login_submit');
-

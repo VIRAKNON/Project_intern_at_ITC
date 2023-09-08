@@ -272,7 +272,53 @@
                                                     </tr>
                                                 </thead> --}}
                                                 <tbody>
-                                                    <tr role="row" class="odd">
+                                                    <tr role="row" class="even">
+                                                        <td  style="width: 7%;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
+                                                        <td colspan="2" style="40%;">
+                                                            <div class="row">
+                                                                <div class="col-8">
+                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Advanced Computer Architecture</span>
+                                                                    <span>(C=16 | TD=20 | TP= 12)</span>
+                                                                </div>
+                                                                <div class="col-4">
+                                                                    I3GCA <br> AB
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td style="width: 26.5%;">CHUN Thavorac</td>
+                                                        <td colspan="2" style="width: 26.5%;">
+                                                            <button id="toggle-button" class="disabled" onclick="toggleScoring()">
+                                                                <i id="icon" class="fas fa-toggle-off"></i>
+                                                            </button>
+                                                            <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                                <svg width="26" height="26" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                                <svg width="22" height="22" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                                <svg width="22" height="22" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M3 6h18"></path>
+                                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                                    <path d="M10 11v6"></path>
+                                                                    <path d="M14 11v6"></path>
+                                                                </svg>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr role="row" class="old">
                                                         <td  style="width: 7%;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
                                                         <td colspan="2" style="40%;">
                                                             <div class="row">
@@ -293,25 +339,24 @@
                                                         <td style="width: 26.5%;">CHUN Thavorac</td>
                                                         <td colspan="2" style="width: 26.5%;">
                                                             <a href="" class="btn p-0 border-0 mt-1" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Disable Scoring">
-                                                                <svg width="50" height="50" fill="#2dd100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd" d="M7 7h10c2.76 0 5 2.24 5 5s-2.24 5-5 5H7c-2.76 0-5-2.24-5-5s2.24-5 5-5Zm-3 5c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3Z" clip-rule="evenodd"></path>
-                                                                </svg>
+                                                                <input type="checkbox" id="check1" class="toggle">
+                                                                <label for="check1"></label>
                                                             </a>
                                                             <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
-                                                                <svg width="29" height="29" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <svg width="26" height="26" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
                                                                 </svg>
                                                             </a>
 
                                                             <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
-                                                                <svg width="25" height="25" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <svg width="22" height="22" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
                                                                     <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
                                                                 </svg>
                                                             </a>
 
                                                             <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
-                                                                <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <svg width="22" height="22" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M3 6h18"></path>
                                                                     <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
                                                                     <path d="M10 11v6"></path>
@@ -341,25 +386,71 @@
                                                         <td style="width: 26.5%;">CHUN Thavorac</td>
                                                         <td colspan="2" style="width: 26.5%;">
                                                             <a href="" class="btn p-0 border-0 mt-1" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Disable Scoring">
-                                                                <svg width="50" height="50" fill="#2dd100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd" d="M7 7h10c2.76 0 5 2.24 5 5s-2.24 5-5 5H7c-2.76 0-5-2.24-5-5s2.24-5 5-5Zm-3 5c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3Z" clip-rule="evenodd"></path>
-                                                                </svg>
+                                                                <input type="checkbox" id="check1" class="toggle">
+                                                                <label for="check1"></label>
                                                             </a>
                                                             <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
-                                                                <svg width="29" height="29" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <svg width="26" height="26" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
                                                                 </svg>
                                                             </a>
 
                                                             <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
-                                                                <svg width="25" height="25" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <svg width="22" height="22" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
                                                                     <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
                                                                 </svg>
                                                             </a>
 
                                                             <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
-                                                                <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <svg width="22" height="22" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M3 6h18"></path>
+                                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                                    <path d="M10 11v6"></path>
+                                                                    <path d="M14 11v6"></path>
+                                                                </svg>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr role="row" class="old">
+                                                        <td  style="width: 7%;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
+                                                        <td colspan="2" style="40%;">
+                                                            <div class="row">
+                                                                <div class="col-8">
+                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Advanced Computer Architecture</span>
+                                                                    <span>(C=16 | TD=20 | TP= 12)</span>
+                                                                </div>
+                                                                <div class="col-4">
+                                                                    I3GCA <br> AB
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td style="width: 26.5%;">CHUN Thavorac</td>
+                                                        <td colspan="2" style="width: 26.5%;">
+                                                            <a href="" class="btn p-0 border-0 mt-1" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Disable Scoring">
+                                                                <input type="checkbox" id="check1" class="toggle">
+                                                                <label for="check1"></label>
+                                                            </a>
+                                                            <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                                <svg width="26" height="26" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                                <svg width="22" height="22" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                                <svg width="22" height="22" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M3 6h18"></path>
                                                                     <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
                                                                     <path d="M10 11v6"></path>
@@ -389,25 +480,71 @@
                                                         <td style="width: 26.5%;">CHUN Thavorac</td>
                                                         <td colspan="2" style="width: 26.5%;">
                                                             <a href="" class="btn p-0 border-0 mt-1" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Disable Scoring">
-                                                                <svg width="50" height="50" fill="#2dd100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd" d="M7 7h10c2.76 0 5 2.24 5 5s-2.24 5-5 5H7c-2.76 0-5-2.24-5-5s2.24-5 5-5Zm-3 5c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3Z" clip-rule="evenodd"></path>
-                                                                </svg>
+                                                                <input type="checkbox" id="check1" class="toggle">
+                                                                <label for="check1"></label>
                                                             </a>
                                                             <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
-                                                                <svg width="29" height="29" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <svg width="26" height="26" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
                                                                 </svg>
                                                             </a>
 
                                                             <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
-                                                                <svg width="25" height="25" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <svg width="22" height="22" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
                                                                     <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
                                                                 </svg>
                                                             </a>
 
                                                             <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
-                                                                <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <svg width="22" height="22" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M3 6h18"></path>
+                                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                                    <path d="M10 11v6"></path>
+                                                                    <path d="M14 11v6"></path>
+                                                                </svg>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr role="row" class="old">
+                                                        <td  style="width: 7%;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
+                                                        <td colspan="2" style="40%;">
+                                                            <div class="row">
+                                                                <div class="col-8">
+                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Advanced Computer Architecture</span>
+                                                                    <span>(C=16 | TD=20 | TP= 12)</span>
+                                                                </div>
+                                                                <div class="col-4">
+                                                                    I3GCA <br> AB
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td style="width: 26.5%;">CHUN Thavorac</td>
+                                                        <td colspan="2" style="width: 26.5%;">
+                                                            <a href="" class="btn p-0 border-0 mt-1" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Disable Scoring">
+                                                                <input type="checkbox" id="check1" class="toggle">
+                                                                <label for="check1"></label>
+                                                            </a>
+                                                            <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                                <svg width="26" height="26" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                                <svg width="22" height="22" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                                <svg width="22" height="22" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M3 6h18"></path>
                                                                     <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
                                                                     <path d="M10 11v6"></path>
@@ -437,25 +574,71 @@
                                                         <td style="width: 26.5%;">CHUN Thavorac</td>
                                                         <td colspan="2" style="width: 26.5%;">
                                                             <a href="" class="btn p-0 border-0 mt-1" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Disable Scoring">
-                                                                <svg width="50" height="50" fill="#2dd100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd" d="M7 7h10c2.76 0 5 2.24 5 5s-2.24 5-5 5H7c-2.76 0-5-2.24-5-5s2.24-5 5-5Zm-3 5c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3Z" clip-rule="evenodd"></path>
-                                                                </svg>
+                                                                <input type="checkbox" id="check1" class="toggle">
+                                                                <label for="check1"></label>
                                                             </a>
                                                             <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
-                                                                <svg width="29" height="29" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <svg width="26" height="26" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
                                                                 </svg>
                                                             </a>
 
                                                             <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
-                                                                <svg width="25" height="25" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <svg width="22" height="22" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
                                                                     <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
                                                                 </svg>
                                                             </a>
 
                                                             <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
-                                                                <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <svg width="22" height="22" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M3 6h18"></path>
+                                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                                    <path d="M10 11v6"></path>
+                                                                    <path d="M14 11v6"></path>
+                                                                </svg>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr role="row" class="old">
+                                                        <td  style="width: 7%;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
+                                                        <td colspan="2" style="40%;">
+                                                            <div class="row">
+                                                                <div class="col-8">
+                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Advanced Computer Architecture</span>
+                                                                    <span>(C=16 | TD=20 | TP= 12)</span>
+                                                                </div>
+                                                                <div class="col-4">
+                                                                    I3GCA <br> AB
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td style="width: 26.5%;">CHUN Thavorac</td>
+                                                        <td colspan="2" style="width: 26.5%;">
+                                                            <a href="" class="btn p-0 border-0 mt-1" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Disable Scoring">
+                                                                <input type="checkbox" id="check1" class="toggle">
+                                                                <label for="check1"></label>
+                                                            </a>
+                                                            <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                                <svg width="26" height="26" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                                <svg width="22" height="22" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                                <svg width="22" height="22" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M3 6h18"></path>
                                                                     <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
                                                                     <path d="M10 11v6"></path>
@@ -485,25 +668,71 @@
                                                         <td style="width: 26.5%;">CHUN Thavorac</td>
                                                         <td colspan="2" style="width: 26.5%;">
                                                             <a href="" class="btn p-0 border-0 mt-1" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Disable Scoring">
-                                                                <svg width="50" height="50" fill="#2dd100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd" d="M7 7h10c2.76 0 5 2.24 5 5s-2.24 5-5 5H7c-2.76 0-5-2.24-5-5s2.24-5 5-5Zm-3 5c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3Z" clip-rule="evenodd"></path>
-                                                                </svg>
+                                                                <input type="checkbox" id="check1" class="toggle">
+                                                                <label for="check1"></label>
                                                             </a>
                                                             <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
-                                                                <svg width="29" height="29" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <svg width="26" height="26" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
                                                                 </svg>
                                                             </a>
 
                                                             <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
-                                                                <svg width="25" height="25" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <svg width="22" height="22" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
                                                                     <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
                                                                 </svg>
                                                             </a>
 
                                                             <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
-                                                                <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <svg width="22" height="22" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M3 6h18"></path>
+                                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                                    <path d="M10 11v6"></path>
+                                                                    <path d="M14 11v6"></path>
+                                                                </svg>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr role="row" class="old">
+                                                        <td  style="width: 7%;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
+                                                        <td colspan="2" style="40%;">
+                                                            <div class="row">
+                                                                <div class="col-8">
+                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Advanced Computer Architecture</span>
+                                                                    <span>(C=16 | TD=20 | TP= 12)</span>
+                                                                </div>
+                                                                <div class="col-4">
+                                                                    I3GCA <br> AB
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td style="width: 26.5%;">CHUN Thavorac</td>
+                                                        <td colspan="2" style="width: 26.5%;">
+                                                            <a href="" class="btn p-0 border-0 mt-1" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Disable Scoring">
+                                                                <input type="checkbox" id="check1" class="toggle">
+                                                                <label for="check1"></label>
+                                                            </a>
+                                                            <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                                <svg width="26" height="26" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                                <svg width="22" height="22" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                                <svg width="22" height="22" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M3 6h18"></path>
                                                                     <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
                                                                     <path d="M10 11v6"></path>
@@ -533,25 +762,71 @@
                                                         <td style="width: 26.5%;">CHUN Thavorac</td>
                                                         <td colspan="2" style="width: 26.5%;">
                                                             <a href="" class="btn p-0 border-0 mt-1" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Disable Scoring">
-                                                                <svg width="50" height="50" fill="#2dd100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd" d="M7 7h10c2.76 0 5 2.24 5 5s-2.24 5-5 5H7c-2.76 0-5-2.24-5-5s2.24-5 5-5Zm-3 5c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3Z" clip-rule="evenodd"></path>
-                                                                </svg>
+                                                                <input type="checkbox" id="check1" class="toggle">
+                                                                <label for="check1"></label>
                                                             </a>
                                                             <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
-                                                                <svg width="29" height="29" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <svg width="26" height="26" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
                                                                 </svg>
                                                             </a>
 
                                                             <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
-                                                                <svg width="25" height="25" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <svg width="22" height="22" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
                                                                     <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
                                                                 </svg>
                                                             </a>
 
                                                             <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
-                                                                <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <svg width="22" height="22" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M3 6h18"></path>
+                                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                                    <path d="M10 11v6"></path>
+                                                                    <path d="M14 11v6"></path>
+                                                                </svg>
+                                                            </button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr role="row" class="old">
+                                                        <td  style="width: 7%;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
+                                                        <td colspan="2" style="40%;">
+                                                            <div class="row">
+                                                                <div class="col-8">
+                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Advanced Computer Architecture</span>
+                                                                    <span>(C=16 | TD=20 | TP= 12)</span>
+                                                                </div>
+                                                                <div class="col-4">
+                                                                    I3GCA <br> AB
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-12">
+                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
+                                                                </div>
+                                                            </div>
+                                                        </td>
+                                                        <td style="width: 26.5%;">CHUN Thavorac</td>
+                                                        <td colspan="2" style="width: 26.5%;">
+                                                            <a href="" class="btn p-0 border-0 mt-1" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Disable Scoring">
+                                                                <input type="checkbox" id="check1" class="toggle">
+                                                                <label for="check1"></label>
+                                                            </a>
+                                                            <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                                <svg width="26" height="26" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                                <svg width="22" height="22" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                                                </svg>
+                                                            </a>
+
+                                                            <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                                <svg width="22" height="22" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M3 6h18"></path>
                                                                     <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
                                                                     <path d="M10 11v6"></path>
@@ -581,25 +856,24 @@
                                                         <td style="width: 26.5%;">CHUN Thavorac</td>
                                                         <td colspan="2" style="width: 26.5%;">
                                                             <a href="" class="btn p-0 border-0 mt-1" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Disable Scoring">
-                                                                <svg width="50" height="50" fill="#2dd100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd" d="M7 7h10c2.76 0 5 2.24 5 5s-2.24 5-5 5H7c-2.76 0-5-2.24-5-5s2.24-5 5-5Zm-3 5c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3Z" clip-rule="evenodd"></path>
-                                                                </svg>
+                                                                <input type="checkbox" id="check1" class="toggle">
+                                                                <label for="check1"></label>
                                                             </a>
                                                             <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
-                                                                <svg width="29" height="29" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <svg width="26" height="26" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
                                                                 </svg>
                                                             </a>
 
                                                             <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
-                                                                <svg width="25" height="25" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <svg width="22" height="22" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
                                                                     <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
                                                                 </svg>
                                                             </a>
 
                                                             <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
-                                                                <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <svg width="22" height="22" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M3 6h18"></path>
                                                                     <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
                                                                     <path d="M10 11v6"></path>
@@ -608,7 +882,7 @@
                                                             </button>
                                                         </td>
                                                     </tr>
-                                                    <tr role="row" class="even">
+                                                    <tr role="row" class="old">
                                                         <td  style="width: 7%;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
                                                         <td colspan="2" style="40%;">
                                                             <div class="row">
@@ -629,72 +903,24 @@
                                                         <td style="width: 26.5%;">CHUN Thavorac</td>
                                                         <td colspan="2" style="width: 26.5%;">
                                                             <a href="" class="btn p-0 border-0 mt-1" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Disable Scoring">
-                                                                <svg width="50" height="50" fill="#2dd100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd" d="M7 7h10c2.76 0 5 2.24 5 5s-2.24 5-5 5H7c-2.76 0-5-2.24-5-5s2.24-5 5-5Zm-3 5c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3Z" clip-rule="evenodd"></path>
-                                                                </svg>
+                                                                <input type="checkbox" id="check1" class="toggle">
+                                                                <label for="check1"></label>
                                                             </a>
                                                             <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
-                                                                <svg width="29" height="29" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <svg width="26" height="26" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
                                                                 </svg>
                                                             </a>
 
                                                             <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
-                                                                <svg width="25" height="25" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <svg width="22" height="22" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
                                                                     <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
                                                                 </svg>
                                                             </a>
 
                                                             <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
-                                                                <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M3 6h18"></path>
-                                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                                                                    <path d="M10 11v6"></path>
-                                                                    <path d="M14 11v6"></path>
-                                                                </svg>
-                                                            </button>
-                                                        </td>
-                                                    </tr>                                                    <tr role="row" class="even">
-                                                        <td  style="width: 7%;" class=""><img class="image_mark" src="https://dev.itc.edu.kh/img/arrow.png"></td>
-                                                        <td colspan="2" style="40%;">
-                                                            <div class="row">
-                                                                <div class="col-8">
-                                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Advanced Computer Architecture</span>
-                                                                    <span>(C=16 | TD=20 | TP= 12)</span>
-                                                                </div>
-                                                                <div class="col-4">
-                                                                    I3GCA <br> AB
-                                                                </div>
-                                                            </div>
-                                                            <div class="row">
-                                                                <div class="col-12">
-                                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td style="width: 26.5%;">CHUN Thavorac</td>
-                                                        <td colspan="2" style="width: 26.5%;">
-                                                            <a href="" class="btn p-0 border-0 mt-1" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Disable Scoring">
-                                                                <svg width="50" height="50" fill="#2dd100" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path fill-rule="evenodd" d="M7 7h10c2.76 0 5 2.24 5 5s-2.24 5-5 5H7c-2.76 0-5-2.24-5-5s2.24-5 5-5Zm-3 5c0 1.66 1.34 3 3 3s3-1.34 3-3-1.34-3-3-3-3 1.34-3 3Z" clip-rule="evenodd"></path>
-                                                                </svg>
-                                                            </a>
-                                                            <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
-                                                                <svg width="29" height="29" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
-                                                                </svg>
-                                                            </a>
-
-                                                            <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
-                                                                <svg width="25" height="25" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                                                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-                                                                </svg>
-                                                            </a>
-
-                                                            <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
-                                                                <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <svg width="22" height="22" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                                     <path d="M3 6h18"></path>
                                                                     <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
                                                                     <path d="M10 11v6"></path>
@@ -703,7 +929,10 @@
                                                             </button>
                                                         </td>
                                                     </tr>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 00781337869c5af718389e343119fa9d10307325
 
 
                                                 </tbody>
@@ -740,8 +969,8 @@
                         </div> --}}
                         <div class="course_session_wrapper">
                             {{-- <button class="btn btn-sm btn_add_course_session" >Add Course Session</button> --}}
-                            <button class="btn btn-sm " style=" margin-top:7px; background-color: rgb(206, 206, 206); color:black;">Add Course Session</button>
-                            <div class="col-sm-12 p-3 no-shadow mt-2" style=" min-height: 60px; background-color: rgb(235, 235, 235);">
+                            <button class="btn btn-sm" style=" margin-top:7px; background-color: rgb(206, 206, 206); color:black;" id="toggleForm">Add Course Session</button>
+                            <div class="col-sm-12 p-3 no-shadow mt-2 hidden" style=" min-height: 60px; background-color: rgb(235, 235, 235);" id="courseForm">
                                 <div class="form_add_session" >
                                     <div class="row">
                                         <div class="col-2" style="padding-left:3px; padding-right: 3px;">
@@ -792,7 +1021,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row" style="">
+                                    <div class="row" style="" >
                                         <div class="col-md-8 mt-3" style="padding-left:3px; padding-right: 3px;">
                                             <div class="form_group">
                                                 <label for="groups" class="fw-bold">Group</label>

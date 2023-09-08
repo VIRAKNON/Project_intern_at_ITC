@@ -46,9 +46,9 @@
             </a>
         </li>
         <li>
-            <a href="#">
-                <i class="fas fa-book-reader"></i>
-                <span>Courses Program</span>
+            <a href="{{route('coursesProgram')}}">
+            <i class="fas fa-user-astronaut"></i>
+            <span class="links_name">Courses Program</span>
             </a>
         </li>
         <li>
