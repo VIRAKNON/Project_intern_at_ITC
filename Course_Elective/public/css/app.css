@@ -62,22 +62,10 @@
   text-decoration: none;
   transition: all 0.1s ease;
 }
-/* .sidebar .nav_links li a.active{
-  background: #2C3E50;
-  border-left: 4px solid #157DEC;
-  color: #FFFFFF;
-}
-.sidebar .nav_links li a.active i{
-  color: #FFFFFF;
-}
-.sidebar .nav_links li a.active span{
-  color: #FFFFFF;
-} */
 .sidebar .nav_links li a:hover {
   color: #ffffff;
   border-left: 4px solid #157DEC;
   background: #2C3E50;
-
 }
 .sidebar .nav_links li a:hover i{
   color: #FFFFFF;
@@ -139,6 +127,7 @@
   top: 22px;
   left: 89px;
 }
+
 /* Searching */
 .InputContainer {
   width: 75%;
@@ -203,7 +192,6 @@
     width: calc(100% - 240px);
     left: 240px;
     z-index: 100;
-    /* padding: 0 20px; */
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     transition: all 0.5s ease;
 }
@@ -264,7 +252,7 @@ nav .sidebar-button i {
 }
 #box:hover{
     background-color: #1373dbcc;
-    border-bottom: 2px solid #34495E;
+    border-bottom: 3px solid #34495E;
     transition: none;
     padding: none;
 }
@@ -394,9 +382,6 @@ nav .sidebar-button i {
   color: #ffffff;
   padding-top: 1rem;
 }
-.view button{
-  width: 6rem;
-}
 /* this is a recreation of twitter search in css */
 .form {
   --input-text-color: #fff;
@@ -425,7 +410,10 @@ nav .sidebar-button i {
 }
 .view .log_pf{
   width: 9vh;
-  padding: 10px 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
   border-radius: 5px;
   border: none;
   appearance: none;
@@ -442,7 +430,9 @@ nav .sidebar-button i {
 }
 .view .log_out{
   width: 9vh;
-  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;;
   cursor: pointer;
   border: none;
   appearance: none;

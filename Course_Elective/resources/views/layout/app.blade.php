@@ -27,7 +27,7 @@
                     <span>Online</span>
                 </div>
             </div>
-        <li>
+        <li class="active">
             <a href="{{ route('dashboard') }}" class="active">
                 <i class="fas fa-tachometer-alt"></i>
                 <span>Dashboard</span>
@@ -158,7 +158,7 @@
                             </div>
                             <div class="view">
                                 <a href="{{ route("admin/profile") }}" type="button" class="log_pf" >Profile</a>
-                                <a href="{{ route("admin/profile") }}" type="button" class="log_out">logout</a>
+                                <a href="{{ route("login") }}" type="button" class="log_out">logout</a>
                             </div>
                         </div>
                     </div>

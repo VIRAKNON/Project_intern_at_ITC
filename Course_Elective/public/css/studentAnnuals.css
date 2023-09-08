@@ -55,3 +55,26 @@ body{
     color: #abb2bf;
 }
 
+.box3{
+    padding-top: 7px;
+    padding-left: 10px;
+}
+.semester{
+    width: 100px;
+}
+.origin{
+    width: 300px;
+}
+.group{
+    width: 80px;
+}
+.abc{
+    width: 130px;
+}
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+    z-index: 3;
+    color: #fff;
+    cursor: default;
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
