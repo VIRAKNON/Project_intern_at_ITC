@@ -35,22 +35,11 @@ Route::get('/studentAnnuals/show', function () {
 Route::get('/coursesAnnually', function () {
     return view('coursesAnnually');
 });
-<<<<<<< HEAD
+
 Route::get('/coursesProgram', function () {
     return view('coursesProgram');
-});
-Route::get('/coursesProgram/createCoursesProgram', function () {
-    return view('createCoursesProgram');
-});
-=======
-Route::get('/profile', function () {
-    return view('profile');
-});
-Route::get('/info', function () {
-    return view('edit_info');
-});
-Route::get('/changepw', function () {
-    return view('changepass');
-});
+})->name('coursesProgram');
 
->>>>>>> 30d5bcde25cef4fd8a40f643cafe1d7966b5fcd9
+Route::get('/coursesProgram/create', function () {
+    return view('createCoursesProgram');
+})->name('coursesProgram/create');

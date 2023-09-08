@@ -1,3 +1,5 @@
+@extends('layout.app')
+@section('createCoursesProgram')
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -11,6 +13,12 @@
         .mainContent{
             border-top: 4px solid #00ABE4;
             border-radius: 5px;
+        }
+
+        /* Override Bootstrap styles */
+        @import 'path/to/bootstrap-source/_reboot.scss';
+        ol, ul {
+            padding-left:0;
         }
     </style>
 </head>
@@ -31,36 +39,36 @@
                     <div class="mb-3 row">
                         <label for="nameKh" class="col-sm-2 col-form-label text-end fw-bolder">Name in Khmer <sup class="text-danger">*</sup></label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm  shadow-none w-75" id="nameKh"> 
+                        <input type="text" class="form-control form-control-sm  shadow-none w-75" id="nameKh">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                         <label for="nameEnglish" class="col-sm-2 col-form-label text-end fw-bolder">Name in English <sup class="text-danger">*</sup></label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm  shadow-none w-75" id="nameEnglish"> 
+                        <input type="text" class="form-control form-control-sm  shadow-none w-75" id="nameEnglish">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                         <label for="nameFre" class="col-sm-2 col-form-label text-end fw-bolder">Name in French <sup class="text-danger">*</sup></label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm  shadow-none w-75" id="nameFre"> 
+                        <input type="text" class="form-control form-control-sm  shadow-none w-75" id="nameFre">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
                         <label for="code" class="col-sm-2 col-form-label text-end fw-bolder">Code</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control form-control-sm  shadow-none w-50 " id="code"> 
+                        <input type="text" class="form-control form-control-sm  shadow-none w-50 " id="code">
                         </div>
                     </div>
 
                     <div class="mb-3 row">
-                
+
                         <label for="Course" class="col-sm-2 col-form-label text-end fw-bolder">Coruse <sup class="text-danger">*</sup></label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control form-control-sm  shadow-none w-25" id="Course"> 
+                            <input type="text" class="form-control form-control-sm  shadow-none w-25" id="Course">
                         </div>
 
                     </div>
@@ -74,7 +82,7 @@
                         </div>
                      </div>
 
-                     
+
 
                     <div class="input-group mb-3">
                         <label class="input-group-text" for="inputGroupSelect01">Degree<sup class="text-danger">*</sup></label>
@@ -87,7 +95,7 @@
                           <option value="">International</option>
                         </select>
                     </div>
-                    
+
                     <div class="input-group mb-3">
                         <label class="input-group-text" for="inputGroupSelect01">Grade<sup class="text-danger">*</sup></label>
                         <select class="form-select" id="inputGroupSelect01">
@@ -118,8 +126,8 @@
                         <option value="">OAC</option>
                         <option value="">SA</option>
                         <option value="">SF</option>
-                        <option value="">TC</option>   
-                    </select> 
+                        <option value="">TC</option>
+                    </select>
                 </div>
                 <label for="Type_Course" class="col-4 form-label text-end fw-bolder">Option<sup class="text-danger">*</sup></label>
                 <div class="col-3">
@@ -174,7 +182,7 @@
             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                 <button class="btn btn-danger" type="button">Cancel</button>
                 <button class="btn btn-primary" type="button">Create</button>
-            </div> 
+            </div>
 
         </div>
     </div>
@@ -182,3 +190,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </body>
 </html>
+@endsection
+

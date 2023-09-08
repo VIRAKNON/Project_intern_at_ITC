@@ -1,66 +1,25 @@
 @extends('layout.app')
 @section('coursesProgram')
-<!-- <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{asset('css/coureseProgram.css')}}">
-    <title>Document</title>
-</head>
-<body>
-    <div class="container">
-        <header class="py-2">
-            <span class="fs-3">Course Programs</span>
-            <span class="px-3">All existing course program</span>
-        </header>
-        <div class="box">
-            <hr>
-            <div class="bt">
-            <button type="button" class="btn addStu btn-sm text-light"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.75 12A7.25 7.25 0 0 1 12 4.75v0A7.25 7.25 0 0 1 19.25 12v0A7.25 7.25 0 0 1 12 19.25v0A7.25 7.25 0 0 1 4.75 12v0Z"></path>
-                            <path d="M12 8.75v6.5"></path>
-                            <path d="M15.25 12h-6.5"></path>
-                        </svg>Add</button>
-                        <button type="button" class="btn someLink btn-sm text-light dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-                            <span class="visually-hidden">Toggle Dropdown</span> 
-                        </button></div>
-        </div>
-        <div class="barTabs p-2"> 
-        <ul class="nav nav-tabs">
-      <li class="nav-item">
-          <a class="nav-link active" data-toggle="tab" href="#GeneralInfo">Activate Course Program</a>
-      </li>
-      <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" href="#newAcInfo">Deativate Course Program<span class="text-danger">*</span>
-          </a>
-      </li>
-  </ul>
-
-  <div class="tab-content">
-      
-     
-      <div id="GeneralInfo" class="tab-pane active"><br>
-        
-      </div>
-
-     
-      <div id="newAcInfo" class="tab-pane fade"><br>
-    
-      </div>
-  </div>
-</div>
-</body>
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/coureseProgram.css')}}">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <title>coursesProgram</title>
+
+    <style>
+        @import 'path/to/bootstrap-source/_reboot.scss';
+        /* Override Bootstrap styles */
+        ol, ul {
+            padding-left:0;
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid">
@@ -71,10 +30,10 @@
     <div class="container-fluid">
         <div class="row">
             <div class="box">
-                <button class="btn btn-primary mt-3">Add</button>
+                <a href="{{route('coursesProgram/create')}}" class="btn btn-primary mt-3">Add</a>
                 <button class="btn btn-primary mt-3 float-end">Export</button>
             </div>
-            
+
 
             <div class="barTabs p-2">
                 <!--general info Nav tabs content-->
@@ -87,10 +46,10 @@
                         </a>
                     </li>
                 </ul>
-              
+
                 <!--general info Tab panes content-->
                 <div class="tab-content">
-                    
+
                     <!-- content1 -->
                     <div id="GeneralInfo" class="tab-pane active"><br>
                         <div class="d-flex">
@@ -208,9 +167,9 @@
                                             <button class="btn btn-danger">Delete</button>
                                         </td>
                                     </tr>
-                            
+
                                 </tbody>
-                               
+
                             </table>
                             <span>Showing 1 to 25 of 1,562 entries</span>
                         </div>
@@ -238,7 +197,7 @@
                               </nav>
                         </div>
                     </div>
-              
+
                     <!-- content2 -->
                     <div id="newAcInfo" class="tab-pane fade"><br>
                         <div id="GeneralInfo" class="tab-pane active"><br>
@@ -357,9 +316,9 @@
                                                 <button class="btn btn-danger">Delete</button>
                                             </td>
                                         </tr>
-                                        
+
                                     </tbody>
-                                   
+
                                 </table>
                                 <span>Showing 1 to 25 of 1,562 entries</span>
                             </div>
@@ -402,7 +361,7 @@
             $("#GeneralInfo").addClass("fade");
             $("#newAcInfo").removeClass("fade");
             $("#newAcInfo").addClass("active");
-            
+
 
         });
         $("#Activate").click(function(){
@@ -412,7 +371,7 @@
             $("#newAcInfo").addClass("fade");
             $("#GeneralInfo").removeClass("fade");
             $("#GeneralInfo").addClass("active");
-            
+
         });
 
     });
@@ -421,4 +380,3 @@
 
 @endsection
 
-   

@@ -46,9 +46,9 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="{{route('coursesProgram')}}">
             <i class="fas fa-user-astronaut"></i>
-            <span class="links_name">Employee</span>
+            <span class="links_name">Courses Program</span>
             </a>
         </li>
         <li>
@@ -166,13 +166,10 @@
     @yield('dashboard')
     @yield('students')
     @yield('createStudent')
-<<<<<<< HEAD
     @yield('coursesProgram')
+    @yield('createCoursesProgram')
 </body>
 </html>
-=======
-    @yield('showStudent')
->>>>>>> 30d5bcde25cef4fd8a40f643cafe1d7966b5fcd9
 
 {{-- endcontent --}}
     </div>
