@@ -40,7 +40,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="{{ route('courseAnnuals') }}">
                 <i class="fas fa-book"></i>
                 <span>Curses Annually</span>
             </a>
@@ -158,7 +158,7 @@
                             </div>
                             <div class="view">
                                 <a href="{{ route("admin/profile") }}" type="button" class="log_pf" >Profile</a>
-                                <a href="{{ route("login") }}" type="button" class="log_out">logout</a>    
+                                <a href="{{ route("login") }}" type="button" class="log_out">logout</a>
                             </div>
                         </div>
                     </div>
@@ -173,6 +173,7 @@
     @yield('students')
     @yield('createStudent')
     @yield('coursesProgram')
+    @yield('courseAnnualls')
 </body>
 </html>
 

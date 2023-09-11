@@ -37,7 +37,7 @@ Route::get('/studentAnnuals/show', function () {
 
 Route::get('/coursesAnnually', function () {
     return view('coursesAnnually');
-});
+})->name('courseAnnuals');
 
 Route::get('/create_Coures', function () {
     return view('create_Coures');
