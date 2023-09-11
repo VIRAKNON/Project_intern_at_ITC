@@ -19,17 +19,6 @@
             ol, ul {
                 padding-left:0;
             }
-            .sidebar .nav_links li a.activeStudentAnnuals{
-                background: #2C3E50;
-                border-left: 4px solid #157DEC;
-                color: #FFFFFF;
-            }
-            .sidebar .nav_links li a.activeStudentAnnuals i{
-                color: #FFFFFF;
-            }
-            .sidebar .nav_links li a.activeStudentAnnuals span{
-                color: #FFFFFF;
-            }
         </style>
     </head>
     <body>
@@ -48,7 +37,7 @@
                 <div class="row">
                     <div class="col-8">
                         <div class="input-group">
-                            <a href="{{ route('studentAnnuals/create') }}" type="button" class="btn btn-primary text-light">
+                            <a href="{{ route('studentAnnuals/create') }}" type="button" class="btn btn-primary text-light" data-bs-toggle="tooltip" data-bs-placement="top" title="Create a Student">
                                 <svg width="20" height="20" fill="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2Z"></path>
                                 </svg>

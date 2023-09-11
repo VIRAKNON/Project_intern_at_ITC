@@ -36,7 +36,7 @@
         <li>
             <a href="{{ route('studentAnnuals') }}" class="activeStudentAnnuals">
             <i class="fas fa-user"></i>
-            <span class="links_name">Student</span>
+            <span class="links_name">Students</span>
             </a>
         </li>
         <li>
@@ -46,9 +46,9 @@
             </a>
         </li>
         <li>
-            <a href="#">
-                <i class="fas fa-book-reader"></i>
-                <span>Courses Program</span>
+            <a href="{{route('coursesProgram')}}">
+            <i class="fas fa-user-astronaut"></i>
+            <span class="links_name">Courses Program</span>
             </a>
         </li>
         <li>
@@ -172,11 +172,16 @@
     @yield('dashboard')
     @yield('students')
     @yield('createStudent')
+    @yield('showStudent')
+    @yield('editStudent')
     @yield('coursesProgram')
+<<<<<<< HEAD
     @yield('courseAnnualls')
 </body>
 </html>
 
+=======
+>>>>>>> 33fe0fb11fc5e418a2cdaa41e1c893e3258ae261
 {{-- endcontent --}}
     </div>
     <div class="footer">

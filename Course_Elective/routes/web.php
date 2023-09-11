@@ -28,7 +28,7 @@ Route::get('/studentAnnuals/create', function () {
 })->name('studentAnnuals/create');
 
 Route::get('/studentAnnuals/edit', function () {
-    return view('createStudent');
+    return view('edit_Student');
 })->name('studentAnnuals/edit');
 
 Route::get('/studentAnnuals/show', function () {
@@ -39,12 +39,22 @@ Route::get('/coursesAnnually', function () {
     return view('coursesAnnually');
 })->name('courseAnnuals');
 
+
 Route::get('/create_Coures', function () {
     return view('create_Coures');
 });
+
+Route::get('/coursesProgram', function () {
+    return view('coursesProgram');
+})->name('coursesProgram');
+
+Route::get('/coursesProgram/create', function () {
+    return view('createCoursesProgram');
+})->name('coursesProgram/create');
 Route::get('/coursesProgram', function () {
     return view('coursesProgram');
 });
+
 Route::get('/coursesProgram/createCoursesProgram', function () {
     return view('createCoursesProgram');
 });
