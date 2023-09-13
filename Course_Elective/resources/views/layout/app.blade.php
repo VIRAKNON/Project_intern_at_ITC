@@ -41,7 +41,7 @@
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="{{ route('courseAnnuals') }}">
                 <i class="fas fa-book"></i>
                 <span>Curses Annually</span>
             </a>
@@ -176,6 +176,13 @@
     @yield('showStudent')
     @yield('editStudent')
     @yield('coursesProgram')
+<<<<<<< HEAD
+    @yield('courseAnnualls')
+</body>
+</html>
+
+=======
+>>>>>>> 33fe0fb11fc5e418a2cdaa41e1c893e3258ae261
 {{-- endcontent --}}
     </div>
     <div class="footer">
