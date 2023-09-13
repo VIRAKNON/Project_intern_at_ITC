@@ -51,9 +51,6 @@ Route::get('/coursesProgram', function () {
 Route::get('/coursesProgram/create', function () {
     return view('createCoursesProgram');
 })->name('coursesProgram/create');
-Route::get('/coursesProgram', function () {
-    return view('coursesProgram');
-});
 
 Route::get('/coursesProgram/createCoursesProgram', function () {
     return view('createCoursesProgram');

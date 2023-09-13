@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <title>ITC | SMIS</title>
+    <link rel="icon" href="{{ asset('image/ITC.jpg') }}">
 </head>
 <body>
     <div class="sidebar">
