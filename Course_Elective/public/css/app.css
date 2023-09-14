@@ -572,16 +572,13 @@ nav .sidebar-button i {
   flex-direction: row;
 }
 .user_top1{
-  width: 12%;
+  width: 18%;
+  padding: 12px;
   background-color: #FFFFFF ;
   font-size: 20px;
   color: #979A9A ;
-  border-radius: 5px;
-  padding-left: 15px;
-  padding-top: 10px;
-  border-top: 1px solid #BDC3C7;
-  border-left: 1px solid #BDC3C7;
-  border-right: 1px solid #BDC3C7;
+  display: flex;
+  align-items: center;
 }
 .user_down{
   width: 98%;
@@ -613,7 +610,7 @@ nav .sidebar-button i {
 table tr td .btn1{
   background-color:#157dece4;
   border: none;
-  padding: 5px;
+  padding: 7px;
   font-size: 13px;
   border-radius: 4px;
   color: #ffffff;
@@ -626,10 +623,11 @@ table tr td .btn1{
 tr:nth-child(odd):hover{background-color:#E5E7E9;}
 tr:nth-child(even) {background: #E5E7E9}
 tr:nth-child(odd) {background: #F0F3F4}
+
 table tr td .btn2{
-  background-color:#f28729;
+  background-color:#FF8C00;
   border: none;
-  padding: 5px;
+  padding: 7px;
   font-size: 13px;
   border-radius: 4px;
   color: #ffffff;

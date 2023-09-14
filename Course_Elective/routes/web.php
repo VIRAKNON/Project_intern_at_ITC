@@ -4,8 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\StudentController;
 
-
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,13 +36,10 @@ Route::get('/studentAnnuals/show', function () {
 
 Route::get('/coursesAnnually', function () {
     return view('coursesAnnually');
-})->name('courseAnnuals');
-
-
+});
 Route::get('/create_Coures', function () {
     return view('create_Coures');
 });
-
 Route::get('/coursesProgram', function () {
     return view('coursesProgram');
 })->name('coursesProgram');
