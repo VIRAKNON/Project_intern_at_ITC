@@ -114,12 +114,18 @@
                         <div class="row g-2 align-items-center">
                             <div class="col-auto">
                                 <select class="form-select shadow-none">
-                                    <option value="2023">២០២២-២០២៣</option><option value="2022">២០២១-២០២២</option><option value="2021">២០២០-២០២១</option><option value="2020">២០១៩ - ២០២០</option><option value="2019">២០១៨ - ២០១៩</option><option value="2018">២០១៧ - ២០១៨</option><option value="2017">២០១៦-២០១៧</option><option value="2016">២០១៥-២០១៦</option><option value="2015">២០១៤-២០១៥</option><option value="2014">២០១៣-២០១៤</option><option value="2013">២០១២-២០១៣</option><option value="2012">២០១១-២០១២</option><option value="2011">២០១០-២០១១</option>
+                                    <option value="" selected disabled>Academic Years</option>
+                                    @foreach ($optionAc as $years)
+                                        <option value="{{ $years->id }}">{{ $years->name_kh }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="col-auto">
                                 <select class="form-select shadow-none">
-                                    <option selected="selected" value="">Degree</option><option value="1">វិស្វករ</option><option value="2">បរិញាប័ត្ររងវិស្វកម្ម</option><option value="5">ប​ណ្ឌិត​</option><option value="4">បរិញាប័ត្រជាន់ខ្ពស់</option><option value="3">បរិញាប័ត្រ</option><option value="6">អន្តរជាតិ</option>
+                                    <option value="" selected disabled>Degree</option>
+                                    {{-- @foreach ($optionDegrees as $op)
+                                        <option value="{{ $op->id }}">{{ $op->name_kh }}</option>
+                                    @endforeach --}}
                                 </select>
                             </div>
                             <div class="col-auto">

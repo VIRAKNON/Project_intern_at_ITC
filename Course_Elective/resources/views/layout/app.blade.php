@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <title>ITC | SMIS</title>
-    <link rel="icon" href="{{ asset('image/ITC.jpg') }}">
+    <link rel="icon" href="{{ asset('image/iconLogo.gif') }}">
 </head>
 <body>
     <div class="sidebar">
@@ -169,28 +169,24 @@
     </nav>
     <div class="home-content">
 
-{{-- content --}}
-    @yield('dashboard')
-    @yield('students')
-    @yield('createStudent')
-    @yield('showStudent')
-    @yield('editStudent')
-    @yield('coursesProgram')
-<<<<<<< HEAD
-    @yield('courseAnnualls')
-</body>
-</html>
-
-=======
->>>>>>> 33fe0fb11fc5e418a2cdaa41e1c893e3258ae261
-{{-- endcontent --}}
+    {{-- content --}}
+        @yield('dashboard')
+        @yield('students')
+        @yield('createStudent')
+        @yield('showStudent')
+        @yield('editStudent')
+        @yield('coursesProgram')
+        @yield('courseAnnualls')
+    {{-- endcontent --}}
     </div>
     <div class="footer">
         <span>Copyright © 2023 <a href="#">ITC | SMIS.</a></span>
         <span>All Right Reserved.</span>
     </div>
-</section>
+    </section>
 </body>
+</html>
+
 <script>
     let sidebar = document.querySelector(".sidebar");
     let sidebarBtn = document.querySelector(".sidebarBtn");
