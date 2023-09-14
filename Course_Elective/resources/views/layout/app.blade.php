@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <title>ITC | SMIS</title>
+    <link rel="icon" href="{{ asset('image/ITC.jpg') }}">
 </head>
 <body>
     <div class="sidebar">
@@ -36,19 +37,19 @@
         <li>
             <a href="{{ route('studentAnnuals') }}" class="activeStudentAnnuals">
             <i class="fas fa-user"></i>
-            <span class="links_name">Student</span>
+            <span class="links_name">Students</span>
             </a>
         </li>
         <li>
-            <a href="#">
+            <a href="{{ route('courseAnnuals') }}">
                 <i class="fas fa-book"></i>
                 <span>Curses Annually</span>
             </a>
         </li>
         <li>
-            <a href="#">
-                <i class="fas fa-book-reader"></i>
-                <span>Courses Program</span>
+            <a href="{{route('coursesProgram')}}">
+            <i class="fas fa-user-astronaut"></i>
+            <span class="links_name">Courses Program</span>
             </a>
         </li>
         <li>
@@ -110,7 +111,7 @@
                             </div>
                             <div class="view">
                                 <a href="{{ route("admin/profile") }}" type="button" class="log_pf" >Profile</a>
-                                <a href="{{ route("login") }}" type="button" class="log_out">logout</a>    
+                                <a href="{{ route("login") }}" type="button" class="log_out">logout</a>
                             </div>
                         </div>
                     </div>
@@ -119,12 +120,14 @@
         </div>
     </nav>
     <div class="home-content">
-
-    {{-- content --}}
-        @yield('dashboard')
-        @yield('students')
-        @yield('createStudent')
-        @yield('coursesProgram')
+   {{-- content --}}
+    @yield('dashboard')
+    @yield('students')
+    @yield('createStudent')
+    @yield('showStudent')
+    @yield('editStudent')
+    @yield('coursesProgram')
+    @yield('courseAnnualls')
     {{-- endcontent --}}
     </div>
     <div class="footer">

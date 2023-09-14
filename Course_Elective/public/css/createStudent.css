@@ -1,6 +1,20 @@
-*{
+
+body{
     font-family: 'Catamaran', sans-serif;
 }
+
+.sidebar .nav_links li a.activeStudentAnnuals{
+    background: #2C3E50;
+    border-left: 4px solid #157DEC;
+    color: #FFFFFF;
+}
+.sidebar .nav_links li a.activeStudentAnnuals i{
+    color: #FFFFFF;
+}
+.sidebar .nav_links li a.activeStudentAnnuals span{
+    color: #FFFFFF;
+}
+
 strong{
     color: red;
     font-size: 15px;

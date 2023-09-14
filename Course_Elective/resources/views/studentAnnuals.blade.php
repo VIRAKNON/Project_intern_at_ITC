@@ -9,6 +9,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         {{-- endCDN --}}
         <link rel="stylesheet" href="{{asset('css/studentAnnuals.css')}}">
         <link rel="stylesheet" href="{{asset('js/studentAnnuals.js')}}">
@@ -18,17 +19,6 @@
             /* Override Bootstrap styles */
             ol, ul {
                 padding-left:0;
-            }
-            .sidebar .nav_links li a.activeStudentAnnuals{
-                background: #2C3E50;
-                border-left: 4px solid #157DEC;
-                color: #FFFFFF;
-            }
-            .sidebar .nav_links li a.activeStudentAnnuals i{
-                color: #FFFFFF;
-            }
-            .sidebar .nav_links li a.activeStudentAnnuals span{
-                color: #FFFFFF;
             }
         </style>
     </head>
@@ -48,7 +38,7 @@
                 <div class="row">
                     <div class="col-8">
                         <div class="input-group">
-                            <a href="{{ route('studentAnnuals/create') }}" type="button" class="btn btn-primary text-light">
+                            <a href="{{ route('studentAnnuals/create') }}" type="button" class="btn btn-primary text-light" data-bs-toggle="tooltip" data-bs-placement="top" title="Create a Student">
                                 <svg width="20" height="20" fill="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2Zm5 11h-4v4h-2v-4H7v-2h4V7h2v4h4v2Z"></path>
                                 </svg>
@@ -226,7 +216,16 @@
                                             <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
                                         </svg>
                                     </a>
-                                    <button class="btn p-0 px-2 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                    {{-- <button class="btn p-0 px-2 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                        <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3 6h18"></path>
+                                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                            <path d="M10 11v6"></path>
+                                            <path d="M14 11v6"></path>
+                                        </svg>
+                                    </button> --}}
+                                    <!-- Button trigger modal -->
+                                    <button type="button" class="btn p-0 px-2 border-0" id="myButton" data-toggle="tooltip" title="Delete">
                                         <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M3 6h18"></path>
                                             <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
@@ -234,6 +233,33 @@
                                             <path d="M14 11v6"></path>
                                         </svg>
                                     </button>
+                                    <!-- Modal -->
+                                    <div class="modal fade" id="deleteStu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="btnClose d-flex flex-row-reverse">
+                                                    <button type="button" class="btn-close shadow-none p-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-header border-0 p-0 m-0 d-flex justify-content-center">
+                                                    <h1 class="modal-title" id="exampleModalLabel" >
+                                                        <svg width="100" height="100" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                                                            <path d="M12 9v4"></path>
+                                                            <path d="M12 17h.01"></path>
+                                                        </svg>
+                                                    </h1>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p class="text-center fs-3">Delete the student?</p>
+                                                    <p class="text-center">You will not be able to recover it</p>
+                                                </div>
+                                                <div class="modal-footer border-0 d-flex justify-content-center">
+                                                    <button type="button" style="width: 110px; background-color:#FF8C00;" onmouseover="this.style.backgroundColor='#F88017';" onmouseout="this.style.backgroundColor='#FF8C00';" class="btn py-1 btn-secondary border-0" data-bs-dismiss="modal">Cancel</button>
+                                                    <button type="button" style="width: 110px" class="btn py-1 btn-primary border-0">Ok</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <a href="{{ route('studentAnnuals/show') }}" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="View Detail">
                                         <svg width="30" height="30" fill="#00aaff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                             <path fill-rule="evenodd" d="M16 8c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4ZM4 18c0-2.66 5.33-4 8-4s8 1.34 8 4v2H4v-2Z" clip-rule="evenodd"></path>
@@ -252,6 +278,17 @@
             var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
             var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
                 return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+
+            //using attribute tooltip and modal on one button
+            $(document).ready(function () {
+                // Initialize tooltip
+                $('#myButton').tooltip();
+
+                // Click event to open the modal
+                $('#myButton').click(function () {
+                    $('#deleteStu').modal('show');
+                });
             });
         </script>
     </body>
