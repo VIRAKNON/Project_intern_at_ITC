@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\AcademicYears;
 use App\Models\Degrees;
+use App\Models\Students;
 
 class StudentController extends Controller
 {
@@ -13,28 +14,23 @@ class StudentController extends Controller
         $this->middleware('auth');
     }
 
-    public function studentAannully(){
-        return view('studentAnnuals');
+    public function index(){
+
+        $addStudent = Students::orderBy('id', 'desc')->get(); //'desc' for order big to small
+        return view('studentAnnuals', compact('addStudent')); // compact use for transfer date to show page
     }
 
-    public function academicOption(){
-        $optionAc = academicYears::all();
-        return view('studentAnnuals', compact('optionAc'));
-    }
-
-    public function degreesOption(){
-        $optionDegrees = degrees::all();
-        return view('studentAnnuals', compact('optionDegrees'));
-    }
-
-    // public function handleAllFunctions()
-    // {
-    //     // Call other controller methods here
-    //     $result1 = $this->studentAannully();
-    //     $result2 = $this->academicOption();
-    //     $result3 = $this->degreesOption();
-
-    //     // You can also pass data to your view or return a response
-    //     return view('studentAnnuals', compact('result1', 'result2', 'result3'));
+    // public function academicOption(){
+    //     $optionAc = AcademicYears::all();
+    //     // return view('studentAnnuals', compact('optionAc'));
+    //     return view('studentAnnuals', [
+    //         'optionAc' =>  $optionAc
+    //     ]);
     // }
+
+    // public function degreesOption(){
+    //     $optionDegrees = degrees::all();
+    //     return view('studentAnnuals', compact('optionDegrees'));
+    // }
+
 }

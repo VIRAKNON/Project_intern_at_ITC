@@ -23,7 +23,7 @@
         </style>
     </head>
     <body>
-        <div class="container-fluid bg-light vh-100">
+        <div class="container-fluid bg-light">
             <div class="row bg-light mb-4" style="
                 border-radius: 5px;
                 background-color: #ffffff;
@@ -34,7 +34,7 @@
                     <span class="px-3">All existing students</span>
                 </header>
             </div>
-            <div class="contentStu p-3">
+            <div class="contentStu px-3" style="padding-top: 16px">
                 <div class="row">
                     <div class="col-8">
                         <div class="input-group">
@@ -115,9 +115,9 @@
                             <div class="col-auto">
                                 <select class="form-select shadow-none">
                                     <option value="" selected disabled>Academic Years</option>
-                                    @foreach ($optionAc as $years)
+                                    {{-- @foreach ($optionAc as $years)
                                         <option value="{{ $years->id }}">{{ $years->name_kh }}</option>
-                                    @endforeach
+                                    @endforeach --}}
                                 </select>
                             </div>
                             <div class="col-auto">
@@ -190,91 +190,97 @@
                     </div>
                 </div>
                 <form action="" class="mt-3">
-                    <table class="table table-bordered table-striped">
+                    <table class="table table-bordered table-striped mb-0 table-hover">
                         <thead>
                             <tr>
-                                <th>ID Card</th>
-                                <th>Name KH</th>
-                                <th>Name Latin</th>
-                                <th>Date of Birth</th>
-                                <th>Gender</th>
-                                <th>Class</th>
-                                <th>Option</th>
-                                <th>Group</th>
-                                <th>Action</th>
+                                <th style="width: 10%">ID Card</th>
+                                <th style="width: 18%">Name KH</th>
+                                <th style="width: 18%">Name Latin</th>
+                                <th style="width: 12%">Date of Birth</th>
+                                <th style="width: 8.5%">Gender</th>
+                                <th style="width: 8.5%">Class</th>
+                                <th style="width: 8.5%">Option</th>
+                                <th style="width: 8.5%">Group</th>
+                                <th style="width: 8%">Action</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>ID Card</td>
-                                <td>Name KH</td>
-                                <td>Name Latin</td>
-                                <td>Date of Birth</td>
-                                <td>Gender</td>
-                                <td>Class</td>
-                                <td>Option</td>
-                                <td>Group</td>
-                                <td>
-                                    <a href="{{route('studentAnnuals/edit')}}" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit">
+                    </table>
+                    <div class="container-fluid p-0" style="overflow-y:scroll; height:70vh;">
+                        <table class="table table-bordered table-striped table-hover">
+                            <tbody>
+                                @foreach ($addStudent as $column)
+                                    <tr>
+                                        <td style="width: 10%">{{$column->id_card}}</td>
+                                        <td style="width: 18%">{{$column->name_kh }}</td>
+                                        <td style="width: 18%">{{$column->name_latin }}</td>
+                                        <td style="width: 12%">{{$column->dob }}</td>
+                                        <td style="width: 8.5%">Gender</td>
+                                        <td style="width: 8.5%">Class</td>
+                                        <td style="width: 8.5%">Option</td>
+                                        <td style="width: 8.5%">Group</td>
+                                        <td style="width: 8%">
+                                            <a href="{{route('studentAnnuals/edit')}}" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit">
 
-                                        <svg width="25" height="25" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-                                        </svg>
-                                    </a>
-                                    {{-- <button class="btn p-0 px-2 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
-                                        <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3 6h18"></path>
-                                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                                            <path d="M10 11v6"></path>
-                                            <path d="M14 11v6"></path>
-                                        </svg>
-                                    </button> --}}
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn p-0 px-2 border-0" id="myButton" data-toggle="tooltip" title="Delete">
-                                        <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M3 6h18"></path>
-                                            <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                                            <path d="M10 11v6"></path>
-                                            <path d="M14 11v6"></path>
-                                        </svg>
-                                    </button>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="deleteStu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog">
-                                            <div class="modal-content">
-                                                <div class="btnClose d-flex flex-row-reverse">
-                                                    <button type="button" class="btn-close shadow-none p-3" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <div class="modal-header border-0 p-0 m-0 d-flex justify-content-center">
-                                                    <h1 class="modal-title" id="exampleModalLabel" >
-                                                        <svg width="100" height="100" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-                                                            <path d="M12 9v4"></path>
-                                                            <path d="M12 17h.01"></path>
-                                                        </svg>
-                                                    </h1>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <p class="text-center fs-3">Delete the student?</p>
-                                                    <p class="text-center">You will not be able to recover it</p>
-                                                </div>
-                                                <div class="modal-footer border-0 d-flex justify-content-center">
-                                                    <button type="button" style="width: 110px; background-color:#FF8C00;" onmouseover="this.style.backgroundColor='#F88017';" onmouseout="this.style.backgroundColor='#FF8C00';" class="btn py-1 btn-secondary border-0" data-bs-dismiss="modal">Cancel</button>
-                                                    <button type="button" style="width: 110px" class="btn py-1 btn-primary border-0">Ok</button>
+                                                <svg width="25" height="25" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                                </svg>
+                                            </a>
+                                            {{-- <button class="btn p-0 px-2 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3 6h18"></path>
+                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                    <path d="M10 11v6"></path>
+                                                    <path d="M14 11v6"></path>
+                                                </svg>
+                                            </button> --}}
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn p-0 px-2 border-0" id="myButton" data-toggle="tooltip" title="Delete">
+                                                <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3 6h18"></path>
+                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                    <path d="M10 11v6"></path>
+                                                    <path d="M14 11v6"></path>
+                                                </svg>
+                                            </button>
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="deleteStu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="btnClose d-flex flex-row-reverse">
+                                                            <button type="button" class="btn-close shadow-none p-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-header border-0 p-0 m-0 d-flex justify-content-center">
+                                                            <h1 class="modal-title" id="exampleModalLabel" >
+                                                                <svg width="100" height="100" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                                                                    <path d="M12 9v4"></path>
+                                                                    <path d="M12 17h.01"></path>
+                                                                </svg>
+                                                            </h1>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p class="text-center fs-3">Delete the student?</p>
+                                                            <p class="text-center">You will not be able to recover it</p>
+                                                        </div>
+                                                        <div class="modal-footer border-0 d-flex justify-content-center">
+                                                            <button type="button" style="width: 110px; background-color:#FF8C00;" onmouseover="this.style.backgroundColor='#F88017';" onmouseout="this.style.backgroundColor='#FF8C00';" class="btn py-1 btn-secondary border-0" data-bs-dismiss="modal">Cancel</button>
+                                                            <button type="button" style="width: 110px" class="btn py-1 btn-primary border-0">Ok</button>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
-                                    <a href="{{ route('studentAnnuals/show') }}" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="View Detail">
-                                        <svg width="30" height="30" fill="#00aaff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" d="M16 8c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4ZM4 18c0-2.66 5.33-4 8-4s8 1.34 8 4v2H4v-2Z" clip-rule="evenodd"></path>
-                                        </svg>
-                                    </a>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                                            <a href="{{ route('studentAnnuals/show') }}" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="View Detail">
+                                                <svg width="30" height="30" fill="#00aaff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" d="M16 8c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4ZM4 18c0-2.66 5.33-4 8-4s8 1.34 8 4v2H4v-2Z" clip-rule="evenodd"></path>
+                                                </svg>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
                 </form>
 
             </div>
