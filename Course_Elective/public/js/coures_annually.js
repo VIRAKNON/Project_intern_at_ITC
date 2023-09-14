@@ -89,9 +89,9 @@ $(document).ready(function () {
 });
 
 // scroll data
-// $(document).ready(function() {
-//     $('#example').DataTable({
-//         "scrollY": "350px", // Set the container wrapper's height to 400 pixels
-//         "scrollCollapse": true // Enable scrollCollapse option
-//     });
-// });
+$(document).ready(function() {
+    $('#example').DataTable({
+        "scrollY": "650px", // Set the container wrapper's height to 400 pixels
+        "scrollCollapse": true // Enable scrollCollapse option
+    });
+});

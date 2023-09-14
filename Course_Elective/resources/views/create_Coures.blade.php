@@ -1,4 +1,5 @@
-<!DOCTYPE html>
+@extends('layout.app')
+@section('createCourse')
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -361,7 +362,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="row" style="margin-">
+                <div class="row" style="">
                     <label for="Permit" class="col-2 form-label col-form-label-md text-end fw-bolder">Permit responsibility to</label>
                     <div class="col-sm-3">
                         <select class="form-control form-select-sm form-comtrol shadow-none" id="Permit" name="responsible_department_id">
@@ -409,3 +410,4 @@
     </div>
 </body>
 </html>
+@endsection

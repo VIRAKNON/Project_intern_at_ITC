@@ -36,11 +36,11 @@
             <div class="box1">
                 <span class="float-start">
                     <div class="btn-group" role="group">
-                        <button type="button" class="btn addStu btn-sm text-light"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <a href="{{ route('CourseAnnually/create') }}" type="button" class="btn addStu btn-sm text-light"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path d="M4.75 12A7.25 7.25 0 0 1 12 4.75v0A7.25 7.25 0 0 1 19.25 12v0A7.25 7.25 0 0 1 12 19.25v0A7.25 7.25 0 0 1 4.75 12v0Z"></path>
                             <path d="M12 8.75v6.5"></path>
                             <path d="M15.25 12h-6.5"></path>
-                        </svg>Add</button>
+                        </svg>Add</a>
                     </div>
                     <button class="btn btn-success btn-sm" id="btn_disable_scoring"><i class="fa fa-toggle-on"></i> Disable Scoring</button>
                     <button class="btn btn-warning btn-sm" id="btn_enable_scoring"><i class="fa fa-toggle-off"></i> Enable Scoring</button>
@@ -272,6 +272,7 @@
                                         </td>
                                         <!-- Add more rows with data -->
                                     </tr>
+
                                     <tr>
                                         <td>
                                             <div class="row">
@@ -508,28 +509,11 @@
                                                 </label>
                                             </a>
 
-<<<<<<< HEAD
                                             <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
                                                 <svg width="26" height="26" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
                                                 </svg>
                                             </a>
-=======
-                                                            <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
-                                                                <svg width="22" height="22" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M3 6h18"></path>
-                                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                                                                    <path d="M10 11v6"></path>
-                                                                    <path d="M14 11v6"></path>
-                                                                </svg>
-                                                            </button>
-                                                        </td>
-                                                    </tr>
-<<<<<<< HEAD
-
-=======
->>>>>>> 00781337869c5af718389e343119fa9d10307325
->>>>>>> 33fe0fb11fc5e418a2cdaa41e1c893e3258ae261
 
                                             <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
                                                 <svg width="22" height="22" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -567,7 +551,267 @@
                                             </div>
                                         </td>
 
-                                        <td>sok</td>
+                                        <td>CHUN Thavorac</td>
+                                        <td>
+
+                                            <a href="" class="btn p-0 border-0 mt-2 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                <label class="switch ">
+                                                    <input type="checkbox" class="warning">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </a>
+
+                                            <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                <svg width="26" height="26" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
+                                                </svg>
+                                            </a>
+
+                                            <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                <svg width="22" height="22" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                                </svg>
+                                            </a>
+
+                                            <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                <svg width="22" height="22" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3 6h18"></path>
+                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                    <path d="M10 11v6"></path>
+                                                    <path d="M14 11v6"></path>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                        <!-- Add more rows with data -->
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Advanced Computer Architecture <br></span>
+                                                    <span>(C=16 | TD=20 | TP= 12)</span>
+                                                </div>
+                                                <div class="col-5">
+                                                    I3GCA <br> AB
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>CHUN Thavorac</td>
+                                        <td>
+
+                                            <a href="" class="btn p-0 border-0 mt-2 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                <label class="switch ">
+                                                    <input type="checkbox" class="warning">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </a>
+
+                                            <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                <svg width="26" height="26" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
+                                                </svg>
+                                            </a>
+
+                                            <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                <svg width="22" height="22" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                                </svg>
+                                            </a>
+
+                                            <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                <svg width="22" height="22" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3 6h18"></path>
+                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                    <path d="M10 11v6"></path>
+                                                    <path d="M14 11v6"></path>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                        <!-- Add more rows with data -->
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Advanced Computer Architecture <br></span>
+                                                    <span>(C=16 | TD=20 | TP= 12)</span>
+                                                </div>
+                                                <div class="col-5">
+                                                    I3GCA <br> AB
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>CHUN Thavorac</td>
+                                        <td>
+
+                                            <a href="" class="btn p-0 border-0 mt-2 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                <label class="switch ">
+                                                    <input type="checkbox" class="warning">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </a>
+
+                                            <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                <svg width="26" height="26" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
+                                                </svg>
+                                            </a>
+
+                                            <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                <svg width="22" height="22" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                                </svg>
+                                            </a>
+
+                                            <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                <svg width="22" height="22" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3 6h18"></path>
+                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                    <path d="M10 11v6"></path>
+                                                    <path d="M14 11v6"></path>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                        <!-- Add more rows with data -->
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Advanced Computer Architecture <br></span>
+                                                    <span>(C=16 | TD=20 | TP= 12)</span>
+                                                </div>
+                                                <div class="col-5">
+                                                    I3GCA <br> AB
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>CHUN Thavorac</td>
+                                        <td>
+
+                                            <a href="" class="btn p-0 border-0 mt-2 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                <label class="switch ">
+                                                    <input type="checkbox" class="warning">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </a>
+
+                                            <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                <svg width="26" height="26" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
+                                                </svg>
+                                            </a>
+
+                                            <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                <svg width="22" height="22" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                                </svg>
+                                            </a>
+
+                                            <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                <svg width="22" height="22" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3 6h18"></path>
+                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                    <path d="M10 11v6"></path>
+                                                    <path d="M14 11v6"></path>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                        <!-- Add more rows with data -->
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Advanced Computer Architecture <br></span>
+                                                    <span>(C=16 | TD=20 | TP= 12)</span>
+                                                </div>
+                                                <div class="col-5">
+                                                    I3GCA <br> AB
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>CHUN Thavorac</td>
+                                        <td>
+
+                                            <a href="" class="btn p-0 border-0 mt-2 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                <label class="switch ">
+                                                    <input type="checkbox" class="warning">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </a>
+
+                                            <a href="" class="btn p-0 border-0 mt-1 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                <svg width="26" height="26" fill="#002aff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M20 3H4c-1.11 0-1.99.89-1.99 2L2 17c0 1.11.89 2 2 2h5v-2H4v-6h18V5c0-1.11-.89-2-2-2Zm0 4H4V5h16v2Zm-5.07 11.17-2.83-2.83-1.41 1.41L14.93 21 22 13.93l-1.41-1.41-5.66 5.65Z"></path>
+                                                </svg>
+                                            </a>
+
+                                            <a href="" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                                                <svg width="22" height="22" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                                </svg>
+                                            </a>
+
+                                            <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                                <svg width="22" height="22" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3 6h18"></path>
+                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                    <path d="M10 11v6"></path>
+                                                    <path d="M14 11v6"></path>
+                                                </svg>
+                                            </button>
+                                        </td>
+                                        <!-- Add more rows with data -->
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="row">
+                                                <div class="col-7">
+                                                    <span class="text" style="font-size: 18px;  font-weight: bold; width:200px;">Advanced Computer Architecture <br></span>
+                                                    <span>(C=16 | TD=20 | TP= 12)</span>
+                                                </div>
+                                                <div class="col-5">
+                                                    I3GCA <br> AB
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <span>ឆមាសទី១ | ២០២២-២០២៣</span>
+                                                </div>
+                                            </div>
+                                        </td>
+
+                                        <td>CHUN Thavorac</td>
                                         <td>
 
                                             <a href="" class="btn p-0 border-0 mt-2 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">

@@ -40,9 +40,9 @@ Route::get('/coursesAnnually', function () {
 })->name('courseAnnuals');
 
 
-Route::get('/create_Coures', function () {
+Route::get('CourseAnnually/create', function () {
     return view('create_Coures');
-});
+})->name('CourseAnnually/create');
 
 Route::get('/coursesProgram', function () {
     return view('coursesProgram');
@@ -51,9 +51,6 @@ Route::get('/coursesProgram', function () {
 Route::get('/coursesProgram/create', function () {
     return view('createCoursesProgram');
 })->name('coursesProgram/create');
-Route::get('/coursesProgram', function () {
-    return view('coursesProgram');
-});
 
 Route::get('/coursesProgram/createCoursesProgram', function () {
     return view('createCoursesProgram');
