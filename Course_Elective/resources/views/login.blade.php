@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="{{ asset ('css/login.css') }}">
-    <title>Document</title>
+    <title>ITC | SMIS</title>
 </head>
 <body>
     <div class="loginpage">
         <div class="pf_top">
             <div class="logo">ITC | SMIS</div>
             <div class="admins">
+              
                 <form>
                     <select name = "dropdown-toggle">
-                        <option value = "taj" selected>Admin Islator</option>
+                        <option value = "taj" selected>AdminIslator</option>
                         <option value = "china">Dashboard</option>
                         <option value = "chirst">Change Password</option>
                         <option value = "machu">Logout</option>

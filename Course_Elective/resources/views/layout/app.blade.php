@@ -63,54 +63,6 @@
                 <span>Scholarship</span>
             </a>
         </li>
-        {{-- <li>
-            <a href="#">
-                <i class="fas fa-user-plus"></i>
-                <span>Access Managment</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="fas fa-user-edit"></i>
-                <span>Examination</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="far fa-window-maximize"></i>
-                <span>Manage Internship</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="far fa-calendar-alt"></i>
-                <span>Schedual Management</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="fas fa-file-invoice-dollar"></i>
-                <span>Accounting</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class='bx bx-cog'></i>
-                <span>Configuration</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="fas fa-toolbox"></i>
-                <span>Log Viewer</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="fas fa-exclamation-triangle"></i>
-                <span>System Rounting</span>
-            </a>
-        </li> --}}
     </ul>
 </div>
 <section class="home-section">
@@ -140,7 +92,7 @@
                 <div class="box1">
                 <a class="button1" href="#popup1">
                     <i class="fas fa-user"></i>
-                    <span>Admin Instator</span>
+                    <span>AdminInstator</span>
                 </a>
                 </div>
                 <div id="popup1" class="overlay">
@@ -168,15 +120,12 @@
     </nav>
     <div class="home-content">
 
-{{-- content --}}
-    @yield('dashboard')
-    @yield('students')
-    @yield('createStudent')
-    @yield('coursesProgram')
-</body>
-</html>
-
-{{-- endcontent --}}
+    {{-- content --}}
+        @yield('dashboard')
+        @yield('students')
+        @yield('createStudent')
+        @yield('coursesProgram')
+    {{-- endcontent --}}
     </div>
     <div class="footer">
         <span>Copyright © 2023 <a href="#">ITC | SMIS.</a></span>
@@ -184,6 +133,8 @@
     </div>
 </section>
 </body>
+</html>
+
 <script>
     let sidebar = document.querySelector(".sidebar");
     let sidebarBtn = document.querySelector(".sidebarBtn");
@@ -198,10 +149,9 @@
     setTimeout(
         function open(event){
             document.querySelector(".popup").style.display = "block";
-        },
-        2000
-    )
-});
+            },2000
+        )
+    });
     document.querySelector("#close").addEventListener("click", function(){
         document.querySelector(".popup").style.display = "none";
     });
