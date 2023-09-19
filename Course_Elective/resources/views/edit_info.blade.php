@@ -6,10 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset ('css/edit_info.css') }}">
-<<<<<<< HEAD
-=======
-
->>>>>>> 8e85cedc9a69b39bc0591fa0f292dd9b549d9c6c
     <title>Profile</title>
 </head>
 <body>
@@ -27,6 +23,7 @@
                 </form>
             </div>
         </div>
+        <div class="back"><a href="{{ route('admin/profile') }}">&#x21e6;Back</a></div>
         <div class="dashboard">
             <div class="update_info">
                 <div class="header">Update Information</div>
