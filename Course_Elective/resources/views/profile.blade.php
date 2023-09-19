@@ -15,7 +15,7 @@
             <div class="admins">
                 <form>
                     <select name = "dropdown-toggle">
-                        <option value = "taj" selected>Admin Islator</option>
+                        <option value = "taj" selected>AdminIslator</option>
                         <option value = "china">Dashboard</option>
                         <option value = "chirst">Change Password</option>
                         <option value = "machu">Logout</option>

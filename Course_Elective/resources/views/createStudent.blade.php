@@ -51,7 +51,6 @@
                 <span>Register new student</span>
             </div>
             <hr>
-
             <div class="barTabs p-2">
                 <!--general info Nav tabs content-->
                 <ul class="nav nav-tabs">
@@ -128,9 +127,10 @@
                                         <label for="gender" class="col-sm-2 col-form-label text-end fw-bolder">Gender <strong>*</strong></label>
                                         <div class="col-sm-10">
                                             <select class="form-select form-select-sm form-comtrol shadow-none" id="gender" required>
-                                                <option selected>Choose your gender</option>
-                                                <option value="M">Male</option>
-                                                <option value="F">Female</option>
+                                                <option selected disabled>Choose your gender</option>
+                                                @foreach ($optionGenders as $og)
+                                                    <option value="{{ $og->id }}">{{ $og->name_kh }}</option>
+                                                @endforeach
 
                                             </select>
                                         </div>
@@ -144,90 +144,11 @@
                                     <div class="row mb-3">
                                         <label for="pob" class="col-sm-2 col-form-label text-end fw-bolder">Place of Birth</label>
                                         <div class="col-sm-10">
-                                            <select class="form-select form-select-sm form-comtrol shadow-none" name="pob">
-                                                <option value="2">បាត់ដំបង</option>
-                                                <option value="3">កំពង់ចាម</option>
-                                                <option value="4">កំពង់ឆ្នាំង</option>
-                                                <option value="5">កំពង់ស្ពឺ</option>
-                                                <option value="6">កំពង់ធំ</option>
-                                                <option value="7">កំពត</option>
-                                                <option value="8">កណ្តាល</option>
-                                                <option value="9">កោះកុង</option>
-                                                <option value="10">ក្រចេះ</option>
-                                                <option value="11">មណ្ឌលគីរី</option>
-                                                <option value="12">ភ្នំពេញ</option>
-                                                <option value="13">ព្រះវិហារ</option>
-                                                <option value="14">ព្រៃវែង</option>
-                                                <option value="15">ពោធិ៍សាត់</option>
-                                                <option value="16">រតនគីរី</option>
-                                                <option value="17">សៀមរាប</option>
-                                                <option value="18">ព្រះសីហនុ</option>
-                                                <option value="19">ស្ទឹងត្រែង</option>
-                                                <option value="20">ស្វាយរៀង</option>
-                                                <option value="21">តាកែវ</option>
-                                                <option value="22">កែប</option>
-                                                <option value="23">បៃលិន</option>
-                                                <option value="25">ត្បូងឃ្មុំ</option>
-                                                <option value="26">ក្រសួងអប់រំយុវជន និង កីឡា</option>
-                                                <option value="27">កម្ពុជាក្រោម</option>
-                                                <option value="31">ខាវអ៊ីដាង</option>
-                                                <option value="32">ព្រះត្រពាំង</option>
-                                                <option value="33">សូរិន្ទ</option>
-                                                <option value="34">ជាយដែនកម្ពុជា-ថៃ</option>
-                                                <option value="35">ដងរែក</option>
-                                                <option value="36">តាទុំ</option>
-                                                <option value="37">ណងច័ន្ទ</option>
-                                                <option value="38">ណងឯក</option>
-                                                <option value="39">បាំងភូ</option>
-                                                <option value="40">ឈុនបូរី</option>
-                                                <option value="41">ភ្នំម៉ាឡៃ</option>
-                                                <option value="42">ភ្នំឆ័ត្រ</option>
-                                                <option value="43">សន្តិសុខ</option>
-                                                <option value="44">សម្តេចឪ</option>
-                                                <option value="45">សាយធូ</option>
-                                                <option value="46">សាយប៊ី</option>
-                                                <option value="47">សាយអេក</option>
-                                                <option value="48">សុខសាន្ត</option>
-                                                <option value="49">អំពិល</option>
-                                                <option value="50">ឫទ្ធិសែន</option>
-                                                <option value="51">ទី៧</option>
-                                                <option value="52">ទី៨</option>
-                                                <option value="53">ចិន</option>
-                                                <option value="54">ថៃ</option>
-                                                <option value="55">អាឡឺម៉ង់</option>
-                                                <option value="56"></option>
-                                                <option value="57">វៀតណាម</option>
-                                                <option value="58">រុស្សី</option>
-                                                <option value="59">កូរ៉េខាងត្បូង</option>
-                                                <option value="60">អាមេរិក</option>
-                                                <option value="61">អេហ្ស៊ីប</option>
-                                                <option value="62">អូស្ត្រាលី</option>
-                                                <option value="63">កាណាដា</option>
-                                                <option value="64">ញូវហ៊្សេឡង់</option>
-                                                <option value="65">អង់គ្លេស</option>
-                                                <option value="66">ជប៉ុន</option>
-                                                <option value="67">បារាំង</option>
-                                                <option value="69">ឡាវ</option>
-                                                <option value="70">ហុងកុង</option>
-                                                <option value="71">តៃវ៉ាន់</option>
-                                                <option value="72">អ៊ុយក្រែន</option>
-                                                <option value="73">ឥណ្ឌា</option>
-                                                <option value="85">ផ្សេងៗ( ក្រៅប្រទេស)</option>
-                                                <option value="86">វិទ្យាស្ថានបច្ចេកវិទ្យាកម្ពុជា</option>
-                                                <option value="1">ប.មានជ័យ</option>
-                                                <option value="24">ឧ.មានជ័យ</option><option value="87">វិទ្យាស្ថានពហុបច្ចេកទេសព្រះកុសុមៈ</option>
-                                                <option value="88">វិទ្យាស្ថានជាតិបណ្តុះបណ្តាលបច្ចេកទេស</option>
-                                                <option value="89">សាលាមធ្យមសិក្សាបច្ចេកទេស JVC</option>
-                                                <option value="90">សាកលវិទ្យាល័យភូមិន្ទកសិកម្ម</option>
-                                                <option value="91">សាកលវិទ្យាល័យភូមិន្ទវិចិត្រសិល្បៈ</option>
-                                                <option value="92">មជ្ឈមណ្ឌលបណ្តុះបណ្តាលវិជ្ជាជីវៈខេត្តព្រះសីហនុ</option>
-                                                <option value="93">វិទ្យាស្ថានពហុបច្ចេកទេសភូមិភាគតេជោសែនស្វាយរៀង</option>
-                                                <option value="94">សាកលវិទ្យាល័យន័រតុន</option>
-                                                <option value="95">វិទ្យាស្ថានបច្ចេកវិទ្យាភ្នំពេញ</option>
-                                                <option value="96">សាធារណៈប្រជាមានិតចិន</option>
-                                                <option value="97">សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ</option>
-                                                <option value="98">សាកលវិទ្យាល័យអន្តរជាតិ</option>
-                                                <option value="99">មីយ៉ាន់ម៉ា</option>
+                                            <select class="form-select form-select-sm form-comtrol shadow-none" name="pob" required>
+                                                <option value="" selected disabled>Select your place</option>
+                                                @foreach ($originOption as $origin)
+                                                    <option value="{{$origin->id}}">{{$origin->name_kh}}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                     </div>
@@ -289,89 +210,10 @@
                                                 <label for="origin" class="col-sm-2 col-form-label col-form-label-sm text-end fw-bolder">Origin <sup>*</sup></label>
                                                 <div class="col-sm-10">
                                                     <select class="form-select form-select-sm form-comtrol shadow-none" name="origin" id="origin" required>
-                                                        <option value="2">បាត់ដំបង</option>
-                                                        <option value="3">កំពង់ចាម</option>
-                                                        <option value="4">កំពង់ឆ្នាំង</option>
-                                                        <option value="5">កំពង់ស្ពឺ</option>
-                                                        <option value="6">កំពង់ធំ</option>
-                                                        <option value="7">កំពត</option>
-                                                        <option value="8">កណ្តាល</option>
-                                                        <option value="9">កោះកុង</option>
-                                                        <option value="10">ក្រចេះ</option>
-                                                        <option value="11">មណ្ឌលគីរី</option>
-                                                        <option value="12">ភ្នំពេញ</option>
-                                                        <option value="13">ព្រះវិហារ</option>
-                                                        <option value="14">ព្រៃវែង</option>
-                                                        <option value="15">ពោធិ៍សាត់</option>
-                                                        <option value="16">រតនគីរី</option>
-                                                        <option value="17">សៀមរាប</option>
-                                                        <option value="18">ព្រះសីហនុ</option>
-                                                        <option value="19">ស្ទឹងត្រែង</option>
-                                                        <option value="20">ស្វាយរៀង</option>
-                                                        <option value="21">តាកែវ</option>
-                                                        <option value="22">កែប</option>
-                                                        <option value="23">បៃលិន</option>
-                                                        <option value="25">ត្បូងឃ្មុំ</option>
-                                                        <option value="26">ក្រសួងអប់រំយុវជន និង កីឡា</option>
-                                                        <option value="27">កម្ពុជាក្រោម</option>
-                                                        <option value="31">ខាវអ៊ីដាង</option>
-                                                        <option value="32">ព្រះត្រពាំង</option>
-                                                        <option value="33">សូរិន្ទ</option>
-                                                        <option value="34">ជាយដែនកម្ពុជា-ថៃ</option>
-                                                        <option value="35">ដងរែក</option>
-                                                        <option value="36">តាទុំ</option>
-                                                        <option value="37">ណងច័ន្ទ</option>
-                                                        <option value="38">ណងឯក</option>
-                                                        <option value="39">បាំងភូ</option>
-                                                        <option value="40">ឈុនបូរី</option>
-                                                        <option value="41">ភ្នំម៉ាឡៃ</option>
-                                                        <option value="42">ភ្នំឆ័ត្រ</option>
-                                                        <option value="43">សន្តិសុខ</option>
-                                                        <option value="44">សម្តេចឪ</option>
-                                                        <option value="45">សាយធូ</option>
-                                                        <option value="46">សាយប៊ី</option>
-                                                        <option value="47">សាយអេក</option>
-                                                        <option value="48">សុខសាន្ត</option>
-                                                        <option value="49">អំពិល</option>
-                                                        <option value="50">ឫទ្ធិសែន</option>
-                                                        <option value="51">ទី៧</option>
-                                                        <option value="52">ទី៨</option>
-                                                        <option value="53">ចិន</option>
-                                                        <option value="54">ថៃ</option>
-                                                        <option value="55">អាឡឺម៉ង់</option>
-                                                        <option value="56"></option>
-                                                        <option value="57">វៀតណាម</option>
-                                                        <option value="58">រុស្សី</option>
-                                                        <option value="59">កូរ៉េខាងត្បូង</option>
-                                                        <option value="60">អាមេរិក</option>
-                                                        <option value="61">អេហ្ស៊ីប</option>
-                                                        <option value="62">អូស្ត្រាលី</option>
-                                                        <option value="63">កាណាដា</option>
-                                                        <option value="64">ញូវហ៊្សេឡង់</option>
-                                                        <option value="65">អង់គ្លេស</option>
-                                                        <option value="66">ជប៉ុន</option>
-                                                        <option value="67">បារាំង</option>
-                                                        <option value="69">ឡាវ</option>
-                                                        <option value="70">ហុងកុង</option>
-                                                        <option value="71">តៃវ៉ាន់</option>
-                                                        <option value="72">អ៊ុយក្រែន</option>
-                                                        <option value="73">ឥណ្ឌា</option>
-                                                        <option value="85">ផ្សេងៗ( ក្រៅប្រទេស)</option>
-                                                        <option value="86">វិទ្យាស្ថានបច្ចេកវិទ្យាកម្ពុជា</option>
-                                                        <option value="1">ប.មានជ័យ</option>
-                                                        <option value="24">ឧ.មានជ័យ</option><option value="87">វិទ្យាស្ថានពហុបច្ចេកទេសព្រះកុសុមៈ</option>
-                                                        <option value="88">វិទ្យាស្ថានជាតិបណ្តុះបណ្តាលបច្ចេកទេស</option>
-                                                        <option value="89">សាលាមធ្យមសិក្សាបច្ចេកទេស JVC</option>
-                                                        <option value="90">សាកលវិទ្យាល័យភូមិន្ទកសិកម្ម</option>
-                                                        <option value="91">សាកលវិទ្យាល័យភូមិន្ទវិចិត្រសិល្បៈ</option>
-                                                        <option value="92">មជ្ឈមណ្ឌលបណ្តុះបណ្តាលវិជ្ជាជីវៈខេត្តព្រះសីហនុ</option>
-                                                        <option value="93">វិទ្យាស្ថានពហុបច្ចេកទេសភូមិភាគតេជោសែនស្វាយរៀង</option>
-                                                        <option value="94">សាកលវិទ្យាល័យន័រតុន</option>
-                                                        <option value="95">វិទ្យាស្ថានបច្ចេកវិទ្យាភ្នំពេញ</option>
-                                                        <option value="96">សាធារណៈប្រជាមានិតចិន</option>
-                                                        <option value="97">សាកលវិទ្យាល័យភូមិន្ទភ្នំពេញ</option>
-                                                        <option value="98">សាកលវិទ្យាល័យអន្តរជាតិ</option>
-                                                        <option value="99">មីយ៉ាន់ម៉ា</option>
+                                                        <option selected disabled value="">Select your origin</option>
+                                                        @foreach ($originOption as $origin)
+                                                            <option value="{{$origin->id}}">{{$origin->name_kh}}</option>
+                                                        @endforeach
                                                     </select>
                                                 </div>
                                             </div>
@@ -379,28 +221,28 @@
                                             <div class="row mb-3">
                                                 <label for="tel" class="col-sm-2 col-form-label col-form-label-sm text-end fw-bolder">Phone Number</label>
                                                 <div class="col-sm-10">
-                                                    <input type="text" class="form-control form-control-sm shadow-none" name="" id="tel" required>
+                                                    <input type="text" class="form-control form-control-sm shadow-none" name="" id="tel">
                                                 </div>
                                             </div>
 
                                             <div class="row mb-3">
                                                 <label for="email" class="col-sm-2 col-form-label col-form-label-sm text-end fw-bolder">Email</label>
                                                 <div class="col-sm-10">
-                                                    <input type="email" class="form-control form-control-sm shadow-none" name="" id="email" required>
+                                                    <input type="email" class="form-control form-control-sm shadow-none" name="" id="email">
                                                 </div>
                                             </div>
 
                                             <div class="row mb-3">
                                                 <label for="currentAddress" class="col-sm-2 col-form-label col-form-label-sm text-end fw-bolder">Current Address</label>
                                                 <div class="col-sm-10">
-                                                    <input type="text" class="form-control form-control-sm shadow-none" name="" id="currentAddress" required>
+                                                    <input type="text" class="form-control form-control-sm shadow-none" name="" id="currentAddress">
                                                 </div>
                                             </div>
 
                                             <div class="row mb-3">
                                                 <label for="perAddress" class="col-sm-2 col-form-label col-form-label-sm text-end fw-bolder">Permanent Address</label>
                                                 <div class="col-sm-10">
-                                                    <input type="text" class="form-control form-control-sm shadow-none" name="" id="perAddress" required>
+                                                    <input type="text" class="form-control form-control-sm shadow-none" name="" id="perAddress">
                                                 </div>
                                             </div>
 
@@ -418,28 +260,28 @@
                                             <div class="row mb-3">
                                                 <label for="parentName" class="col-sm-2 col-form-label col-form-label-sm text-end fw-bolder">Parent Name</label>
                                                 <div class="col-sm-10">
-                                                    <input type="text" class="form-control form-control-sm shadow-none" name="" id="parentName" required>
+                                                    <input type="text" class="form-control form-control-sm shadow-none" name="" id="parentName">
                                                 </div>
                                             </div>
 
                                             <div class="row mb-3">
                                                 <label for="parentOcc" class="col-sm-2 col-form-label col-form-label-sm text-end fw-bolder">Parent Occupation</label>
                                                 <div class="col-sm-10">
-                                                    <input type="text" class="form-control form-control-sm shadow-none" name="" id="parentOcc" required>
+                                                    <input type="text" class="form-control form-control-sm shadow-none" name="" id="parentOcc">
                                                 </div>
                                             </div>
 
                                             <div class="row mb-3">
                                                 <label for="parentAddress" class="col-sm-2 col-form-label col-form-label-sm text-end fw-bolder">Parent Address</label>
                                                 <div class="col-sm-10">
-                                                    <input type="text" class="form-control form-control-sm shadow-none" name="" id="parentAddress" required>
+                                                    <input type="text" class="form-control form-control-sm shadow-none" name="" id="parentAddress">
                                                 </div>
                                             </div>
 
                                             <div class="row mb-3">
                                                 <label for="parentTel" class="col-sm-2 col-form-label col-form-label-sm text-end fw-bolder">Parent Phone Number</label>
                                                 <div class="col-sm-10">
-                                                    <input type="text" class="form-control form-control-sm shadow-none" name="" id="parentTel" required>
+                                                    <input type="text" class="form-control form-control-sm shadow-none" name="" id="parentTel">
                                                 </div>
                                             </div>
 
@@ -457,7 +299,12 @@
                                             <div class="row mb-3">
                                                 <label for="hSchool" class="col-sm-2 col-form-label col-form-label-sm text-end fw-bolder">High School</label>
                                                 <div class="col-sm-10">
-                                                    <input type="text" class="form-control form-control-sm shadow-none" name="" id="hSchool" placeholder="High school name" required>
+                                                    <select class="form-select form-select-sm form-comtrol shadow-none" name="origin" id="origin">
+                                                        <option selected disabled value="">Select your heighSchool</option>
+                                                        @foreach ($heighSchoolOps as $hschool)
+                                                            <option value="{{$hschool->id}}">{{$hschool->name_kh}}</option>
+                                                        @endforeach
+                                                    </select>
                                                 </div>
                                             </div>
 
@@ -481,34 +328,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="container" style="margin-top: 3rem">
-
-                            <form action="" class="w-100">
-                                <div class="row mb-3">
-
-                                    <div class="col-sm-12 d-flex justify-content-center">
-
-                                        <a type="button" href=""class="btn btnCancel shadow-none mr-2">Cancel</a>
-
-                                        <button class="btnCreate">
-                                            <span>Create</span>
-                                            <span>
-                                                Sure ?
-                                            </span>
-                                            <span>
-                                                Created !
-                                            <svg id="svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path stroke-linecap="round" stroke-width="2" stroke="#ffffff" d="M8.00011 13L12.2278 16.3821C12.6557 16.7245 13.2794 16.6586 13.6264 16.2345L22.0001 6"></path> <path fill="#ffffff" d="M11.1892 12.2368L15.774 6.63327C16.1237 6.20582 16.0607 5.5758 15.6332 5.22607C15.2058 4.87635 14.5758 4.93935 14.226 5.36679L9.65273 10.9564L11.1892 12.2368ZM8.02292 16.1068L6.48641 14.8263L5.83309 15.6248L2.6 13.2C2.15817 12.8687 1.53137 12.9582 1.2 13.4C0.868627 13.8419 0.95817 14.4687 1.4 14.8L4.63309 17.2248C5.49047 17.8679 6.70234 17.7208 7.381 16.8913L8.02292 16.1068Z" clip-rule="evenodd" fill-rule="evenodd"></path></g></svg>
-                                            </span>
-                                        </button>
-
-                                    </div>
-
-                                </div>
-
-                            </form>
-
-                        </div>
-
                     </div>
 
                     {{-- New Academic Information content--}}
@@ -521,19 +340,9 @@
                                     <label for="acaYear" class="col-sm-2 col-form-label col-form-label-sm text-end fw-bolder">Academic Year <sup>*</sup></label>
                                     <div class="col-sm-10">
                                         <select class="form-select form-select-sm form-comtrol shadow-none" name="" id="acaYear" required>
-                                            <option value="2023">២០២២-២០២៣</option>
-                                            <option value="2022">២០២១-២០២២</option>
-                                            <option value="2021">២០២០-២០២១</option>
-                                            <option value="2020">២០១៩-២០២០</option>
-                                            <option value="2019">២០១៨-២០១៩</option>
-                                            <option value="2018">២០១៧-២០១៨</option>
-                                            <option value="2017">២០១៦-២០១៧</option>
-                                            <option value="2016">២០១៥-២០១៦</option>
-                                            <option value="2015">២០១៤-២០១៥</option>
-                                            <option value="2014">២០១៣-២០១៤</option>
-                                            <option value="2013">២០១២-២០១៣</option>
-                                            <option value="2012">២០១១-២០១២</option>
-                                            <option value="2011">២០១០-២០១១</option>
+                                            @foreach ($optionAc as $e)
+                                                <option value="{{$e->id}}">{{$e->name_kh}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -542,48 +351,10 @@
                                     <label for="promotion" class="col-sm-2 col-form-label col-form-label-sm text-end fw-bolder">Promotion <sup>*</sup></label>
                                     <div class="col-sm-10">
                                         <select class="form-select form-select-sm form-comtrol shadow-none" name="" id="promotion" required>
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                            <option value="6">6</option>
-                                            <option value="7">7</option>
-                                            <option value="8">8</option>
-                                            <option value="9">9</option>
-                                            <option value="10">10</option>
-                                            <option value="11">11</option>
-                                            <option value="12">12</option>
-                                            <option value="13">13</option>
-                                            <option value="14">14</option>
-                                            <option value="15">15</option>
-                                            <option value="16">16</option>
-                                            <option value="17">17</option>
-                                            <option value="18">18</option>
-                                            <option value="19">19</option>
-                                            <option value="20">20</option>
-                                            <option value="21">21</option>
-                                            <option value="22">22</option>
-                                            <option value="23">23</option>
-                                            <option value="24">24</option>
-                                            <option value="25">25</option>
-                                            <option value="26">26</option>
-                                            <option value="27">27</option>
-                                            <option value="28">28</option>
-                                            <option value="29">29</option>
-                                            <option value="30">30</option>
-                                            <option value="31">31</option>
-                                            <option value="32">32</option>
-                                            <option value="33">33</option>
-                                            <option value="34">34</option>
-                                            <option value="35">35</option>
-                                            <option value="36">36</option>
-                                            <option value="37">37</option>
-                                            <option value="38">38</option>
-                                            <option value="39">39</option>
-                                            <option value="40">40</option>
-                                            <option value="41">41</option>
-                                            <option value="42">42</option>
+                                            <option selected disabled value="">Choose your promotion</option>
+                                            @foreach ($promotions as $e)
+                                                <option value="{{$e->id}}">{{$e->name}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -591,12 +362,9 @@
                                     <label for="degree" class="col-sm-2 col-form-label col-form-label-sm text-end fw-bolder">Degree <sup>*</sup></label>
                                     <div class="col-sm-10">
                                         <select class="form-select form-select-sm form-comtrol shadow-none" name="" id="degree" required>
-                                            <option value="1">វិស្វករ</option>
-                                            <option value="2">បរិញាប័ត្ររងវិស្វកម្ម</option>
-                                            <option value="5">ប​ណ្ឌិត​</option>
-                                            <option value="4">បរិញាប័ត្រជាន់ខ្ពស់</option>
-                                            <option value="3">បរិញាប័ត្រ</option>
-                                            <option value="6">អន្តរជាតិ</option>
+                                            @foreach ($optionDegrees as $e)
+                                                <option value="{{$e->id}}">{{$e->name_kh}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -605,11 +373,9 @@
                                     <label for="grade" class="col-sm-2 col-form-label col-form-label-sm text-end fw-bolder">Grade <sup>*</sup></label>
                                     <div class="col-sm-10">
                                         <select class="form-select form-select-sm form-comtrol shadow-none" name="" id="grade" required>
-                                            <option value="1">ឆ្នាំទី១</option>
-                                            <option value="2">ឆ្នាំទី២</option>
-                                            <option value="3">ឆ្នាំទី៣</option>
-                                            <option value="4">ឆ្នាំទី៤</option>
-                                            <option value="5">ឆ្នាំទី៥</option>
+                                            @foreach ($optionGrades as $e)
+                                                <option value="{{$e->id}}">{{$e->name_kh}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -617,23 +383,10 @@
                                     <label for="department" class="col-sm-2 col-form-label col-form-label-sm text-end fw-bolder">Department <sup>*</sup></label>
                                     <div class="col-sm-10">
                                         <select class="form-select form-select-sm form-comtrol shadow-none" name="" id="department" required>
-                                            <option value="22">GTI</option>
-                                            <option value="21">GAR</option>
-                                            <option value="20">AMS</option>
-                                            <option value="19">IME</option>
-                                            <option value="18">GS</option>
-                                            <option value="17">OAC</option>
-                                            <option value="16">GTR</option>
-                                            <option value="13">SF</option>
-                                            <option value="12">SA</option>
-                                            <option value="8">TC</option>
-                                            <option value="7">GGG</option>
-                                            <option value="6">GRU</option>
-                                            <option value="5">GIM</option>
-                                            <option value="4">GIC</option>
-                                            <option value="3">GEE</option>
-                                            <option value="2">GCI</option>
-                                            <option value="1">GCA</option>
+                                            <option value="" selected disabled>Choose your department</option>
+                                            @foreach ($departments as $e)
+                                                <option value="{{$e->id}}">{{$e->code}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -642,83 +395,9 @@
                                     <div class="col-sm-10">
                                         <select class="form-select form-select-sm form-comtrol shadow-none" name="" id="option">
                                             <option selected="selected" value=""></option>
-                                            <option value="1">_Arch</option>
-                                            <option value="2">_Civil</option>
-                                            <option value="3">_EAT</option>
-                                            <option value="7">g</option>
-                                            <option value="10">_FST</option>
-                                            <option value="11">_ChE</option>
-                                            <option value="5">_Ind</option>
-                                            <option value="6">_Mé</option>
-                                            <option value="4">_EE</option>
-                                            <option value="8">_EA</option>
-                                            <option value="9">_ET</option>
-                                            <option value="12">_WRI</option>
-                                            <option value="14">Materials Science and Structures</option>
-                                            <option value="16">WE</option>
-                                            <option value="17">MS</option>
-                                            <option value="23">MIT</option>
-                                            <option value="15">Food Technology and Nutrition</option>
-                                            <option value="24">FTN</option>
-                                            <option value="25">MSS</option>
-                                            <option value="26">WE</option>
-                                            <option value="27">ETM</option>
-                                            <option value="22">M-AIE</option>
-                                            <option value="21">M-GIM</option>
-                                            <option value="20">M-MT</option>
-                                            <option value="19">M-WE</option>
-                                            <option value="18">M-MS</option>
-                                            <option value="13">_WEE</option>
-                                            <option value="38">WAE</option>
-                                            <option value="49">_MGCA</option>
-                                            <option value="46">_MGCI</option>
-                                            <option value="47">_MGEE</option>
-                                            <option value="45">_MGIC</option>
-                                            <option value="50">_MGIM</option>
-                                            <option value="48">_MGRU</option>
-                                            <option value="51">M-TE</option>
-                                            <option value="52">M-WEE</option>
-                                            <option value="53">M-AI</option>
-                                            <option value="54">M-IM</option>
-                                            <option value="55">M-ETM</option>
-                                            <option value="56">ECAM</option>
-                                            <option value="57">_AMS</option>
-                                            <option value="58">_GTI</option>
-                                            <option value="59">M-TIE</option>
-                                            <option value="60">M-MSE</option>
-                                            <option value="61">M-MIC</option>
-                                            <option value="63">D-ETM</option>
-                                            <option value="64">D-FTN</option>
-                                            <option value="65">D-MIT</option>
-                                            <option value="66">D-MSS</option>
-                                            <option value="67">D-WAE</option>
-                                            <option value="68">_ABE</option>
-                                            <option value="62">M-ECS</option>
-                                            <option value="70">_GTI</option>
-                                            <option value="71">_GAR</option>
-                                            <option value="69">ECAM_ROA</option>
-                                            <option value="28">_GCA</option>
-                                            <option value="32">_GGG</option>
-                                            <option value="35">_GRU</option>
-                                            <option value="72">ECAM_RA</option>
-                                            <option value="73">ECAM_IESCM</option>
-                                            <option value="74">ECAM_ISM</option>
-                                            <option value="75">M-DAS</option>
-                                            <option value="76">_TFS</option>
-                                            <option value="77">_TCI</option>
-                                            <option value="79">_TMG</option>
-                                            <option value="80">_TIM</option>
-                                            <option value="81">_TMT</option>
-                                            <option value="82">_TMT</option>
-                                            <option value="84">_TEA</option>
-                                            <option value="85">_TWE</option>
-                                            <option value="83">_TET</option>
-                                            <option value="30">_GAR</option>
-                                            <option value="29">_GCI</option>
-                                            <option value="31">_GEE</option>
-                                            <option value="33">_GIC</option>
-                                            <option value="34">_GIM</option>
-                                            <option value="36">_GTR</option>
+                                            @foreach ($departmentOption as $e)
+                                                <option value="{{ $e->id }}">{{ $e->code }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -727,142 +406,10 @@
                                     <label for="group" class="col-sm-2 col-form-label col-form-label-sm text-end fw-bolder">Group</label>
                                     <div class="col-sm-10">
                                         <select class="form-select form-select-sm form-comtrol shadow-none" name="" id="group">
-                                            <option value="30">1</option>
-                                            <option value="11">2</option>
-                                            <option value="29">3</option>
-                                            <option value="17">4</option>
-                                            <option value="27">5</option>
-                                            <option value="18">6</option>
-                                            <option value="31">7</option>
-                                            <option value="7">8</option>
-                                            <option value="8">9</option>
-                                            <option value="20">10</option>
-                                            <option value="19">11</option>
-                                            <option value="21">12</option>
-                                            <option value="23">13</option>
-                                            <option value="32">14</option>
-                                            <option value="33">15</option>
-                                            <option value="13">16</option>
-                                            <option value="12">17</option>
-                                            <option value="9">18</option>
-                                            <option value="16">19</option>
-                                            <option value="35">20</option>
-                                            <option value="10">21</option>
-                                            <option value="36">22</option>
-                                            <option value="22">23</option>
-                                            <option value="14">24</option>
-                                            <option value="15">25</option>
-                                            <option value="26">26</option>
-                                            <option value="24">27</option>
-                                            <option value="25">28</option>
-                                            <option value="28">29</option>
-                                            <option value="34">30</option>
-                                            <option value="60">31</option>
-                                            <option value="61">32</option>
-                                            <option value="62">33</option>
-                                            <option value="59">34</option>
-                                            <option value="63">35</option>
-                                            <option value="64">36</option>
-                                            <option value="65">37</option>
-                                            <option value="66">38</option>
-                                            <option value="67">39</option>
-                                            <option value="68">40</option>
-                                            <option value="69">41</option>
-                                            <option value="70">42</option>
-                                            <option value="71">43</option>
-                                            <option value="72">44</option>
-                                            <option value="73">45</option>
-                                            <option value="74">46</option>
-                                            <option value="79">47</option>
-                                            <option value="80">48</option>
-                                            <option value="81">49</option>
-                                            <option value="82">50</option>
-                                            <option value="83">51</option>
-                                            <option value="84">52</option>
-                                            <option value="85">53</option>
-                                            <option value="86">54</option>
-                                            <option value="87">55</option>
-                                            <option value="88">56</option>
-                                            <option value="89">57</option>
-                                            <option value="90">58</option>
-                                            <option value="91">59</option>
-                                            <option value="92">60</option>
-                                            <option value="93">61</option>
-                                            <option value="94">62</option>
-                                            <option value="95">63</option>
-                                            <option value="96">64</option>
-                                            <option value="97">65</option>
-                                            <option value="98">66</option>
-                                            <option value="99">67</option>
-                                            <option value="100">68</option>
-                                            <option value="101">69</option>
-                                            <option value="102">70</option>
-                                            <option value="103">71</option>
-                                            <option value="104">72</option>
-                                            <option value="105">73</option>
-                                            <option value="106">74</option>
-                                            <option value="107">75</option>
-                                            <option value="108">76</option>
-                                            <option value="109">77</option>
-                                            <option value="110">78</option>
-                                            <option value="111">79</option>
-                                            <option value="112">80</option>
-                                            <option value="113">81</option>
-                                            <option value="114">82</option>
-                                            <option value="115">83</option>
-                                            <option value="116">84</option>
-                                            <option value="117">85</option>
-                                            <option value="118">86</option>
-                                            <option value="119">87</option>
-                                            <option value="120">88</option>
-                                            <option value="121">89</option>
-                                            <option value="122">90</option>
-                                            <option value="123">91</option>
-                                            <option value="124">92</option>
-                                            <option value="125">93</option>
-                                            <option value="126">94</option>
-                                            <option value="127">95</option>
-                                            <option value="128">96</option>
-                                            <option value="129">97</option>
-                                            <option value="130">98</option>
-                                            <option value="131">99</option>
-                                            <option value="132">100</option>
-                                            <option value="2">A</option>
-                                            <option value="76">AA</option>
-                                            <option value="75">AB</option>
-                                            <option value="134">AC</option>
-                                            <option value="135">AD</option>
-                                            <option value="136">AE</option>
-                                            <option value="137">AF</option>
-                                            <option value="138">AG</option>
-                                            <option value="1">B</option>
-                                            <option value="4">C</option>
-                                            <option value="3">D</option>
-                                            <option value="37">E</option>
-                                            <option value="38">F</option>
-                                            <option value="39">G</option>
-                                            <option value="40">H</option>
-                                            <option value="41">I</option>
-                                            <option value="42">J</option>
-                                            <option value="43">K</option>
-                                            <option value="44">L</option>
-                                            <option value="45">M</option>
-                                            <option value="46">N</option>
-                                            <option value="133">N/A</option>
-                                            <option value="47">O</option>
-                                            <option value="48">P</option>
-                                            <option value="49">Q</option>
-                                            <option value="50">R</option>
-                                            <option value="51">S</option>
-                                            <option value="52">T</option>
-                                            <option value="53">U</option>
-                                            <option value="54">V</option>
-                                            <option value="55">W</option>
-                                            <option value="56">X</option>
-                                            <option value="77">Y</option>
-                                            <option value="78">Z</option>
-                                            <option value="57">b</option>
-                                            <option value="58">s</option>
+                                            <option selected disabled value="">Choose your group</option>
+                                            @foreach ($groups as $e)
+                                                <option value="{{$e->id}}">{{$e->code}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -871,27 +418,13 @@
                                     <label for="history" class="col-sm-2 col-form-label col-form-label-sm text-end fw-bolder">History</label>
                                     <div class="col-sm-10">
                                         <select class="form-select form-select-sm form-comtrol shadow-none" name="" id="history">
-                                            <option selected="selected" value=""></option>
-                                            <option value="1">DUT+0</option>
-                                            <option value="2">DUT+1</option>
-                                            <option value="3">DUT+2</option>
-                                            <option value="4">T1+0</option>
-                                            <option value="5">T1+1</option>
-                                            <option value="6">T1+2</option>
-                                            <option value="7">T2+0</option>
-                                            <option value="8">T2+1</option>
-                                            <option value="9">T2+2</option>
-                                            <option value="10">Ex. T1</option>
-                                            <option value="11">Ex. T2</option>
-                                            <option value="12">Ex. T3</option>
-                                            <option value="13">Ex. T3+0</option>
-                                            <option value="14">Laos</option>
-                                            <option value="15">Vietnam</option>
-                                            <option value="16">Other</option>
+                                            <option selected disabled  value="">Select your history</option>
+                                            @foreach ($histories as $e)
+                                                <option value="{{$e->id}}">{{$e->name_en}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
-
                                 <div class="row mb-3">
                                     <label for="" class="col-sm-2 col-form-label col-form-label-sm text-end fw-bolder">Redouble</label>
                                     <div class="col-sm-2">
@@ -934,134 +467,45 @@
                                     <label for="selectWithSearch" class="col-sm-2 col-form-label col-form-label-sm text-end fw-bolder">Scholarships</label>
                                     <div class="col-sm-10">
                                         <select class="form-comtrol" style="width: 100%" name="" id="selectWithSearch">
-                                            <option selected value=""></option>
-                                            <option value="1">Boursier Partielle</option>
-                                            <option value="2">Boursier M</option>
-                                            <option value="3">Boursier L</option>
-                                            <option value="4">Boursier P</option>
-                                            <option value="5">Boursier F</option>
-                                            <option value="6">Boursier AUF</option>
-                                            <option value="7">Boursier WB</option>
-                                            <option value="8">Boursier ITC</option>
-                                            <option value="9">MoWRAM</option>
-                                            <option value="10">Sumitomo</option>
-                                            <option value="11">D.K.Kim</option>
-                                            <option value="12">AFS</option>
-                                            <option value="13">Akaraka</option>
-                                            <option value="14">CDRI</option>
-                                            <option value="15">Enfants du Mekong</option>
-                                            <option value="16">Harpswell Foundation</option>
-                                            <option value="17">Total Cambodge</option>
-                                            <option value="18">CEEF</option>
-                                            <option value="19">Boursier ITC 50%</option>
-                                            <option value="20">Boursier Smart</option>
-                                            <option value="21">Boursier ITC 60%</option>
-                                            <option value="22">Boursier ITC 70%</option>
-                                            <option value="23">UYFC</option>
-                                            <option value="47">Boursier P ITC 70%</option>
-                                            <option value="48">Boursier P ITC PK</option>
-                                            <option value="49">Boursier P ITC 100%</option>
-                                            <option value="50">Boursier P ITC 50%</option>
-                                            <option value="51">AFD-EU</option>
-                                            <option value="52">CBRD 100%</option>
-                                            <option value="53">CBRD 100%,  ITC allowance</option>
-                                            <option value="54">Eramus+, ITC 50%</option>
-                                            <option value="55">ARES-CCD</option>
-                                            <option value="56">ITC 50%</option>
-                                            <option value="57">ITC staff</option>
-                                            <option value="58">ITC-LBE</option>
-                                            <option value="59">ITC 100%</option>
-                                            <option value="60">ITC 100%,  ITC allowance</option>
-                                            <option value="61">ITC 50%,  MoE 50%</option>
-                                            <option value="62">CBRD 50%</option>
-                                            <option value="63">BGF-ITC</option>
-                                            <option value="64">ITC</option>
-                                            <option value="65">ARES-ITC</option>
-                                            <option value="66">Boursier ITC 100%</option>
-                                            <option value="67">Boursier P ITC 60%</option>
-                                            <option value="68">Boursier P ITC K 100%</option>
-                                            <option value="69">Boursier P ITC</option>
-                                            <option value="70">Boursier F  / AFS</option>
-                                            <option value="71">Boursier L / CEEF</option>
-                                            <option value="72">Boursier M / CEEF</option>
-                                            <option value="73">HEIP-Partnership</option>
-                                            <option value="74">HEIP-Research</option>
-                                            <option value="75">ARES-Synergie</option>
-                                            <option value="76">ITC-TBK</option>
-                                            <option value="77">BGF-ITC.p</option>
-                                            <option value="78">NIPTIC</option>
-                                            <option value="79">ARES</option>
-                                            <option value="80">IPC</option><option value="81">HEIP</option>
-                                            <option value="82">NPIC</option>
-                                            <option value="83">CCCA</option>
-                                            <option value="84">MoE</option>
-                                            <option value="85">BGF</option>
-                                            <option value="86">KIT-ITC</option>
-                                            <option value="87">ARES-COMBOdIA</option>
-                                            <option value="88">Boursier P PCK 100%</option>
-                                            <option value="89">Boursier P / Mékong Enfant's</option>
-                                            <option value="90">Wat-health</option>
-                                            <option value="91">HEIP-SRU</option>
-                                            <option value="92">HEIP-SGA-13</option>
-                                            <option value="93">HEIP-ITB</option>
-                                            <option value="94">HEIP-NUBB</option>
-                                            <option value="95">HEIP-ITC-ITB</option>
-                                            <option value="96">CAVAC</option>
-                                            <option value="97">HEIP-12</option>
-                                            <option value="98">HEIP-04</option>
-                                            <option value="99">HEIP-SGA-03</option>
-                                            <option value="100">USAID-Project</option>
-                                            <option value="101">HEIP-SGA-02</option>
-                                            <option value="102">HEIP-SGA-02</option>
-                                            <option value="103">BGF-HEIP</option>
-                                            <option value="104">ITC-Erasmus+</option>
-                                            <option value="105">IRD</option>
-                                            <option value="106">HEIP-ITC</option>
-                                            <option value="107">Boursier ITC 30%</option>
-                                            <option value="108">HEIP-C1</option>
-                                            <option value="109">HEIP-UHST</option>
-                                            <option value="110">HEIP-C2</option>
-                                            <option value="111">CE Fund</option>
-                                            <option value="112">USAID-WoM</option>
-                                            <option value="113">ARES-CAMBOFISH</option>
-                                            <option value="114">NUM</option>
-                                            <option value="115">HIEP</option>
+                                            <option selected value="">Select options</option>
+                                            @foreach ($scholarships as $e)
+                                                <option value="{{$e->id}}">{{$e->code}}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
                             </form>
-
-                        </div>
-                        <div class="container" style="margin-top: 3rem">
-
-                            <form action="" class="w-100">
-                                <div class="row mb-3">
-
-                                    <div class="col-sm-12 d-flex justify-content-center">
-
-                                        <a type="button" href=""class="btn btnCancel shadow-none mr-2">Cancel</a>
-
-
-                                        <button class="btnCreate">
-                                            <span>Create</span>
-                                            <span>
-                                                Sure ?
-                                            </span>
-                                            <span>
-                                                Created !
-                                            <svg id="svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path stroke-linecap="round" stroke-width="2" stroke="#ffffff" d="M8.00011 13L12.2278 16.3821C12.6557 16.7245 13.2794 16.6586 13.6264 16.2345L22.0001 6"></path> <path fill="#ffffff" d="M11.1892 12.2368L15.774 6.63327C16.1237 6.20582 16.0607 5.5758 15.6332 5.22607C15.2058 4.87635 14.5758 4.93935 14.226 5.36679L9.65273 10.9564L11.1892 12.2368ZM8.02292 16.1068L6.48641 14.8263L5.83309 15.6248L2.6 13.2C2.15817 12.8687 1.53137 12.9582 1.2 13.4C0.868627 13.8419 0.95817 14.4687 1.4 14.8L4.63309 17.2248C5.49047 17.8679 6.70234 17.7208 7.381 16.8913L8.02292 16.1068Z" clip-rule="evenodd" fill-rule="evenodd"></path></g></svg>
-                                            </span>
-                                        </button>
-
-                                    </div>
-
-                                </div>
-
-                            </form>
-
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="container py-3">
+
+                <form action="" class="w-100">
+                    <div class="row mb-3">
+
+                        <div class="col-sm-12 d-flex justify-content-center">
+
+                            <a type="button" href=""class="btn btnCancel shadow-none mr-2">Cancel</a>
+
+
+                            <button class="btnCreate">
+                                <span>Create</span>
+                                <span>
+                                    Sure ?
+                                </span>
+                                <span>
+                                    Created
+                                <svg id="svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path stroke-linecap="round" stroke-width="2" stroke="#ffffff" d="M8.00011 13L12.2278 16.3821C12.6557 16.7245 13.2794 16.6586 13.6264 16.2345L22.0001 6"></path> <path fill="#ffffff" d="M11.1892 12.2368L15.774 6.63327C16.1237 6.20582 16.0607 5.5758 15.6332 5.22607C15.2058 4.87635 14.5758 4.93935 14.226 5.36679L9.65273 10.9564L11.1892 12.2368ZM8.02292 16.1068L6.48641 14.8263L5.83309 15.6248L2.6 13.2C2.15817 12.8687 1.53137 12.9582 1.2 13.4C0.868627 13.8419 0.95817 14.4687 1.4 14.8L4.63309 17.2248C5.49047 17.8679 6.70234 17.7208 7.381 16.8913L8.02292 16.1068Z" clip-rule="evenodd" fill-rule="evenodd"></path></g></svg>
+                                </span>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
             </div>
         </div>
     </div>

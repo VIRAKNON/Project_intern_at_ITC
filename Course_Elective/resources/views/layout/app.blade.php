@@ -35,7 +35,7 @@
             </a>
         </li>
         <li>
-            <a href="{{ route('studentAnnuals') }}" class="activeStudentAnnuals">
+            <a href="{{  url('/studentAnnuals') }}" class="activeStudentAnnuals">
             <i class="fas fa-user"></i>
             <span class="links_name">Students</span>
             </a>
@@ -64,54 +64,6 @@
                 <span>Scholarship</span>
             </a>
         </li>
-        {{-- <li>
-            <a href="#">
-                <i class="fas fa-user-plus"></i>
-                <span>Access Managment</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="fas fa-user-edit"></i>
-                <span>Examination</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="far fa-window-maximize"></i>
-                <span>Manage Internship</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="far fa-calendar-alt"></i>
-                <span>Schedual Management</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="fas fa-file-invoice-dollar"></i>
-                <span>Accounting</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class='bx bx-cog'></i>
-                <span>Configuration</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="fas fa-toolbox"></i>
-                <span>Log Viewer</span>
-            </a>
-        </li>
-        <li>
-            <a href="#">
-                <i class="fas fa-exclamation-triangle"></i>
-                <span>System Rounting</span>
-            </a>
-        </li> --}}
     </ul>
 </div>
 <section class="home-section">
@@ -141,7 +93,7 @@
                 <div class="box1">
                 <a class="button1" href="#popup1">
                     <i class="fas fa-user"></i>
-                    <span>Admin Instator</span>
+                    <span>AdminInstator</span>
                 </a>
                 </div>
                 <div id="popup1" class="overlay">
@@ -168,8 +120,8 @@
         </div>
     </nav>
     <div class="home-content">
-
     {{-- content --}}
+<<<<<<< HEAD
         @yield('dashboard')
         @yield('students')
         @yield('createStudent')
@@ -178,6 +130,16 @@
         @yield('coursesProgram')
         @yield('courseAnnualls')
         @yield('createCourse')
+=======
+    @yield('dashboard')
+    @yield('students')
+    @yield('createStudent')
+    @yield('showStudent')
+    @yield('editStudent')
+    @yield('coursesProgram')
+    @yield('courseAnnualls')
+    {{-- endcontent --}}
+>>>>>>> 8b7ce459c4e6438a98e906fef72bc664e1f8b3b1
     </div>
     {{-- endcontent --}}
     <div class="footer">
@@ -205,10 +167,9 @@
     setTimeout(
         function open(event){
             document.querySelector(".popup").style.display = "block";
-        },
-        2000
-    )
-});
+            },2000
+        )
+    });
     document.querySelector("#close").addEventListener("click", function(){
         document.querySelector(".popup").style.display = "none";
     });
