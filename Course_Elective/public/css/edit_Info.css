@@ -41,6 +41,13 @@
     background-color: #F0F3F4;
     padding: 5px;
 }
+.back{
+    padding: 5px;
+}
+.back a{
+    text-decoration: none;
+    color: #979A9A;
+}
 .dashboard{
     width: 100%;
     height: 90%;

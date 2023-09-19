@@ -143,6 +143,7 @@
                             </div>
                             <div class="col-auto">
                                 <select class="form-select shadow-none">
+                                    <option selected="selected" value="">Gender</option><option value="1">ប្រុស</option><option value="2">ស្រី</option>
                                     <option selected disabled value="" >Gender</option>
                                     @foreach ($optionGenders as $og)
                                         <option value="{{ $og->id }}">{{ $og->name_kh }}</option>

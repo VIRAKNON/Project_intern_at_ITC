@@ -25,36 +25,62 @@
                 </form>
             </div>
         </div>
+        <div class="back px-1"><a href="{{ route('admin/profile') }}">&#x21e6;Back</a></div>
         <div class="dashboard">
             <div class="update_info">
                 <div class="header">Chhange Password</div>
                 <div class="main_header">
                     <div class="sub_header">
-                        <label for="form1"><p>Old Password <span style="color: red">*</span></p></label>
-                        <label for="form2"><p>New Password <span style="color: red">*</span></p></label>
-                        <label for="form3"><p>New Password Confirmation <span style="color: red">*</span></p></label>
+                        <label for="old_password"><p>Old Password <span style="color: red">*</span></p></label>
+                        <label for="new_password"><p>New Password <span style="color: red">*</span></p></label>
+                        <label for="comfirm_password"><p>New Password Confirmation <span style="color: red">*</span></p></label>
                     </div>
                     <div class="detail">
-                        <label class="wrapper_fill">
+                       <form action="" method="POST">
+                            <div class="mb-4 m-2 ">
+                                @csrf
+                                <input type="password" name="old_password" id="old_password" required class="form-control shadow-none" autocomplete="off">
+                            </div>
+                            <div class="mb-4 m-2">
+                                @csrf
+                                <input type="password" name="new_password" id="new_password" required class="form-control shadow-none" autocomplete="off" >   
+                            </div>
+                            <div class="mb-4 m-2">
+                                @csrf
+                                <input type="password" name="comfirm_password" id="comfirm_password" class="form-control shadow-none" autocomplete="off">
+                            </div>
+                            <button type="submit" class="btn btn-primary me-2 m-2">Save Change</button>
+                        
+
+
+                        {{-- <label class="wrapper_fill py-1">
                             <div class="fill_input">
-                                <input type="text" placeholder="Input old password" name="text" id="form1" class="input_text" required>
-                                <span class="holders">Input old password</span>
+                                
+                                @csrf
+                                <input type="password" placeholder="Input old password" name="old_password" id="old_password" value="{{ old('old_password') }}" required autocomplete="off" class="form-control
+                                @error('old_password') is-invailid @enderror shadow-none">
+                                @error('old_password')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
                         </label>
-                        <label class="wrapper_fill">
+                        <label class="wrapper_fill py-3">
                             <div class="fill_input">
-                                <input type="text" placeholder="Input new password" name="text" id="form2" class="input_text" required>
-                                <span class="holders">Input new password</span>
+                                <input type="password" placeholder="Input new password" name="new_password" id="new_password" value="{{ old('new_password') }}"  autocomplete="off" class="form-control
+                                @error('new_password') is-invailid @enderror shadow-none">
+                                @error('new_password')
+                                    <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
                         </label>
-                        <label class="wrapper_fill">
+                        <label class="wrapper_fill  py-3">
                             <div class="fill_input">
-                                <input type="text" placeholder="Comfirm password" name="text" id="form3" class="input_text">
-                                <span class="holders">Comfirm password</span>
+                                <input type="password" placeholder="Comfirm password" name="comfirm_password" id="comfirm_password" autocomplete="off" class="form-control
+                                @error('comfirm_password') is-invailid @enderror shadow-none">
                             </div>
                         </label>
-                        <label class="wrapper_fill">
-                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        <label class="wrapper_fill  py-4">
+                            <button type="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
                                 Save Change
                             </button>
                             <!-- Modal -->
@@ -73,13 +99,18 @@
                                             <p class="text-center fs-4">Are you sure you want to change your passsword?</p>
                                         </div>
                                         <div class="modal-footer justify-content-center border-0">
+<<<<<<< HEAD
+                                            <button type="button" class="btn text-light" data-bs-dismiss="modal" style="width: 90px; backgroundcolor: #F88017;" onmouseover="this.style.backgroundColor='#F88017'; onmouseout="this.style.backgroundColor='#FF8C00';>Close</button>
+=======
                                             <button type="button" class="btn text-light" data-bs-dismiss="modal" style="width: 90px; background-color:#FF8C00;" onmouseover="this.style.backgroundColor='#F88017'" onmouseout="this.style.backgroundColor='#FF8C00';">Close</button>
+>>>>>>> 2de524d06e57178e2437b41dbbb28836c6ddf023
                                             <button type="button" class="btn btn-primary" style="width: 90px">Ok</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </label>
+                        </label> --}}
+                       </form>
                     </div>
                 </div>
             </div>

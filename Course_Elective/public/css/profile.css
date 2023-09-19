@@ -47,6 +47,13 @@
     display: flex;
     justify-content: center;
 }
+.back{
+    padding: 5px;
+}
+.back a{
+    text-decoration: none;
+    color: #979A9A;
+}
 .main{
     width: 50%;
     height: 90%;

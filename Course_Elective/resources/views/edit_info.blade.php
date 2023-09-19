@@ -23,6 +23,7 @@
                 </form>
             </div>
         </div>
+        <div class="back"><a href="{{ route('admin/profile') }}">&#x21e6;Back</a></div>
         <div class="dashboard">
             <div class="update_info">
                 <div class="header">Update Information</div>

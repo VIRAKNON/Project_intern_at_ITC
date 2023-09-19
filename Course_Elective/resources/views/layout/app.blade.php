@@ -41,7 +41,7 @@
             </a>
         </li>
         <li>
-            <a href="{{ route('courseAnnuals') }}">
+            <a href="{{ route('coursesAnnually') }}">
                 <i class="fas fa-book"></i>
                 <span>Curses Annually</span>
             </a>
@@ -121,15 +121,16 @@
     </nav>
     <div class="home-content">
     {{-- content --}}
-    @yield('dashboard')
-    @yield('students')
-    @yield('createStudent')
-    @yield('showStudent')
-    @yield('editStudent')
-    @yield('coursesProgram')
-    @yield('courseAnnualls')
-    {{-- endcontent --}}
+        @yield('dashboard')
+        @yield('students')
+        @yield('createStudent')
+        @yield('showStudent')
+        @yield('editStudent')
+        @yield('coursesProgram')
+        @yield('courseAnnualls')
+        @yield('createCourse')
     </div>
+    {{-- endcontent --}}
     <div class="footer">
         <span>Copyright © 2023 <a href="#">ITC | SMIS.</a></span>
         <span>All Right Reserved.</span>
