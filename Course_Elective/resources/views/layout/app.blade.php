@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <title>ITC | SMIS</title>
+    <link rel="icon" href="{{ asset('image/iconLogo.gif') }}">
 </head>
 <body>
     <div class="sidebar">
@@ -183,7 +184,7 @@
         <span>Copyright © 2023 <a href="#">ITC | SMIS.</a></span>
         <span>All Right Reserved.</span>
     </div>
-</section>
+    </section>
 </body>
 </html>
 

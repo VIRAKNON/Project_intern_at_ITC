@@ -9,20 +9,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-
-                         <!-- Include Select2 CSS -->
+    <!-- Include Select2 CSS -->
    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
-
-                        <!-- Include jQuery -->
+    <!-- Include jQuery -->
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-                        <!-- Include Select2 JS -->
+   <!-- Include Select2 JS -->
    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/createCourse.css')}}">
     <script src="{{asset('js/coures_annually.js')}}"></script>
 
     <title></title>
+    <style>
+        @import 'path/to/bootstrap-source/_reboot.scss';
+        /* Override Bootstrap styles */
+        ol, ul {
+            padding-left:0;
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid bg-light">
@@ -263,148 +267,133 @@
                                 </label>
                               </div>
                         </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="Time_course" class="col-2 form-label col-form-label-md text-end fw-bolder">Time Course <sup>*</sup></label>
-                    <div class="col-sm-4">
-                        <input type="number"  class="form-control form-control-sm shadow-none" name="" id="Time_course" style="width: 70%;">
                     </div>
-                    <label for="credit" class="col-2 form-label col-form-label-md text-end fw-bolder">Credit<sup>*</sup></label>
-                    <div class="col-4">
-                        <input class="form-control form-control-sm  shadow-none" type="text" name="credit" id="credit">
+                    <div class="row mb-3">
+                        <label for="Time_course" class="col-2 form-label col-form-label-md text-end fw-bolder">Time Course <sup>*</sup></label>
+                        <div class="col-sm-4">
+                            <input type="number"  class="form-control form-control-sm shadow-none" name="" id="Time_course" style="width: 70%;">
+                        </div>
+                        <label for="credit" class="col-2 form-label col-form-label-md text-end fw-bolder">Credit<sup>*</sup></label>
+                        <div class="col-4">
+                            <input class="form-control form-control-sm  shadow-none" type="text" name="credit" id="credit">
+                        </div>
                     </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="Time_TP" class="col-2 form-label col-form-label-md text-end fw-bolder">Time TP <sup>*</sup></label>
-                    <div class="col-sm-4">
-                        <input type="number"  class="form-control form-control-sm shadow-none" name="" id="Time_TP" style="width: 70%;">
+                    <div class="row mb-3">
+                        <label for="Time_TP" class="col-2 form-label col-form-label-md text-end fw-bolder">Time TP <sup>*</sup></label>
+                        <div class="col-sm-4">
+                            <input type="number"  class="form-control form-control-sm shadow-none" name="" id="Time_TP" style="width: 70%;">
+                        </div>
+                        <label for="Name_khmer" class="col-2 form-label col-form-label-md text-end fw-bolder">Name Khmer </label>
+                        <div class="col-4">
+                            <input class="form-control form-control-sm  shadow-none" type="text" name="credit" id="Name_khmer">
+                        </div>
                     </div>
-                    <label for="Name_khmer" class="col-2 form-label col-form-label-md text-end fw-bolder">Name Khmer </label>
-                    <div class="col-4">
-                        <input class="form-control form-control-sm  shadow-none" type="text" name="credit" id="Name_khmer">
+                    <div class="row mb-3">
+                        <label for="Time_TD" class="col-2 form-label col-form-label-md text-end fw-bolder">Time TD <sup>*</sup></label>
+                        <div class="col-sm-4">
+                            <input type="number"  class="form-control form-control-sm shadow-none" name="" id="Time_TD" style="width: 70%;">
+                        </div>
+                        <label for="credit" class="col-2 form-label col-form-label-md text-end fw-bolder">Name English</label>
+                        <div class="col-4">
+                            <input class="form-control form-control-sm shadow-none" type="text" name="credit" id="credit">
+                        </div>
                     </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="Time_TD" class="col-2 form-label col-form-label-md text-end fw-bolder">Time TD <sup>*</sup></label>
-                    <div class="col-sm-4">
-                        <input type="number"  class="form-control form-control-sm shadow-none" name="" id="Time_TD" style="width: 70%;">
+                    <div class="row mb-3">
+                        <label for="name_fr" class="col-lg-8 col-form-label-md fw-bolder  text-end control-label ">Name French</label>
+                        <div class="col-sm-4">
+                            <input class="form-control form-control-sm shadow-none" type="text" name="" id="name_fr">
+                        </div>
                     </div>
-                    <label for="credit" class="col-2 form-label col-form-label-md text-end fw-bolder">Name English</label>
-                    <div class="col-4">
-                        <input class="form-control form-control-sm shadow-none" type="text" name="credit" id="credit">
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="name_fr" class="col-lg-8 col-form-label-md fw-bolder  text-end control-label ">Name French</label>
-                    <div class="col-sm-4">
-                        <input class="form-control form-control-sm shadow-none" type="text" name="" id="name_fr">
-                    </div>
-                </div>
-                <div class="row mb-3">
-                    <label for="Scoring" class="col-2 form-label col-form-label-md text-end fw-bolder">Scoring <sup>*</sup></label>
-                    <div class="col-lg-10">
-                        <div class="box box-solid" style="border-top: 1px solid #d2d6de" id="scoring_panel">
-                            <div class="box-header with-border d-flex">
-                                <div class="col-md-6 col-xs-6">
-                                    <label for="normal_scoring_panel" class="control-label fw-bolder" style="font-size: 18px">
-                                        Normal Scoring
-                                        <input onclick="toggleVisible('#normal_scoring_panel', this)" id="normal_scoring" name="normal_scoring" value="checked" type="checkbox" >
-                                    </label>
-                                </div>
-                                <div class="col-md-6 col-xs-6">
-                                    <label for="competency_scoring_panel" style="float:left; font-size: 18px" class="control-label fw-bolder">
-                                        Competency Scoring (SA/SF Section)
-                                         <input onclick="toggleVisible('#competency_scoring_panel', this)" name="competency_scoring" value="checked" id="competency_scoring" type="checkbox">
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="box-body" style="padding:10px 0 0 0">
-                                <div class="col-md-7 col-xs-7">
-                                    <div class="normal_scoring_panel">
-                                        <div class="row mt-2">
-                                            <label for="having_resitted" data-toggle="tooltip" data-placement="top" title="" class="col-lg-12  text-end control-label required" data-original-title="When you allow student to take supplementary of this course. You must check this option for enabling the inputing score of this subject!">
-                                                 Allow Resit
-                                                  <input id="having_resitted" type="checkbox" name="is_having_resitted" style="font-size: 18pt" value="1"><span style="color: red"> *</span>
-                                            </label>
-                                        </div>
-                                        <div class="row mt-2">
-                                            <label for="transcript" data-toggle="tooltip" data-placement="top" title="" class="col-lg-12  text-end control-label required" data-original-title="When you allow student to take supplementary of this course. You must check this option for enabling the inputing score of this subject!">
-                                                Credit For Transcript
-                                                  <input id="transcript" type="checkbox" name="is_having_resitted" style="font-size: 18pt" value="1"><span style="color: red"> *</span>
-                                            </label>
-                                        </div>
-                                        <div class="row mt-2">
-                                            <label for="absence" data-toggle="tooltip" data-placement="top" title="" class="col-lg-12  text-end control-label required" data-original-title="When you allow student to take supplementary of this course. You must check this option for enabling the inputing score of this subject!">
-                                                10%-Absence
-                                                  <input id="absence" type="checkbox" name="is_having_resitted" style="font-size: 18pt" value="1"><span style="color: red"> *</span>
-                                            </label>
-                                        </div>
+                    <div class="row mb-3">
+                        <label for="Scoring" class="col-2 form-label col-form-label-md text-end">Scoring <sup>*</sup></label>
+                        <div class="col-lg-10">
+                            <div class="box box-solid" style="border-top: 1px solid #d2d6de" id="scoring_panel">
+                                <div class="box-header with-border d-flex">
+                                    <div class="col-md-6 col-xs-6">
+                                        <label for="normal_scoring_panel" class="control-label fw-bolder" style="font-size: 18px">
+                                            Normal Scoring
+                                            <input onclick="toggleVisible('#normal_scoring_panel', this)" id="" name="" value="checked" type="checkbox" >
+                                        </label>
                                     </div>
-                                    <div class="row mt-2">
-                                        <label for="selectPercentage" class="col-sm-5 form-label fw-bolder control-label text-end">Mitdterm Score <sup>*</sup></label>
-                                        <div class="col-sm-7">
-                                            <select class="form-select form-select-sm form-control shadow-none" id="selectPercentage">
-                                                <option value="0">0%</option>
-                                                <option value="30" selected>30%</option>
-                                                <option value="40">40%</option>
-                                              </select>
+                                    <div class="col-md-6 col-xs-6">
+                                        <label for="competency_scoring_panel" style="float:left; font-size: 18px" class="control-label fw-bolder">
+                                            Competency Scoring (SA/SF Section)
+                                            <input onclick="toggleVisible('#competency_scoring_panel', this)" name="competency_scoring" value="checked" id="competency_scoring" type="checkbox">
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="box-body" style="padding:10px 0 0 0">
+                                    <div class="col-md-7 col-7">
+                                        <div class="normal_scoring_panel">
+                                            <div class="row mt-2">
+                                                <label for="having_resitted" data-toggle="tooltip" data-placement="top" title="" class="col-lg-12  text-end control-label required" data-original-title="When you allow student to take supplementary of this course. You must check this option for enabling the inputing score of this subject!">
+                                                    Allow Resit
+                                                    <input id="having_resitted" type="checkbox" name="is_having_resitted" style="font-size: 18pt" value="1"><span style="color: red"> *</span>
+                                                </label>
+                                            </div>
+                                            <div class="row mt-2">
+                                                <label for="transcript" data-toggle="tooltip" data-placement="top" title="" class="col-lg-12  text-end control-label required" data-original-title="When you allow student to take supplementary of this course. You must check this option for enabling the inputing score of this subject!">
+                                                    Credit For Transcript
+                                                    <input id="transcript" type="checkbox" name="is_having_resitted" style="font-size: 18pt" value="1"><span style="color: red"> *</span>
+                                                </label>
+                                            </div>
+                                            <div class="row mt-2">
+                                                <label for="absence" data-toggle="tooltip" data-placement="top" title="" class="col-lg-12  text-end control-label required" data-original-title="When you allow student to take supplementary of this course. You must check this option for enabling the inputing score of this subject!">
+                                                    10%-Absence
+                                                    <input id="absence" type="checkbox" name="is_having_resitted" style="font-size: 18pt" value="1"><span style="color: red"> *</span>
+                                                </label>
+                                            </div>
                                         </div>
-                                      </div>
-                                        <div class="row mt-3 mb-3">
-                                            <label for="inputValue" class="col-sm-5 form-label form-label-md fw-bolder control-label col-sm-5 text-end required">Final Score <sup>*</sup></label>
+                                        <div class="row mt-2">
+                                            <label for="selectPercentage" class="col-sm-5 form-label fw-bolder control-label text-end">Mitdterm Score <sup>*</sup></label>
+                                            <div class="col-sm-7">
+                                                <select class="form-select form-select-sm form-control shadow-none" id="selectPercentage">
+                                                    <option value="0">0%</option>
+                                                    <option value="30" selected>30%</option>
+                                                    <option value="40">40%</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <label for="inputValue" class="col-sm-5 form-label form-label-md fw-bolder control-label  text-end required">Final Score <sup>*</sup></label>
                                             <div class="col-sm-7">
                                                 <input type="number" class="form-control form-control-sm shadow-none" id="inputValue" min="0" max="100" required="required" disabled>
                                             </div>
                                         </div>
                                     </div>
-                                <div class="col-md-6 col-xs-5"></div>
+                                    <div class="col-md-6 col-5"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row" style="">
-                    <label for="Permit" class="col-2 form-label col-form-label-md text-end fw-bolder">Permit responsibility to</label>
-                    <div class="col-sm-3">
-                        <select class="form-control form-select-sm form-comtrol shadow-none" id="Permit" name="responsible_department_id">
-                            <option selected="selected" value="">Department</option>
-                            <option value="20">AMS</option>
-                            <option value="21">GAR</option>
-                            <option value="1">GCA</option>
-                            <option value="2">GCI</option>
-                            <option value="3">GEE</option>
-                            <option value="7">GGG</option>
-                            <option value="4">GIC</option>
-                            <option value="5">GIM</option>
-                            <option value="6">GRU</option>
-                            <option value="18">GS</option>
-                            <option value="22">GTI</option>
-                            <option value="16">GTR</option>
-                            <option value="19">IME</option>
-                            <option value="17">OAC</option>
-                            <option value="12">SA</option>
-                            <option value="13">SF</option>
-                            <option value="8">TC</option>
-                        </select>
-                    </div>
-                    <label for="Type_Course" class="col-4 form-label col-form-label-md text-end fw-bolder">Type Course </label>
-                    <div class="col-3">
-                        <select class="form-select form-select-sm form-comtrol shadow-none" name="" id="Type_Course">
-                            <option value="">General Course</option>
-                            <option value="">Elective Course</option>
-                        </select>
-                    </div>
-                </div>
             </div>
-            </div>
-            <div class="box box-success mt-5">
-                <div class="box-body">
-                    <div class="pull-left">
-                        <a href="" class="btn btn-danger btn-xs">Cancel</a>
+            <div class="container" style="margin-top: 3rem;">
+
+                <form action="" class="w-100">
+                    <div class="row mb-5">
+
+                        <div class="col-sm-12 d-flex justify-content-center">
+
+                            <a type="button" href=""class="btn btnCancel shadow-none mr-2">Cancel</a>
+
+
+                            <button class="btnCreate mx-1">
+                                <span>Create</span>
+                                <span>
+                                    Sure ?
+                                </span>
+                                <span>
+                                    Created !
+                                <svg id="svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path stroke-linecap="round" stroke-width="2" stroke="#ffffff" d="M8.00011 13L12.2278 16.3821C12.6557 16.7245 13.2794 16.6586 13.6264 16.2345L22.0001 6"></path> <path fill="#ffffff" d="M11.1892 12.2368L15.774 6.63327C16.1237 6.20582 16.0607 5.5758 15.6332 5.22607C15.2058 4.87635 14.5758 4.93935 14.226 5.36679L9.65273 10.9564L11.1892 12.2368ZM8.02292 16.1068L6.48641 14.8263L5.83309 15.6248L2.6 13.2C2.15817 12.8687 1.53137 12.9582 1.2 13.4C0.868627 13.8419 0.95817 14.4687 1.4 14.8L4.63309 17.2248C5.49047 17.8679 6.70234 17.7208 7.381 16.8913L8.02292 16.1068Z" clip-rule="evenodd" fill-rule="evenodd"></path></g></svg>
+                                </span>
+                            </button>
+
+                        </div>
+
                     </div>
-                    <div class="pull-right">
-                        <button type="sumite" id="submit_form" class="btn btn-success btn-xs">Create</button>
-                    </div>
-                </div>
+
+                </form>
+
             </div>
         </div>
     </div>
