@@ -1,4 +1,4 @@
-*{
+body{
     font-family: 'Catamaran', sans-serif;
 }
 /* Override Bootstrap styles */
@@ -8,7 +8,6 @@ ol, ul {
 }
 .content{
     width: 100%;
-    height: 100vh;
     /* padding: 10px; */
     background-color:#ffffff ;
     border-top: 4px solid #00ABE4;
@@ -191,3 +190,22 @@ element.style {
   .slider.round:before {
     border-radius: 50%;
   }
+ input[type='search']:focus{
+box-shadow: none;
+}
+.custom-select:focus{
+    box-shadow: none;
+}
+.paginate_button:focus{
+    box-shadow: none;
+}
+
+/* Initially hide the tools */
+.tools {
+    display: none;
+}
+
+/* Show the tools when hovering over the li element */
+.todo-list li:hover .tools {
+    display: block;
+}

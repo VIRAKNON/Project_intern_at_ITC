@@ -36,7 +36,7 @@
                         </div>
                     </div>
                     <div class="sucess">
-                        <button class="save">Save Change</button> 
+                        <button class="save">Save Change</button>
                         <div class="modal-wrapper">
                             <div class="modal">
                                 <div class="modal-close">&times;</div>

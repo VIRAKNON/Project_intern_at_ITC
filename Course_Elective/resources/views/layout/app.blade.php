@@ -35,7 +35,7 @@
             </a>
         </li>
         <li>
-            <a href="{{ route('studentAnnuals') }}" class="activeStudentAnnuals">
+            <a href="{{  url('/studentAnnuals') }}" class="activeStudentAnnuals">
             <i class="fas fa-user"></i>
             <span class="links_name">Students</span>
             </a>
@@ -121,6 +121,7 @@
     </nav>
     <div class="home-content">
     {{-- content --}}
+<<<<<<< HEAD
         @yield('dashboard')
         @yield('students')
         @yield('createStudent')
@@ -128,8 +129,22 @@
         @yield('editStudent')
         @yield('coursesProgram')
         @yield('courseAnnualls')
+<<<<<<< HEAD
+=======
+        @yield('createCourse')
+=======
+    @yield('dashboard')
+    @yield('students')
+    @yield('createStudent')
+    @yield('showStudent')
+    @yield('editStudent')
+    @yield('coursesProgram')
+    @yield('courseAnnualls')
+>>>>>>> 2de524d06e57178e2437b41dbbb28836c6ddf023
     {{-- endcontent --}}
+>>>>>>> 8b7ce459c4e6438a98e906fef72bc664e1f8b3b1
     </div>
+    {{-- endcontent --}}
     <div class="footer">
         <span>Copyright © 2023 <a href="#">ITC | SMIS.</a></span>
         <span>All Right Reserved.</span>
@@ -137,6 +152,9 @@
     </section>
 </body>
 </html>
+
+
+
 
 <script>
     let sidebar = document.querySelector(".sidebar");

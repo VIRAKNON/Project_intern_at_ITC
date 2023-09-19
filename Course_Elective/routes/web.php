@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\AcademicYearsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +20,7 @@ Route::get('/admin/dashboard', function(){
     return view('dashboard');
 })->name('dashboard');
 
+<<<<<<< HEAD
 Route::get('/studentAnnuals', [StudentController::class, 'studentAannully'])->name('studentAnnuals');
 Route::get('/studentAnnuals', [StudentController::class, 'academicOption'])->name('studentAnnuals');
 // Route::get('/studentAnnuals', [StudentController::class, 'degreesOption'])->name('degreesOption');
@@ -27,6 +29,10 @@ Route::get('/studentAnnuals/create', function () {
     return view('createStudent');
 })->name('studentAnnuals/create');
 
+=======
+Route::get('/studentAnnuals', [StudentController::class, 'index']);
+Route::get('/studentAnnuals/create', [StudentController::class, 'store'])->name('studentAnnuals/create');
+>>>>>>> 2de524d06e57178e2437b41dbbb28836c6ddf023
 Route::get('/studentAnnuals/edit', function () {
     return view('edit_Student');
 })->name('studentAnnuals/edit');
@@ -38,10 +44,21 @@ Route::get('/studentAnnuals/show', function () {
 
 Route::get('/coursesAnnually', function () {
     return view('coursesAnnually');
+<<<<<<< HEAD
 })->name('coursesAnnually');
+=======
+})->name('courseAnnuals');
+<<<<<<< HEAD
+
+
+Route::get('CourseAnnually/create', function () {
+=======
+>>>>>>> 2de524d06e57178e2437b41dbbb28836c6ddf023
 Route::get('/create_Coures', function () {
+>>>>>>> 8b7ce459c4e6438a98e906fef72bc664e1f8b3b1
     return view('create_Coures');
-});
+})->name('CourseAnnually/create');
+
 Route::get('/coursesProgram', function () {
     return view('coursesProgram');
 })->name('coursesProgram');
