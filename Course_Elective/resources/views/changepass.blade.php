@@ -70,10 +70,10 @@
                                             </div>
                                         </div>
                                         <div class="modal-body justify-content-center py-0">
-                                            <p class="text-center fs-4">Are you sure you want to change your passsword?</p> 
+                                            <p class="text-center fs-4">Are you sure you want to change your passsword?</p>
                                         </div>
                                         <div class="modal-footer justify-content-center border-0">
-                                            <button type="button" class="btn text-light" data-bs-dismiss="modal" style="width: 90px; onmouseover="this.style.backgroundColor='#F88017'; onmouseout="this.style.backgroundColor='#FF8C00';">Close</button>
+                                            <button type="button" class="btn text-light" data-bs-dismiss="modal" style="width: 90px; background-color:#FF8C00;" onmouseover="this.style.backgroundColor='#F88017'" onmouseout="this.style.backgroundColor='#FF8C00';">Close</button>
                                             <button type="button" class="btn btn-primary" style="width: 90px">Ok</button>
                                         </div>
                                     </div>

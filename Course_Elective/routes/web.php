@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\AcademicYearsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,13 +20,8 @@ Route::get('/admin/dashboard', function(){
     return view('dashboard');
 })->name('dashboard');
 
-Route::get('/studentAnnuals', [StudentController::class, 'index'])->name('studentAnnuals');
-// Route::get('/studentAnnuals', [StudentController::class, 'academicOption']);
-// Route::get('/studentAnnuals', [StudentController::class, 'degreesOption']);
-
-Route::get('/studentAnnuals/create', function () {
-    return view('createStudent');
-})->name('studentAnnuals/create');
+Route::get('/studentAnnuals', [StudentController::class, 'index']);
+Route::get('/studentAnnuals/create', [StudentController::class, 'store'])->name('studentAnnuals/create');
 Route::get('/studentAnnuals/edit', function () {
     return view('edit_Student');
 })->name('studentAnnuals/edit');
@@ -36,10 +32,11 @@ Route::get('/studentAnnuals/show', function () {
 
 Route::get('/coursesAnnually', function () {
     return view('coursesAnnually');
-});
+})->name('courseAnnuals');
 Route::get('/create_Coures', function () {
     return view('create_Coures');
 });
+
 Route::get('/coursesProgram', function () {
     return view('coursesProgram');
 })->name('coursesProgram');
