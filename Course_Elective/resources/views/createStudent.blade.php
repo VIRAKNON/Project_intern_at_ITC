@@ -24,13 +24,6 @@
     <script src="{{asset("js/createStudent.js")}}"></script>
 
     <title>Document</title>
-    <style>
-        @import 'path/to/bootstrap-source/_reboot.scss';
-        /* Override Bootstrap styles */
-        ol, ul {
-            padding-left:0;
-        }
-    </style>
 </head>
 <body>
     {{-- header content --}}
