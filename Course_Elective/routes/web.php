@@ -20,13 +20,9 @@ Route::get('/admin/dashboard', function(){
     return view('dashboard');
 })->name('dashboard');
 
-Route::get('/studentAnnuals', [StudentController::class, 'studentAannully'])->name('studentAnnuals');
-Route::get('/studentAnnuals', [StudentController::class, 'academicOption'])->name('studentAnnuals');
-// Route::get('/studentAnnuals', [StudentController::class, 'degreesOption'])->name('degreesOption');
+Route::get('/studentAnnuals', [StudentController::class, 'index'])->name('studentAnnuals');
 
-Route::get('/studentAnnuals/create', function () {
-    return view('createStudent');
-})->name('studentAnnuals/create');
+Route::get('/studentAnnuals/create',[StudentController::class, 'store'] )->name('studentAnnuals/create');
 
 Route::get('/studentAnnuals/edit', function () {
     return view('edit_Student');
