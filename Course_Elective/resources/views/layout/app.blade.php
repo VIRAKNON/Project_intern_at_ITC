@@ -46,15 +46,9 @@
             </a>
         </li>
         <li>
-<<<<<<< HEAD
-            <a href="{{route('coursesProgram')}}">
+            <a href="{{route('coursesProgram')}}" class="activeCoursesProgram">
             <i class="fas fa-user-astronaut"></i>
             <span class="links_name">Courses Program</span>
-=======
-            <a href="#">
-                <i class="fas fa-book-reader"></i>
-                <span>Courses Program</span>
->>>>>>> faf90d767aaec2fc38c86e8253d5ee866ff19af8
             </a>
         </li>
         <li>
@@ -164,7 +158,7 @@
                             </div>
                             <div class="view">
                                 <a href="{{ route("admin/profile") }}" type="button" class="log_pf" >Profile</a>
-                                <a href="{{ route("login") }}" type="button" class="log_out">logout</a>    
+                                <a href="{{ route("login") }}" type="button" class="log_out">logout</a>
                             </div>
                         </div>
                     </div>

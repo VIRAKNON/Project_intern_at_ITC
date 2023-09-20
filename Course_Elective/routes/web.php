@@ -39,7 +39,10 @@ Route::get('/coursesAnnually', function () {
     return view('coursesAnnually');
 });
 
-<<<<<<< HEAD
+Route::get('/create_Coures', function () {
+    return view('create_Coures');
+});
+
 Route::get('/coursesProgram', function () {
     return view('coursesProgram');
 })->name('coursesProgram');
@@ -47,16 +50,7 @@ Route::get('/coursesProgram', function () {
 Route::get('/coursesProgram/create', function () {
     return view('createCoursesProgram');
 })->name('coursesProgram/create');
-=======
-Route::get('/create_Coures', function () {
-    return view('create_Coures');
-});
-Route::get('/coursesProgram', function () {
-    return view('coursesProgram');
-});
-Route::get('/coursesProgram/createCoursesProgram', function () {
-    return view('createCoursesProgram');
-});
+
 Route::get('/admin/profile', function () {
     return view('profile');
 })->name('admin/profile');
@@ -75,4 +69,3 @@ Route::post('/register/submit/', [AuthController::class,'register_submit'])->nam
 //login
 Route::get('/', [AuthController::class,'login'])->name('login');
 Route::post('/login/submit/', [AuthController::class,'login_submit'])->name('login_submit');
->>>>>>> faf90d767aaec2fc38c86e8253d5ee866ff19af8
