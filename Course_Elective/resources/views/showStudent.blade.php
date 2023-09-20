@@ -14,13 +14,6 @@
     {{-- endCDN --}}
     <link rel="stylesheet" href="{{asset('css/showStudent.css')}}">
     <title>show detail of student</title>
-    <style>
-        @import 'path/to/bootstrap-source/_reboot.scss';
-        /* Override Bootstrap styles */
-        ol, ul {
-            padding-left:0;
-        }
-    </style>
 </head>
 <body>
     <div class="container-fluid">
@@ -29,7 +22,7 @@
             background-color: #ffffff;
             box-shadow:  5px 5px 7px #d6d6d6;
         ">
-        
+
             <header class="py-2">
                 <span class="fs-3">Student Detail</span>
                 <span class="px-3">View Information</span>

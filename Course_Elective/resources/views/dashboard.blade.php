@@ -54,7 +54,7 @@
                     <div class="user">
                         <div class="user_info">
                             <div class="user_top">
-                                <div class="user_top1">My Information</div>
+                                <div class="user_top1"><span>My Information</span></div>
                                 <div class="user_top2"></div>
                             </div>
                             <div class="user_down">

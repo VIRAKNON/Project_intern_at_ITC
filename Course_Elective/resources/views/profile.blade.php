@@ -15,7 +15,7 @@
             <div class="admins">
                 <form>
                     <select name = "dropdown-toggle">
-                        <option value = "taj" selected>Admin Islator</option>
+                        <option value = "taj" selected>AdminIslator</option>
                         <option value = "china">Dashboard</option>
                         <option value = "chirst">Change Password</option>
                         <option value = "machu">Logout</option>
@@ -23,6 +23,7 @@
                 </form>
             </div>
         </div>
+        <div class="back"><a href="{{ route('dashboard') }}">&#x21e6;Back</a></div>
         <div class="dashboard">
             <div class="main">
                 <div class="info">
