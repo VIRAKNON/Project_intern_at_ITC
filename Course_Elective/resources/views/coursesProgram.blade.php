@@ -22,16 +22,34 @@
     </style>
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <h4>Course Parograms <font style="font-size: 15px;color: rgb(175, 175, 176);">All exising course program</font></h4>
+    <div class="container-fluid vh-100">
+
+        <div class="row bg-light mb-3" style="
+                border-radius: 5px;
+                background-color: #ffffff;
+                box-shadow:  5px 5px 7px #d6d6d6;
+            ">
+            <header class="py-2">
+                <span class="fs-3">Course Programs</span>
+                <span class="px-3">All existing students</span>
+            </header>
         </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="box">
-                <a href="{{route('coursesProgram/create')}}" class="btn btn-primary mt-3">Add</a>
-                <button class="btn btn-primary mt-3 float-end">Export</button>
+
+        <div class="row px-2" style="
+                    height: auto !important ;
+                    border-top: 4px solid #00ABE4;
+                    border-radius: 5px;
+                ">
+            <div class="row px-2 py-2">
+                <div class="col-12">
+                    <a href="{{route('coursesProgram/create')}}" type="button" class="btn btn-primary px-3 shadow-none">
+                        <svg width="20" height="20" fill="#ffffff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M2 12C2 6.48 6.48 2 12 2s10 4.48 10 10-4.48 10-10 10S2 17.52 2 12Zm11 1h4v-2h-4V7h-2v4H7v2h4v4h2v-4Z" clip-rule="evenodd"></path>
+                          </svg>
+                        Add
+                    </a>
+                    <button class="btn btn-primary float-end">Export</button>
+                </div>
             </div>
 
 
@@ -53,8 +71,8 @@
                     <!-- content1 -->
                     <div id="GeneralInfo" class="tab-pane active"><br>
                         <div class="d-flex">
-                            <label class="form-label" for="">Show</label>
-                            <select name="" id="" style="width: 70px; margin-left: 10px; transform: translateY(-15%);font-size: 13px;" class="form-select">
+                            <label class="form-label " for="">Show</label>
+                            <select name="" id="" style="width: 70px; margin-left: 10px; transform: translateY(-15%);font-size: 13px;" class="form-select shadow-none">
                               <option value="">25</option>
                               <option value="">10</option>
                               <option value="">50</option>
@@ -63,74 +81,82 @@
                             </select>
                             <label class="form-label" for="" style="margin-left: 10px;">entries</label>
                         </div>
-                        <div class="d-flex" style="margin-top: 5px;">
-                            <select name="" id="" style="width: 120px; transform: translateY(-15%); font-size: 13px;" class="form-select">
-                              <option value="">Department</option>
-                              <option value="">AMS</option>
-                              <option value="">GAR</option>
-                              <option value="">GCA</option>
-                              <option value="">GCI</option>
-                              <option value="">GEE</option>
-                              <option value="">GGG</option>
-                              <option value="">GIC</option>
-                              <option value="">GIM</option>
-                              <option value="">GRU</option>
-                              <option value="">GS</option>
-                              <option value="">GTI</option>
-                              <option value="">GTR</option>
-                              <option value="">IME</option>
-                              <option value="">OAC</option>
-                              <option value="">SA</option>
-                              <option value="">SF</option>
-                              <option value="">TC</option>
-                            </select>
-                            <select name="" id="" style="width: 120px;margin-left: 5px; transform: translateY(-15%); font-size: 13px;" class="form-select">
-                                <option value="">Semester</option>
-                                <option value="">Semester1</option>
-                                <option value="">Semester2</option>
-                            </select>
-                            <select name="" id="" style="width: 120px; margin-left: 5px; transform: translateY(-15%); font-size: 13px;" class="form-select">
-                                <option value="">Degree</option>
-                                <option value="">Engineer</option>
-                                <option value="">Associate</option>
-                                <option value="">Doctoral</option>
-                                <option value="">Master</option>
-                                <option value="">Bachelor</option>
-                                <option value="">International</option>
-                            </select>
-                            <select name="" id="" style="width: 120px; margin-left: 5px; transform: translateY(-15%); font-size: 13px;" class="form-select">
-                                <option value="">Year</option>
-                                <option value="">First Year</option>
-                                <option value="">Second YEAR</option>
-                                <option value="">Third Year</option>
-                                <option value="">Fourth Year</option>
-                                <option value="">Fifth Year</option>
-                            </select>
-                            <select name="" id="" style="width: 170px; margin-left: 5px; transform: translateY(-15%); font-size: 13px;" class="form-select">
-                                <option value="">Permitted department</option>
+                        <div class="row">
+                            <div class="col-9">
+                                <div class="d-flex" style="margin-top: 5px;">
+                                <select name="" id="" style="width: 120px; transform: translateY(-15%); font-size: 13px;" class="form-select shadow-none">
+                                <option value="">Department</option>
                                 <option value="">AMS</option>
-                              <option value="">GAR</option>
-                              <option value="">GCA</option>
-                              <option value="">GCI</option>
-                              <option value="">GEE</option>
-                              <option value="">GGG</option>
-                              <option value="">GIC</option>
-                              <option value="">GIM</option>
-                              <option value="">GRU</option>
-                              <option value="">GS</option>
-                              <option value="">GTI</option>
-                              <option value="">GTR</option>
-                              <option value="">IME</option>
-                              <option value="">OAC</option>
-                              <option value="">SA</option>
-                              <option value="">SF</option>
-                              <option value="">TC</option>
-                            </select>
-                            <div class="d-flex" style="margin-left: 510px;">
-                                <label for="">Search:</label>
-                                <input type="text" style=" margin-left: 10px; transform: translateY(-15%);font-size: 13px;" class="form-control" >
+                                <option value="">GAR</option>
+                                <option value="">GCA</option>
+                                <option value="">GCI</option>
+                                <option value="">GEE</option>
+                                <option value="">GGG</option>
+                                <option value="">GIC</option>
+                                <option value="">GIM</option>
+                                <option value="">GRU</option>
+                                <option value="">GS</option>
+                                <option value="">GTI</option>
+                                <option value="">GTR</option>
+                                <option value="">IME</option>
+                                <option value="">OAC</option>
+                                <option value="">SA</option>
+                                <option value="">SF</option>
+                                <option value="">TC</option>
+                                </select>
+                                <select name="" id="" style="width: 120px;margin-left: 5px; transform: translateY(-15%); font-size: 13px;" class="form-select shadow-none">
+                                    <option value="">Semester</option>
+                                    <option value="">Semester1</option>
+                                    <option value="">Semester2</option>
+                                </select>
+                                <select name="" id="" style="width: 120px; margin-left: 5px; transform: translateY(-15%); font-size: 13px;" class="form-select shadow-none">
+                                    <option value="">Degree</option>
+                                    <option value="">Engineer</option>
+                                    <option value="">Associate</option>
+                                    <option value="">Doctoral</option>
+                                    <option value="">Master</option>
+                                    <option value="">Bachelor</option>
+                                    <option value="">International</option>
+                                </select>
+                                <select name="" id="" style="width: 120px; margin-left: 5px; transform: translateY(-15%); font-size: 13px;" class="form-select shadow-none">
+                                    <option value="">Year</option>
+                                    <option value="">First Year</option>
+                                    <option value="">Second YEAR</option>
+                                    <option value="">Third Year</option>
+                                    <option value="">Fourth Year</option>
+                                    <option value="">Fifth Year</option>
+                                </select>
+                                <select name="" id="" style="width: 170px; margin-left: 5px; transform: translateY(-15%); font-size: 13px;" class="form-select shadow-none">
+                                    <option value="">Permitted department</option>
+                                    <option value="">AMS</option>
+                                <option value="">GAR</option>
+                                <option value="">GCA</option>
+                                <option value="">GCI</option>
+                                <option value="">GEE</option>
+                                <option value="">GGG</option>
+                                <option value="">GIC</option>
+                                <option value="">GIM</option>
+                                <option value="">GRU</option>
+                                <option value="">GS</option>
+                                <option value="">GTI</option>
+                                <option value="">GTR</option>
+                                <option value="">IME</option>
+                                <option value="">OAC</option>
+                                <option value="">SA</option>
+                                <option value="">SF</option>
+                                <option value="">TC</option>
+                                </select>
+                            </div>
+                            </div>
+
+                            <div class="col-3">
+                                <div class="d-flex float-end">
+                                    <label for="">Search:</label>
+                                    <input type="text" style=" margin-left: 10px; transform: translateY(-15%);font-size: 13px;" class="form-control shadow-none" >
+                                </div>
                             </div>
                         </div>
+
                         <div class="">
                             <table class="table table-hover">
                                 <thead>
@@ -163,8 +189,8 @@
                                         <td>24</td>
                                         <td>2</td>
                                         <td>
-                                            <button class="btn btn-warning">Edit</button>
-                                            <button class="btn btn-danger">Delete</button>
+                                            <button class="btn btn-warning shadow-none">Edit</button>
+                                            <button class="btn btn-danger shadow-none">Delete</button>
                                         </td>
                                     </tr>
 
@@ -174,7 +200,7 @@
                             <span>Showing 1 to 25 of 1,562 entries</span>
                         </div>
                         <div class="float-end">
-                            <nav aria-label="...">
+                            {{-- <nav aria-label="...">
                                 <ul class="pagination">
                                   <li class="page-item disabled">
                                     <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
@@ -194,7 +220,7 @@
                                     <a class="page-link" href="#">Next</a>
                                   </li>
                                 </ul>
-                              </nav>
+                              </nav> --}}
                         </div>
                     </div>
 
@@ -361,12 +387,8 @@
             $("#GeneralInfo").addClass("fade");
             $("#newAcInfo").removeClass("fade");
             $("#newAcInfo").addClass("active");
-<<<<<<< HEAD
 
 
-=======
-            
->>>>>>> faf90d767aaec2fc38c86e8253d5ee866ff19af8
         });
         $("#Activate").click(function(){
             $("#Activate").find("a").addClass("active");

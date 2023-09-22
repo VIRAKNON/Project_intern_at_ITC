@@ -40,6 +40,10 @@ Route::get('/create_Coures', function () {
     return view('create_Coures');
 })->name('CourseAnnually/create');
 
+Route::get('/create_Coures', function () {
+    return view('create_Coures');
+});
+
 Route::get('/coursesProgram', function () {
     return view('coursesProgram');
 })->name('coursesProgram');
@@ -48,9 +52,6 @@ Route::get('/coursesProgram/create', function () {
     return view('createCoursesProgram');
 })->name('coursesProgram/create');
 
-Route::get('/coursesProgram/createCoursesProgram', function () {
-    return view('createCoursesProgram');
-});
 Route::get('/admin/profile', function () {
     return view('profile');
 })->name('admin/profile');
@@ -76,5 +77,11 @@ Route::get('/changepw', function () {
 
 
 
+<<<<<<< HEAD
 
 
+=======
+//login
+Route::get('/', [AuthController::class,'login'])->name('login');
+Route::post('/login/submit/', [AuthController::class,'login_submit'])->name('login_submit');
+>>>>>>> 676d55a32b62162dbc3f2ed501d23516a2e80ae3
