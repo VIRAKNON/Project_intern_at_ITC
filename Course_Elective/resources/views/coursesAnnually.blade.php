@@ -246,7 +246,6 @@
                                         </td>
                                     </tr>
 
-<<<<<<< HEAD
                                         <td>CHUN Thavorac</td>
                                         <td>
 
@@ -705,8 +704,6 @@
                                         </td>
                                         <!-- Add more rows with data -->
                                     </tr>
-=======
->>>>>>> 2de524d06e57178e2437b41dbbb28836c6ddf023
 
                                 </tbody>
                         </table>

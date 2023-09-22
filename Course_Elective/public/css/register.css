@@ -4,6 +4,11 @@
   margin: 0px;
 font-family: sans-serif;
 }
+body{
+  background-image: url(../image/image4.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+}
 .loginpage{
   width: 100%;
   display: flex;
@@ -13,7 +18,7 @@ font-family: sans-serif;
   width: 100%;
   height: 9vh;
   background-color:#F0F3F4;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   display: flex;
 }
 .logo{
@@ -43,12 +48,12 @@ font-family: sans-serif;
 
 /* login */
 .form {
-  width: 50vh;
+  width: 60vh;
   margin: 0 auto;
   margin-top: 3rem;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 25px;
   background-color: #fff;
   padding: 20px;
   border-radius: 20px;
@@ -127,17 +132,18 @@ font-family: sans-serif;
   color: #fff;
   font-size: 16px;
   transform: .3s ease;
+  cursor: pointer;
 }
 .submit:hover {
   background-color: rgb(56, 90, 194);
 }
 @keyframes pulse {
-from {
-  transform: scale(0.9);
-  opacity: 1;
-}
-to {
-  transform: scale(1.8);
-  opacity: 0;
-}
+  from {
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  to {
+    transform: scale(1.8);
+    opacity: 0;
+  }
 }
