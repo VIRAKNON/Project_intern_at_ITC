@@ -24,10 +24,10 @@
             </div>
         </div>
     </div>
-    <form class="form_container" action="{{ route('login_submit') }}" method="POST">
-        
+    <div class="page_login">
+      <form class="form_container" action="{{ route('login_submit') }}" method="POST">    
         <div class="logo_container">
-          <svg width="100" height="100" fill="none" stroke="#616161" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <svg width="100" height="100" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z"></path>
             <path d="M12 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"></path>
             <path d="M6.168 18.849A4 4 0 0 1 10 16h4a4 4 0 0 1 3.834 2.855"></path>
@@ -87,5 +87,6 @@
         </button>
         <p class="note">Terms of use &amp; Conditions</p>
       </form>
+    </div>
 </body>
 </html>

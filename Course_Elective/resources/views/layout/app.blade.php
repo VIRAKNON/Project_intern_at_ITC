@@ -47,7 +47,7 @@
             </a>
         </li>
         <li>
-            <a href="{{route('coursesProgram')}}">
+            <a href="{{route('coursesProgram')}}" class="activeCoursesProgram">
             <i class="fas fa-user-astronaut"></i>
             <span class="links_name">Courses Program</span>
             </a>

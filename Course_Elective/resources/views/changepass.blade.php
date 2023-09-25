@@ -38,15 +38,12 @@
                     <div class="detail">
                        <form action="" method="POST">
                             <div class="mb-4 m-2 ">
-                                @csrf
                                 <input type="password" name="old_password" id="old_password" required class="form-control shadow-none" autocomplete="off">
                             </div>
                             <div class="mb-4 m-2">
-                                @csrf
                                 <input type="password" name="new_password" id="new_password" required class="form-control shadow-none" autocomplete="off" >   
                             </div>
                             <div class="mb-4 m-2">
-                                @csrf
                                 <input type="password" name="comfirm_password" id="comfirm_password" class="form-control shadow-none" autocomplete="off">
                             </div>
                             <button type="submit" class="btn btn-primary me-2 m-2">Save Change</button>
@@ -99,11 +96,7 @@
                                             <p class="text-center fs-4">Are you sure you want to change your passsword?</p>
                                         </div>
                                         <div class="modal-footer justify-content-center border-0">
-<<<<<<< HEAD
                                             <button type="button" class="btn text-light" data-bs-dismiss="modal" style="width: 90px; backgroundcolor: #F88017;" onmouseover="this.style.backgroundColor='#F88017'; onmouseout="this.style.backgroundColor='#FF8C00';>Close</button>
-=======
-                                            <button type="button" class="btn text-light" data-bs-dismiss="modal" style="width: 90px; background-color:#FF8C00;" onmouseover="this.style.backgroundColor='#F88017'" onmouseout="this.style.backgroundColor='#FF8C00';">Close</button>
->>>>>>> 2de524d06e57178e2437b41dbbb28836c6ddf023
                                             <button type="button" class="btn btn-primary" style="width: 90px">Ok</button>
                                         </div>
                                     </div>
