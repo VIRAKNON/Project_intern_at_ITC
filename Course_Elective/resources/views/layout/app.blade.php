@@ -121,7 +121,6 @@
     </nav>
     <div class="home-content">
     {{-- content --}}
-<<<<<<< HEAD
         @yield('dashboard')
         @yield('students')
         @yield('createStudent')
@@ -130,16 +129,7 @@
         @yield('coursesProgram')
         @yield('courseAnnualls')
         @yield('createCourse')
-=======
-    @yield('dashboard')
-    @yield('students')
-    @yield('createStudent')
-    @yield('showStudent')
-    @yield('editStudent')
-    @yield('coursesProgram')
-    @yield('courseAnnualls')
-    {{-- endcontent --}}
->>>>>>> 8b7ce459c4e6438a98e906fef72bc664e1f8b3b1
+        @yield('inputScore')
     </div>
     {{-- endcontent --}}
     <div class="footer">

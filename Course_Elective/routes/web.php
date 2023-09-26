@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\AcademicYearsController;
+use App\Http\Controllers\CouresAnnuals;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,26 +23,23 @@ Route::get('/admin/dashboard', function(){
 
 Route::get('/studentAnnuals', [StudentController::class, 'index']);
 Route::get('/studentAnnuals/create', [StudentController::class, 'store'])->name('studentAnnuals/create');
+
 Route::get('/studentAnnuals/edit', function () {
     return view('edit_Student');
 })->name('studentAnnuals/edit');
+
 Route::get('/studentAnnuals/show', function () {
     return view('showStudent');
 })->name('studentAnnuals/show');
 
 
-Route::get('/coursesAnnually', function () {
-    return view('coursesAnnually');
-})->name('courseAnnuals');
-<<<<<<< HEAD
-
+Route::get('/coursesAnnually',[CouresAnnuals::class, 'index'])->name('courseAnnuals');
 
 Route::get('CourseAnnually/create', function () {
-=======
-Route::get('/create_Coures', function () {
->>>>>>> 8b7ce459c4e6438a98e906fef72bc664e1f8b3b1
     return view('create_Coures');
 })->name('CourseAnnually/create');
+
+Route::get('/coursesAnnually/inputScore', [CouresAnnuals::class, 'inputScores'])->name('inputScore');
 
 Route::get('/coursesProgram', function () {
     return view('coursesProgram');
@@ -64,6 +62,8 @@ Route::get('/admin', function () {
 Route::get('/changepw', function () {
     return view('changepass');
 })->name('changepw');
+
+
 
 //register
 Route::get('/register', [AuthController::class,'register'])->name('register');
