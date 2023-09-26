@@ -37,10 +37,12 @@ ol, ul {
 .dataTables_filter input[type='search']{
     box-shadow: none;
     padding-left: 15px;
+    border: 1px solid #2C3E50;
 }
 .dataTables_filter input[type='search']:focus{
     width: 250px;
     border-radius: 99999999px;
+    border: 1px solid #157DEC;
 }
 div.dataTables_wrapper div.dataTables_info{
     padding-top: 20px;
