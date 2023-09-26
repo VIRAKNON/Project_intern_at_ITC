@@ -1,93 +1,20 @@
-
-body{
-    font-family: 'Catamaran', sans-serif;
-}
-/* Override Bootstrap styles */
-@import 'path/to/bootstrap-source/_reboot.scss';
-ol, ul {
-    padding-left:0;
-}
-.sidebar .nav_links li a.activeStudentAnnuals{
+.sidebar .nav_links li a.activeCoursesProgram{
     background: #2C3E50;
     border-left: 4px solid #157DEC;
     color: #FFFFFF;
 }
-.sidebar .nav_links li a.activeStudentAnnuals i{
+.sidebar .nav_links li a.activeCoursesProgram i{
     color: #FFFFFF;
 }
-.sidebar .nav_links li a.activeStudentAnnuals span{
+.sidebar .nav_links li a.activeCoursesProgram span{
     color: #FFFFFF;
 }
 
-strong{
-    color: red;
-    font-size: 15px;
-}
-sup{
-    color: red;
-}
-.content{
-    width: 100%;
-    background-color:#ffffff ;
-    border-top: 4px solid #00ABE4;
-    border-radius: 5px;
-}
-.content hr{
-    margin: 0;
-    color: rgb(202, 202, 202);
-}
-
-.barTabs a{
-    font-size: 15px;
-}
-/* upload profile */
-.custom_file_upload_profile {
-    height: 230px;
-    width: 170px;
-    display: flex;
-    flex-direction: column;
-    align-items: space-between;
-    gap: 20px;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
-    border-radius: 15px;
-    background: linear-gradient(145deg, #cacaca, #f0f0f0);
-    box-shadow:  8px 8px 16px #bebebe,
-            -8px -8px 16px #ffffff;
-    padding: 1.5rem;
-}
-
-.custom_file_upload_profile .iconUploadProfile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.custom_file_upload_profile .iconUploadProfile svg {
-    height: 80px;
-    fill: rgba(75, 85, 99, 1);
-}
-
-.custom_file_upload_profile .textUploadProfile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.custom_file_upload_profile .textUploadProfile span {
-    font-weight: 400;
-    color: rgba(75, 85, 99, 1);
-}
-
-.custom_file_upload_profile input {
-    display: none;
-}
 /* btn cancel */
 .btnCancel {
     display: inline-block;
-    width: 110px;
-    height: 37px;
+    width: 130px;
+    height: 40px;
     color: #ffffff;
     text-transform: uppercase;
     border-radius: 5px;
@@ -95,7 +22,6 @@ sup{
     position: relative;
     overflow: hidden;
     z-index: 1;
-    font-size: 16px;
     background-color: #FFA500;
 }
 
@@ -149,8 +75,8 @@ sup{
 }
 /* btn create */
 .btnCreate {
-    width: 110px;
-    height: 37px;
+    width: 130px;
+    height: 40px;
     position: relative;
     outline: 0;
     border: none;
@@ -177,8 +103,7 @@ sup{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.2rem;
-    font-size: 16px;
+    gap: 0.75rem;
     transition: all .4s ease;
 }
 
@@ -208,8 +133,3 @@ sup{
 .btnCreate:focus {
     box-shadow: none;
 }
-
-.footerNewAcIfo{
-    margin-top: 7rem;
-}
-

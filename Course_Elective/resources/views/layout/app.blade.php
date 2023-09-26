@@ -41,13 +41,13 @@
             </a>
         </li>
         <li>
-            <a href="{{ route('courseAnnuals') }}">
+            <a href="{{ route('coursesAnnually') }}">
                 <i class="fas fa-book"></i>
                 <span>Curses Annually</span>
             </a>
         </li>
         <li>
-            <a href="{{route('coursesProgram')}}">
+            <a href="{{route('coursesProgram')}}" class="activeCoursesProgram">
             <i class="fas fa-user-astronaut"></i>
             <span class="links_name">Courses Program</span>
             </a>
@@ -139,9 +139,6 @@
     </section>
 </body>
 </html>
-
-
-
 
 <script>
     let sidebar = document.querySelector(".sidebar");

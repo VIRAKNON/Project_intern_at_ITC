@@ -23,6 +23,7 @@
                 </form>
             </div>
         </div>
+        <div class="back"><a href="{{ route('admin/profile') }}">&#x21e6;Back</a></div>
         <div class="dashboard">
             <div class="update_info">
                 <div class="header">Update Information</div>
@@ -44,7 +45,7 @@
                                     <p>Are you sure to change your name?</p>
                                     <div id="change">
                                         <a href="#">
-                                            <button>ok</button>
+                                            <button>Ok</button>
                                         </a>
                                     </div>
                                 </div>

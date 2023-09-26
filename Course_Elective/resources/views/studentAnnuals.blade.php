@@ -5,22 +5,17 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        {{-- CDN --}}
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        {{-- endCDN --}}
+        <link href="{{asset('css/libraries/bootstrap@5.3.1_dist_css_bootstrap.min.css')}}" rel="stylesheet">
+        <link href="{{asset('css/libraries/fonts.googleapis.css')}}" rel="stylesheet">
+        <script src="{{asset('js/libraries/bootstrap@5.3.1_dist_js.bundle.min.js')}}"></script>
+        <script src="{{asset('js/libraries/jquery-3.6.0.min.js')}}"></script>
+        <link rel="stylesheet" href="{{asset('css/libraries/datatables_1.10.21.bootstrap4.min.css')}}">
+        <script src="{{asset('js/libraries/jquery-3.5.1.min.js')}}"></script>
+        <script src="{{asset('js/libraries/datatables_1.10.21_jquery.min.js')}}"></script>
+        <script src="{{asset('js/libraries/datatables_1.10.21.bootstrap4.min.js')}}"></script>
         <link rel="stylesheet" href="{{asset('css/studentAnnuals.css')}}">
         <link rel="stylesheet" href="{{asset('js/studentAnnuals.js')}}">
         <title>Student Annuals</title>
-        <style>
-            @import 'path/to/bootstrap-source/_reboot.scss';
-            /* Override Bootstrap styles */
-            ol, ul {
-                padding-left:0;
-            }
-        </style>
     </head>
     <body>
         <div class="container-fluid bg-light">
@@ -110,7 +105,7 @@
                 </div>
                 <hr>
                 <div class="row">
-                    <div class="col-9">
+                    <div class="col-12">
                         <div class="row g-2 align-items-center">
                             <div class="col-auto">
                                 <select class="form-select shadow-none">
@@ -163,15 +158,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-3">
-                        <div class="searchStu float-end mx-2">
-                            <svg class="search_icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" alt="search icon">
-                                <path d="M46.599 46.599a4.498 4.498 0 0 1-6.363 0l-7.941-7.941C29.028 40.749 25.167 42 21 42 9.402 42 0 32.598 0 21S9.402 0 21 0s21 9.402 21 21c0 4.167-1.251 8.028-3.342 11.295l7.941 7.941a4.498 4.498 0 0 1 0 6.363zM21 6C12.717 6 6 12.714 6 21s6.717 15 15 15c8.286 0 15-6.714 15-15S29.286 6 21 6z">
-                                </path>
-                            </svg>
-                            <input class="search_stu" id="inputBox" type="text" placeholder="Search Students">
-                        </div>
-                    </div>
                 </div>
                 <div class="row mt-1">
                     <div class="col-9">
@@ -208,7 +194,7 @@
                     </div>
                 </div>
                 <form action="" class="mt-3">
-                    <table class="table table-bordered table-striped mb-0 table-hover">
+                    {{-- <table class="table table-bordered table-striped mb-0 table-hover">
                         <thead>
                             <tr>
                                 <th style="width: 10%">ID Card</th>
@@ -222,81 +208,97 @@
                                 <th style="width: 8%">Action</th>
                             </tr>
                         </thead>
-                    </table>
-                    <div class="container-fluid p-0" style="overflow-y:scroll; height:70vh;">
-                        <table class="table table-bordered table-striped table-hover">
-                            <tbody>
-                                @foreach ($addStudent as $column)
+                    </table> --}}
+                    <div class="container-fluid p-0">
+                        <div style="overflow-x: auto;">
+                            <table id="example" class="table table-bordered table-striped table-hover w-100">
+                                <thead class="thead-dark">
                                     <tr>
-                                        <td style="width: 10%">{{$column->id_card}}</td>
-                                        <td style="width: 18%">{{$column->name_kh }}</td>
-                                        <td style="width: 18%">{{$column->name_latin }}</td>
-                                        <td style="width: 12%">{{$column->dob }}</td>
-                                        <td style="width: 8.5%">Gender</td>
-                                        <td style="width: 8.5%">Class</td>
-                                        <td style="width: 8.5%">Option</td>
-                                        <td style="width: 8.5%">Group</td>
-                                        <td style="width: 8%">
-                                            <a href="{{route('studentAnnuals/edit')}}" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit">
-                                                <svg width="25" height="25" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                                                    <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-                                                </svg>
-                                            </a>
-                                            <!-- Button trigger modal -->
-                                            <button type="button" class="btn p-0 px-2 border-0" data-bs-toggle="modal" data-bs-target="#deleteStu">
-                                                <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M3 6h18"></path>
-                                                    <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
-                                                    <path d="M10 11v6"></path>
-                                                    <path d="M14 11v6"></path>
-                                                </svg>
-                                            </button>
-                                            <!-- Modal -->
-                                            <div class="modal fade" id="deleteStu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="btnClose d-flex flex-row-reverse">
-                                                            <button type="button" class="btn-close shadow-none p-3" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                        </div>
-                                                        <div class="modal-header border-0 p-0 m-0 d-flex justify-content-center">
-                                                            <div class="modal-title" id="exampleModalLabel" >
-                                                                <p class="p p-0 m-0 fw-bolder">Are you sure you want to delete?</p>
-                                                                <div class="d-flex justify-content-center"><svg width="100" height="100" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
-                                                                    <path d="M12 9v4"></path>
-                                                                    <path d="M12 17h.01"></path>
-                                                                </svg></div>
+                                        <th style="width: 10%"  >ID Card</th>
+                                        <th style="width: 18%"  >Name KH</th>
+                                        <th style="width: 18%"  >Name Latin</th>
+                                        <th style="width: 12%"  >Date of Birth</th>
+                                        <th style="width: 8.5%" >Gender</th>
+                                        <th style="width: 8.5%" >Class</th>
+                                        <th style="width: 8.5%" >Option</th>
+                                        <th style="width: 8.5%" >Group</th>
+                                        <th style="width: 8%"   >Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($addStudent as $column)
+                                        <tr>
+                                            <td style="width: 10%">{{$column->id_card}}</td>
+                                            <td style="width: 18%">{{$column->name_kh }}</td>
+                                            <td style="width: 18%">{{$column->name_latin }}</td>
+                                            <td style="width: 12%">{{$column->dob }}</td>
+                                            <td style="width: 8.5%">Gender</td>
+                                            <td style="width: 8.5%">Class</td>
+                                            <td style="width: 8.5%">Option</td>
+                                            <td style="width: 8.5%">Group</td>
+                                            <td style="width: 8%"  >
+                                                <a href="{{route('studentAnnuals/edit')}}" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit">
+                                                    <svg width="25" height="25" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                                                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                                                    </svg>
+                                                </a>
+                                                <!-- Button trigger modal -->
+                                                <button type="button" class="btn p-0 px-2 border-0" data-bs-toggle="modal" data-bs-target="#deleteStu">
+                                                    <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M3 6h18"></path>
+                                                        <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
+                                                        <path d="M10 11v6"></path>
+                                                        <path d="M14 11v6"></path>
+                                                    </svg>
+                                                </button>
+                                                <!-- Modal -->
+                                                <div class="modal fade" id="deleteStu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                    <div class="modal-dialog">
+                                                        <div class="modal-content">
+                                                            <div class="btnClose d-flex flex-row-reverse">
+                                                                <button type="button" class="btn-close shadow-none p-3" data-bs-dismiss="modal" aria-label="Close"></button>
                                                             </div>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <p class="text-center fs-3">Delete the student!</p>
-                                                            <p class="text-center">You will not be able to recover it</p>
-                                                        </div>
-                                                        <div class="modal-footer border-0 d-flex justify-content-center">
-                                                            <button type="button" style="width: 110px; background-color:#FF8C00;" onmouseover="this.style.backgroundColor='#F88017';" onmouseout="this.style.backgroundColor='#FF8C00';" class="btn py-1 btn-secondary border-0" data-bs-dismiss="modal">Cancel</button>
-                                                            <button type="button" style="width: 110px" class="btn py-1 btn-primary border-0">Ok</button>
+                                                            <div class="modal-header border-0 p-0 m-0 d-flex justify-content-center">
+                                                                <div class="modal-title" id="exampleModalLabel" >
+                                                                    <p class="p p-0 m-0 fw-bolder">Are you sure you want to delete?</p>
+                                                                    <div class="d-flex justify-content-center">
+                                                                        <img src="{{asset('image/system-outline-56-warning.gif')}}">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <p class="text-center fs-3">Delete the student!</p>
+                                                                <p class="text-center">You will not be able to recover it</p>
+                                                            </div>
+                                                            <div class="modal-footer border-0 d-flex justify-content-center">
+                                                                <button type="button" style="width: 110px; background-color:#FF8C00;" onmouseover="this.style.backgroundColor='#F88017';" onmouseout="this.style.backgroundColor='#FF8C00';" class="btn py-1 btn-secondary border-0" data-bs-dismiss="modal">Cancel</button>
+                                                                <button type="button" style="width: 110px" class="btn py-1 btn-primary border-0">Ok</button>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <a href="{{ route('studentAnnuals/show') }}" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="View Detail">
-                                                <svg width="30" height="30" fill="#00aaff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" d="M16 8c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4ZM4 18c0-2.66 5.33-4 8-4s8 1.34 8 4v2H4v-2Z" clip-rule="evenodd"></path>
-                                                </svg>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+                                                <a href="{{ route('studentAnnuals/show') }}" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="View Detail">
+                                                    <svg width="30" height="30" fill="#00aaff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path fill-rule="evenodd" d="M16 8c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4ZM4 18c0-2.66 5.33-4 8-4s8 1.34 8 4v2H4v-2Z" clip-rule="evenodd"></path>
+                                                    </svg>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </form>
 
             </div>
-            <div class="row py-4 px-3">
-                <div class="col-12">
-                    <a href="#top" class="btn btn-primary border-0 float-end" >Back to Top</a>
+            <div class="row py-2 px-3">
+                <div class="col-12 d-flex justify-content-center">
+                    <a href="#top" type="button" class="btn p-0 border-0" data-bs-toggle="tooltip" data-bs-placement="top" title="View Back to top !"><svg width="50" height="50" fill="none" stroke="#38d100" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m6 12 6-6 6 6"></path>
+                        <path d="m6 18 6-6 6 6"></path>
+                    </svg></a>
                 </div>
             </div>
 
@@ -306,6 +308,14 @@
             var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
             var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
                 return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+
+            $(document).ready(function() {
+                $('#example').DataTable({
+                    "scrollX": true, // Enable horizontal scrolling
+                    "scrollY": "60hv", // Set the container wrapper's height to 400 pixels
+                    "scrollCollapse": true // Enable scrollCollapse option
+                });
             });
         </script>
     </body>

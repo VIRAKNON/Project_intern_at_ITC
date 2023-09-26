@@ -23,6 +23,7 @@
                 </form>
             </div>
         </div>
+        <div class="back"><a href="{{ route('dashboard') }}">&#x21e6;Back</a></div>
         <div class="dashboard">
             <div class="main">
                 <div class="info">

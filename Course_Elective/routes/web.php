@@ -49,16 +49,15 @@ Route::get('/coursesProgram/create', function () {
     return view('createCoursesProgram');
 })->name('coursesProgram/create');
 
-Route::get('/coursesProgram/createCoursesProgram', function () {
-    return view('createCoursesProgram');
-});
 Route::get('/admin/profile', function () {
     return view('profile');
 })->name('admin/profile');
 
 Route::get('/admin', function () {
     return view('edit_info');
+
 })->name('admin');
+
 Route::get('/changepw', function () {
     return view('changepass');
 })->name('changepw');
@@ -69,6 +68,3 @@ Route::get('/changepw', function () {
 Route::get('/register', [AuthController::class,'register'])->name('register');
 Route::post('/register/submit/', [AuthController::class,'register_submit'])->name('register_submit');
 
-//login
-Route::get('/', [AuthController::class,'login'])->name('login');
-Route::post('/login/submit/', [AuthController::class,'login_submit'])->name('login_submit');

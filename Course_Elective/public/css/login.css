@@ -4,6 +4,11 @@
     margin: 0px;
   font-family: sans-serif;
 }
+body{
+    background-image: url(../image/image4.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
 .loginpage{
     width: 100%;
     display: flex;
@@ -42,12 +47,11 @@
 }
 
 /* login page */
-
 .form_container {
     width: fit-content;
     height: fit-content;
     margin: 0 auto;
-    margin-top: 3rem;
+    margin-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -59,6 +63,9 @@
         0px 7px 15px rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, 0.1);
     border-radius: 11px;
     font-family: "Inter", sans-serif;
+    background-image: url(../image/image3.jfif);
+    background-repeat: no-repeat;
+    background-size:cover;
 }
 .logo_container {
     box-sizing: border-box;
@@ -80,14 +87,14 @@
     margin: 0;
     font-size: 1.25rem;
     font-weight: 700;
-    color: #212121;
+    color: #ffffff;
 }
 .subtitle {
     font-size: 0.725rem;
     max-width: 80%;
     text-align: center;
     line-height: 1.1rem;
-    color: #8B8E98;
+    color: #e8e8e8;
 }
 .input_container {
     width: 100%;
@@ -106,7 +113,7 @@
 }
 .input_label {
     font-size: 0.75rem;
-    color: #8B8E98;
+    color: #e5e5e5;
     font-weight: 600;
 }
 .input_field {
@@ -116,8 +123,9 @@
     border-radius: 7px;
     outline: none;
     border: 1px solid #e5e5e5;
-    filter: drop-shadow(0px 1px 0px #efefef)
-    drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+    font-size: 15px;
+    /* filter: drop-shadow(0px 1px 0px #efefef)
+    drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5)); */
     transition: all 0.3s cubic-bezier(0.15, 0.83, 0.66, 1);
 }
 .input_field:focus {
@@ -147,8 +155,8 @@
     outline: none;
     color: #242424;
     border: 1px solid #e5e5e5;
-    filter: drop-shadow(0px 1px 0px #efefef)
-    drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+    /* filter: drop-shadow(0px 1px 0px #efefef)
+    drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5)); */
     cursor: pointer;
 }
 .sign-in_apl {
@@ -162,9 +170,9 @@
     border-radius: 7px;
     outline: none;
     color: #ffffff;
-    border: 1px solid #e5e5e5;
-    filter: drop-shadow(0px 1px 0px #efefef)
-    drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5));
+    border: 1px solid #2ECC71;
+    /* filter: drop-shadow(0px 1px 0px #efefef)
+    drop-shadow(0px 1px 0.5px rgba(239, 239, 239, 0.5)); */
     cursor: pointer;
 }
 .sign-in_apl a{
@@ -188,6 +196,7 @@
 }
 .note {
     font-size: 0.75rem;
-    color: #8B8E98;
+    color: #e8e8e8;
     text-decoration: underline;
+    cursor: pointer;
 }
