@@ -91,7 +91,6 @@
                                             <input type="text" class="form-control shadow-none form-control-sm " id="idCard" disabled placeholder="ID Card (Auto generate)">
                                         </div>
                                     </div>
-
                                     <div class="row mb-3">
                                         <label for="enableID" class="col-sm-2 text-end col-form-label"></label>
                                         <div class="col-sm-10">
