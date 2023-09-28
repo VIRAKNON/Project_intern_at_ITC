@@ -129,6 +129,7 @@
         @yield('coursesProgram')
         @yield('courseAnnualls')
         @yield('createCourse')
+        @yield('inputScore')
     </div>
     {{-- endcontent --}}
     <div class="footer">
