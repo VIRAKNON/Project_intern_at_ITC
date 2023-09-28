@@ -5,16 +5,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        {{-- CDN --}}
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
-        <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
-        {{-- endCDN --}}
+        <link href="{{asset('css/libraries/bootstrap@5.3.1_dist_css_bootstrap.min.css')}}" rel="stylesheet">
+        <link href="{{asset('css/libraries/fonts.googleapis.css')}}" rel="stylesheet">
+        <script src="{{asset('js/libraries/bootstrap@5.3.1_dist_js.bundle.min.js')}}"></script>
+        <script src="{{asset('js/libraries/jquery-3.6.0.min.js')}}"></script>
+        <link rel="stylesheet" href="{{asset('css/libraries/datatables_1.10.21.bootstrap4.min.css')}}">
+        <script src="{{asset('js/libraries/jquery-3.5.1.min.js')}}"></script>
+        <script src="{{asset('js/libraries/datatables_1.10.21_jquery.min.js')}}"></script>
+        <script src="{{asset('js/libraries/datatables_1.10.21.bootstrap4.min.js')}}"></script>
         <link rel="stylesheet" href="{{asset('css/studentAnnuals.css')}}">
         <link rel="stylesheet" href="{{asset('js/studentAnnuals.js')}}">
         <title>Student Annuals</title>

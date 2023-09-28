@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\AcademicYearsController;
+use App\Http\Controllers\CouresAnnuals;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,9 +21,8 @@ Route::get('/admin/dashboard', function(){
     return view('dashboard');
 })->name('dashboard');
 
-Route::get('/studentAnnuals', [StudentController::class, 'index'])->name('studentAnnuals');
-
-Route::get('/studentAnnuals/create',[StudentController::class, 'store'] )->name('studentAnnuals/create');
+Route::get('/studentAnnuals', [StudentController::class, 'index']);
+Route::get('/studentAnnuals/create', [StudentController::class, 'store'])->name('studentAnnuals/create');
 
 Route::get('/studentAnnuals/edit', function () {
     return view('edit_Student');
@@ -32,17 +33,13 @@ Route::get('/studentAnnuals/show', function () {
 })->name('studentAnnuals/show');
 
 
-Route::get('/coursesAnnually', function () {
-    return view('coursesAnnually');
-})->name('coursesAnnually');
+Route::get('/coursesAnnually',[CouresAnnuals::class, 'index'])->name('courseAnnuals');
 
-Route::get('/create_Coures', function () {
+Route::get('CourseAnnually/create', function () {
     return view('create_Coures');
 })->name('CourseAnnually/create');
 
-Route::get('/create_Coures', function () {
-    return view('create_Coures');
-});
+Route::get('/coursesAnnually/inputScore', [CouresAnnuals::class, 'inputScores'])->name('inputScore');
 
 Route::get('/coursesProgram', function () {
     return view('coursesProgram');
@@ -58,23 +55,22 @@ Route::get('/admin/profile', function () {
 
 Route::get('/admin', function () {
     return view('edit_info');
-    
+
 })->name('admin');
 
 Route::get('/changepw', function () {
     return view('changepass');
 })->name('changepw');
 
-// Admin group middleware
-    //register
-    Route::get('/register', [AuthController::class,'register'])->name('register');
-    Route::post('/register/submit/', [AuthController::class,'register_submit'])->name('register_submit');
-
-    //login
-    Route::get('/', [AuthController::class,'login'])->name('login');
-    Route::post('/login/submit/', [AuthController::class,'login_submit'])->name('login_submit');
 
 
+//register
+Route::get('/register', [AuthController::class,'register'])->name('register');
+Route::post('/register/submit/', [AuthController::class,'register_submit'])->name('register_submit');
+
+//login
+Route::get('/', [AuthController::class,'login'])->name('login');
+Route::post('/login/submit/', [AuthController::class,'login_submit'])->name('login_submit');
 
 
 

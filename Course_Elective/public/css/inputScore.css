@@ -1,0 +1,49 @@
+body{
+    font-family: 'Catamaran', sans-serif;
+
+}
+/* Override Bootstrap styles */
+@import 'path/to/bootstrap-source/_reboot.scss';
+ol, ul {
+    padding-left:0;
+}
+
+.sidebar .nav_links li a.activeCoursesAnnually{
+    background: #2C3E50;
+    border-left: 4px solid #157DEC;
+    color: #FFFFFF;
+}
+.sidebar .nav_links li a.activeCoursesAnnually i{
+    color: #FFFFFF;
+}
+.sidebar .nav_links li a.activeCoursesAnnually span{
+    color: #FFFFFF;
+}
+table{
+    font-size: 16px;
+}
+.htNotation{
+    width:80vh;
+}
+
+
+/* large laptop screen */
+@media (max-width: 1200px) {
+    .htNotation{
+        width:42vh;
+    }
+}
+/* laptops screen */
+@media (max-width: 992px){
+    .htNotation{
+        width:12vh;
+    }
+}
+/* tablete screen */
+@media (max-width: 768px){
+
+}
+/* phones screen */
+@media (max-width: 600px){
+
+}
