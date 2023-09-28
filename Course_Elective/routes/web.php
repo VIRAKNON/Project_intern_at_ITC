@@ -77,11 +77,5 @@ Route::get('/changepw', function () {
 
 
 
-<<<<<<< HEAD
 
 
-=======
-//login
-Route::get('/', [AuthController::class,'login'])->name('login');
-Route::post('/login/submit/', [AuthController::class,'login_submit'])->name('login_submit');
->>>>>>> 676d55a32b62162dbc3f2ed501d23516a2e80ae3
