@@ -57,7 +57,6 @@ class StudentController extends Controller
         $scholarships = scholarships::all();
 
         return view('createStudent', compact('optionGenders','originOption','heighSchoolOps','optionAc','promotions','optionDegrees','optionGrades','departments','departmentOption','groups','histories','scholarships'));
-
     }
 
 }
