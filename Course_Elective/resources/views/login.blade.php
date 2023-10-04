@@ -25,6 +25,14 @@
         </div>
     </div>
     <div class="page_login">
+      <div class="stripe">
+        <div class="image"><img src="../image/iconLogo.gif" alt=""></div>
+        <div class="container">
+          <div class="row">
+              <h3 class="animate-charcter">Welcom To ITC</h3>
+          </div>
+        </div>
+      </div>
       <form class="form_container" action="{{ route('login_submit') }}" method="POST">    
         <div class="logo_container">
           <svg width="100" height="100" fill="none" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

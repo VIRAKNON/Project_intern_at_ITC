@@ -70,3 +70,7 @@ Route::post('/register/submit/', [AuthController::class,'register_submit'])->nam
 //login
 Route::get('/', [AuthController::class,'login'])->name('login');
 Route::post('/login/submit/', [AuthController::class,'login_submit'])->name('login_submit');
+
+
+
+
