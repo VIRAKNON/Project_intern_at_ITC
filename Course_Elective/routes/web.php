@@ -22,7 +22,9 @@ Route::get('/admin/dashboard', function(){
 })->name('dashboard');
 
 Route::get('/studentAnnuals', [StudentController::class, 'index']);
-Route::get('/studentAnnuals/create', [StudentController::class, 'store'])->name('studentAnnuals/create');
+
+Route::get('/studentAnnuals/create', [StudentController::class, 'create'])->name('studentAnnuals.create');
+Route::post('/studentAnnuals/create', [StudentController::class, 'store'])->name('studentAnnuals.store');
 
 Route::get('/studentAnnuals/edit', function () {
     return view('edit_Student');
@@ -62,12 +64,13 @@ Route::get('/changepw', function () {
     return view('changepass');
 })->name('changepw');
 
-
-
 //register
 Route::get('/register', [AuthController::class,'register'])->name('register');
 Route::post('/register/submit/', [AuthController::class,'register_submit'])->name('register_submit');
-
 //login
 Route::get('/', [AuthController::class,'login'])->name('login');
 Route::post('/login/submit/', [AuthController::class,'login_submit'])->name('login_submit');
+
+
+
+
