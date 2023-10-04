@@ -17,6 +17,7 @@ use App\Models\Promotions;
 use App\Models\Groups;
 use App\Models\Histories;
 use App\Models\Scholarships;
+use App\Helpers\Helper;
 
 class StudentController extends Controller
 {
@@ -40,9 +41,7 @@ class StudentController extends Controller
 
         return view('studentAnnuals', compact('addStudent','optionAc','optionDegrees','optionGenders','optionGrades','departments','departmentOption','semestersOption','originOption')); // compact use for transfer date to show page
     }
-    //create function
-    public function store(){
-
+    public function create(){
         $optionGenders = genders::all();
         $originOption = Origins::all();
         $heighSchoolOps = HeighSchools::all();
@@ -55,8 +54,18 @@ class StudentController extends Controller
         $groups = groups::all();
         $histories = histories::all();
         $scholarships = scholarships::all();
-
         return view('createStudent', compact('optionGenders','originOption','heighSchoolOps','optionAc','promotions','optionDegrees','optionGrades','departments','departmentOption','groups','histories','scholarships'));
+    }
+    //store function
+    public function store(Request $request){
+
+        $request->validate([
+            'photo'=>'required|image|mimes:png,jpg,jpeg,gig|max:2048'
+        ]);
+
+        // $id_card = Helper::id_card_generator(new Students, 'id_card', 4, 'e2023'); //id_card generator
+
+        // return redirect()->route('studentAnnuals.store', compact('optionGenders','originOption','heighSchoolOps','optionAc','promotions','optionDegrees','optionGrades','departments','departmentOption','groups','histories','scholarships') );
     }
 
 }

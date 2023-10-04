@@ -12,7 +12,6 @@ $(document).ready(function(){
         }
     });
 });
-
 // Initialize Select2
 $(document).ready(function() {
     $('#selectWithSearch').select2();

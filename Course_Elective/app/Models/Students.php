@@ -13,32 +13,36 @@ class Students extends Model
     protected $primarykey = 'id';
     protected $fillable = [
         'id_card',
-        'mcs_no',
-        'can_id',
-        'name_latin',
         'name_kh',
+        'name_latin',
+        'gender_id',
         'dob',
-        'photo',
+        'pob',
         'radie',
         'observation',
-        'phone',
+        'origin_id',
+        'tel',
         'email',
-        'admissin_date',
-        'address',
         'address_current',
+        'address_permanent',
         'parent_name',
         'parent_occupation',
         'parent_address',
-        'parent_phone',
-        'active',
-        'user_id',
-        'pob',
-        'gender_id',
-        'high_school_id',
-        'origin_id',
-        'candidate_id',
-        'create_uid',
-        'write_uid',
-        'certificate'
+        'parent_tel',
+        'highschool_id',
+        'mcs_no',
+        'can_id',
+        'photo',
     ];
+
+    // one-to-one relationship
+    public function studentAnnuals(){
+        return $this->hasOne(StudentAnnuals::class);
+    }
 }
+
+
+
+
+
+            

@@ -16,7 +16,7 @@
   width: 60px;
 }
 .sidebar .logo-details {
-  background-color: #157deccc;
+  background-color: #0866FF;
   height: 80px;
   display: flex;
   align-items: center;
@@ -185,7 +185,7 @@
     display: flex;
     justify-content: space-between;
     height: 80px;
-    background-color: #157DEC;
+    background-color: #0866FF;
     display: flex;
     align-items: center;
     position: fixed;
