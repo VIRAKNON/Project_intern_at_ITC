@@ -9,15 +9,11 @@
 
     <link href="{{asset('css/libraries/bootstrap@5.3.1_dist_css_bootstrap.min.css')}}" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <script src="{{asset('js/libraries/bootstrap@5.3.1_dist_js.bundle.min.js')}}" ></script>
-
-    <!-- Include Select2 CSS -->
-   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
-
-   <!-- Include jQuery -->
+    {{-- search selection option --}}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
 
-   <!-- Include Select2 JS -->
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     {{-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css"> --}}
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css">
     <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
@@ -79,10 +75,7 @@
                                 <select class="form-select shadow-none">
                                     <option value="">Degree</option>
                                     <option value="">Engineer</option>
-                                    <option value="">Associcate</option>
-                                    <option value="">Master</option>
-                                    <option value="">Bachelor</option>
-                                    <option value="">International</option>
+
                                     {{-- @foreach ($optionDegrees as $op)
                                         <option value="{{ $op->id }}">{{ $op->name_kh }}</option>
                                     @endforeach --}}
@@ -111,30 +104,13 @@
                             <option value="190">CHOU Chandary | ជូ ច័ន្ទដារី</option>
                             <option value="378">CHOUM Tival | ជុំ ទីវ៉ាល់</option>
                             <option value="275">CHUM Pharino | ជុំ ផារីណូ</option>
-                            <option value="357">HENG Sokchhay | ហេង&nbsp;សុខឆាយ</option>
-                            <option value="356">HANG Leakhéna | ហង្ស លក្ខិណា</option>
-                            <option value="299">KRY Nallis | គ្រី ណាល់លីស</option>
-                            <option value="366">OU Sothea | អ៊ូ សុធា</option>
-                            <option value="355">DOUNG Ratha | ដួង រដ្ធា</option>
-                            <option value="476">PAK Sothy | ប៉ាក់ សុធី</option>
-                            <option value="353">CHOU Soklin | ជូ&nbsp;សុខលីន</option>
-                            <option value="645">CHHAN Malin | CHHAN Malin</option>
-                            <option value="317">CHUN Thavorac | ជុន​ ថាវរៈ</option>
-                            <option value="674">UN Kenratanak | អ៊ុន⁣⁣ កេនរតនះ</option>
-                            <option value="452">SIM Boly | ស៊ីម បូលី</option>
-                            <option value="586">CHEA Sophea | ជា សុភា</option>
-                            <option value="624">KHAN Ponnara | ខាន់ ប៉ុណ្ណារ៉ា</option>
-                            <option value="647">JEONG Chul | JEONG Chul</option>
-                            <option value="660">RATH THAVYMONY Annanda | RATH THAVYMONY Annanda</option>
-                            <option value="635">SEAK Leng | សៀក ឡេង</option>
-                            <option value="721">Khin Seanghak | ឃីន ស៊ាងហាក់</option>
-                            <option value="926">Vey Soriya | Vey Soriya</option>
+
                         </select>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-7 pt-3 shadow-none">
-                        <table id="example" class="table table-striped table-bordered" style="width:100%">
+                        <table id="example" class="table  table-bordered table-hover" style="width:100%">
                             <thead>
                                 <tr>
                                     <th>Name</th>
@@ -142,8 +118,8 @@
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                                <tbody>
-                                    <tr class="table-row">
+                                <tbody id="myTable">
+                                    <tr  class="bordered-row">
                                         <td>
                                             <div class="row">
                                                 <div class="col-7">
@@ -164,8 +140,8 @@
                                         <td>CHUN Thavorac</td>
                                         <td>
 
-                                            <a href="" class="btn p-0 border-0 mt-2 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
-                                                <label class="switch ">
+                                            <a href="{{ route('CourseAnnually/create') }}" class="btn p-0 border-0 mt-2 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
+                                                <label class="switch" id="switch">
                                                     <input type="checkbox" class="warning">
                                                     <span class="slider round"></span>
                                                 </label>
@@ -183,8 +159,7 @@
                                                     <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
                                                 </svg>
                                             </a>
-
-                                            <button class="btn p-0 border-0 mx-2" type="button"  data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                                            <button type="button" class="btn p-0 px-2 border-0" data-bs-toggle="modal" data-bs-target="#delete_course">
                                                 <svg width="22" height="22" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M3 6h18"></path>
                                                     <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
@@ -192,6 +167,32 @@
                                                     <path d="M14 11v6"></path>
                                                 </svg>
                                             </button>
+                                            <!-- Modal -->
+                                            <div class="modal fade" id="delete_course" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                    <div class="modal-content">
+                                                        <div class="btnClose d-flex flex-row-reverse">
+                                                            <button type="button" class="btn-close shadow-none p-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                        </div>
+                                                        <div class="modal-header border-0 p-0 m-0 d-flex justify-content-center">
+                                                            <div class="modal-title" id="exampleModalLabel" >
+                                                                <p class="p p-0 m-0 fw-bolder">Are you sure you want to delete?</p>
+                                                                <div class="d-flex justify-content-center">
+                                                                    <img src="{{asset('image/system-outline-56-warning.gif')}}">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <p class="text-center fs-3">Delete the course!</p>
+                                                            <p class="text-center">You will not be able to recover it</p>
+                                                        </div>
+                                                        <div class="modal-footer border-0 d-flex justify-content-center">
+                                                            <button type="button" style="width: 110px; background-color:#FF8C00;" onmouseover="this.style.backgroundColor='#F88017';" onmouseout="this.style.backgroundColor='#FF8C00';" class="btn py-1 btn-secondary border-0" data-bs-dismiss="modal">Cancel</button>
+                                                            <button type="button" style="width: 110px" class="btn py-1 btn-primary border-0">Ok</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </td>
                                     </tr>
                                     <tr class="table-row">
@@ -216,7 +217,7 @@
                                         <td>
 
                                             <a href="" class="btn p-0 border-0 mt-2 mx-2" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="input score">
-                                                <label class="switch ">
+                                                <label class="switch" id="switch">
                                                     <input type="checkbox" class="warning">
                                                     <span class="slider round"></span>
                                                 </label>
@@ -245,6 +246,7 @@
                                             </button>
                                         </td>
                                     </tr>
+
                                 </tbody>
                         </table>
                     </div>
@@ -261,7 +263,6 @@
                                             <div class="form-group">
                                                 <label for="session_time_course" class="fw-bold">Course</label>
                                                 <input type="number" name="time_course" min="0" max="16" value="16" class="form-control shadow-none form-control-sm" id="session_time_course">
-                                                <input type="hidden" name="course_annual_id" value="">
                                             </div>
                                         </div>
                                         <div class="col-2">
@@ -282,25 +283,6 @@
                                                 <select name="" id="select_lecturer" class="form-select form-select-sm form-comtrol shadow-none" style="width: 100%;">
                                                     <option value=""></option>
                                                     <option value="1">Ava</option>
-                                                    <option value="2">Liam</option>
-                                                    <option value="3">Noah</option>
-                                                    <option value="4">Olivia</option>
-                                                    <option value="5">Ava</option>
-                                                    <option value="6">Jackson</option>
-                                                    <option value="7">Emma</option>
-                                                    <option value="8">Isabella</option>
-                                                    <option value="9">Lucas</option>
-                                                    <option value="10">Isabella</option>
-                                                    <option value="11">Aiden</option>
-                                                    <option value="12">Mia</option>
-                                                    <option value="13">Oliver</option>
-                                                    <option value="14">Amelia</option>
-                                                    <option value="15">Ethan</option>
-                                                    <option value="16">Harper</option>
-                                                    <option value="17">Caden</option>
-                                                    <option value="18">Evelyn</option>
-                                                    <option value="19">Abigail</option>
-                                                    <option value="20">Mason</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -318,13 +300,13 @@
                                             </div>
                                         </div>
                                         <div class="col-md-4 mt-3">
-                                            <button type="button" class="btn pull-right p-0 px-2 mx-2 rounded-1" style="background-color: #FF4500">Cancel</button>
-                                            <button type="button" class="btn pull-right p-0 px-2 mx-2 rounded-1" style="background-color:#1E90FF">Save</button>
+                                            <button type="reset" class="btn pull-right p-0 px-1 mx-1 rounded-1" style="background-color: #FF4500">Cancel</button>
+                                            <button type="submit" class="btn pull-right p-0 px-1 mx-2 rounded-1" style="background-color:#1E90FF">Save</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <ul class="todo-list ui-sortable mt-2" style="background-color: #e7fcf8; list-style: none;">
+                            <ul class="todo-list ui-sortable mt-2 hidden" style="background-color: #e7fcf8; list-style: none;" id="new_course">
                                 <li>
                                     <span class="handle ui-sortable-handle" style="padding-left: 20px;">
                                         <i class="fa fa-ellipsis-v"></i>

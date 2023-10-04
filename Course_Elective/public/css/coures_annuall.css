@@ -220,3 +220,18 @@ box-shadow: none;
 .todo-list li:hover .tools {
     display: block;
 }
+tr:hover {
+    cursor: pointer;
+  }
+.selected td:last-child {
+    border-right: thin solid #83B8EC !important;
+}
+.selected td:first-child {
+    border-left: thin solid #83B8EC !important;
+}
+.selected td {
+    border-left: 0;
+    border-right: 0;
+    border-top: thin solid #83B8EC !important;
+    border-bottom: thin solid #83B8EC !important;
+}

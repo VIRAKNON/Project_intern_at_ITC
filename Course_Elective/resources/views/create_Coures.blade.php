@@ -17,7 +17,7 @@
    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('css/createCourse.css')}}">
-    <script src="{{asset('js/coures_annually.js')}}"></script>
+    <script src="{{asset('js/create_course.js')}}"></script>
 
     <title></title>
     <style>

@@ -2,15 +2,6 @@
 $(document).ready(function() {
     $('#Coure_name').select2();
   });
-// Lecturer search
-
-// $(document).ready(function() {
-//   $("#select_lecturer").select2({
-//     minimumInputLength: 3, // Set the minimum input length for search
-//     placeholder: "Search for an option",
-//     // Add additional options and customization as needed
-//   });
-// });
 $(document).ready(function() {
     $("#select_lecturer").select2({
       minimumInputLength: 3,

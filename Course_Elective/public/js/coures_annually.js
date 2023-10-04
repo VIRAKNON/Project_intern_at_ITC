@@ -1,44 +1,21 @@
+//search in selection option by one length
 $(document).ready(function() {
+    // Initialize Select2 with search functionality
     $("#filter_lecturer").select2({
-      minimumInputLength: 1,  // Change this to 1
-      placeholder: "Search for an option",
-      templateSelection: function(data, container) {
-        // If no data is selected, return the placeholder
-        if (data.id === "") {
-          return "Enter name ...";
-        }
-
-        // Otherwise, return the selected option with a delete icon and clear button
-        return $('<span> </span>' + data.text + ' <span class="clear-selection"><i class="fas fa-times"></i></span>');
-      }
-    });
-
-    // Clear selection when the clear button is clicked
-    $(document).on("click", ".clear-selection", function(e) {
-      e.stopPropagation();
-      $("#filter_lecturer").val(null).trigger("change");
+      width: '410px', // Set the width as needed
+      placeholder: "Lecturer",
+      allowClear: true, // Enable the clear button
     });
   });
 
+//search in selection option by 3 length
 $(document).ready(function() {
+    // Initialize Select2 with search functionality and a minimum input length of 3 characters
     $("#select_lecturer").select2({
-      minimumInputLength: 3,
-      placeholder: "Search for an option",
-      templateSelection: function(data, container) {
-        // If no data is selected, return the placeholder
-        if (data.id === "") {
-          return "Enter name ...";
-        }
-
-        // Otherwise, return the selected option with a delete icon and clear button
-        return $('<span> </span>' + data.text + ' <span class="clear-selection"><i class="fas fa-times"></i></span>');
-      }
-    });
-
-    // Clear selection when the clear button is clicked
-    $(document).on("click", ".clear-selection", function(e) {
-      e.stopPropagation();
-      $("#select_lecturer").val(null).trigger("change");
+      width: '230px', // Set the width as needed
+      placeholder: "Enter name...",
+      allowClear: true, // Enable the clear button
+      minimumInputLength: 3 // Require at least 3 characters for searching
     });
   });
 
@@ -49,10 +26,25 @@ $(document).ready(function() {
 
 
   ///////////////////
+// $(document).ready(function () {
+
+//     $("tbody tr").click(function () {
+//         $("#toggleForm").show();
+//     });
+
+//      // Add a click event handler to each table row
+//      $('#myTable tr').click(function() {
+//         // Toggle the hover effect on the clicked row
+//         $(this).toggleClass('hovered');
+//       });
+// });
 $(document).ready(function () {
-    $("tbody").click(function () {
-        // Show the "Add Course Sessions" button when a table row is clicked
+
+    $("tbody tr").click(function () {
         $("#toggleForm").show();
+        $('tbody tr').removeClass('selected');
+        // Add the 'clicked' class to the clicked row
+        $(this).addClass('selected');
     });
 });
 /////
@@ -121,7 +113,7 @@ $(document).ready(function() {
     $('#session_time_course').val('16');
     $('#select_lecturer').val('1');
 
-    $('#courseForm').show();
+    $('#courseForm').hide();
   });
 
   // Click event handler for #toggleForm button
@@ -130,12 +122,13 @@ $(document).ready(function() {
   });
 
   // Click event handler for "Save" button
-  $('#courseForm button[type="button"]').click(function() {
+  $('#courseForm button[type="submit"]').click(function() {
     // Here, you can add code to save the form data
     // Replace the following with your data saving logic
 
     var courseTime = $('#session_time_course').val();
     var lecturer = $('#select_lecturer').val();
+    $('#new_course').show();
 
     // Create a new todo item and append it to the todo list
     var todoItem = '<li>' +
@@ -160,6 +153,9 @@ $(document).ready(function() {
     $('#session_time_course').val('');
     $('#select_lecturer').val('');
   });
+  $('#courseForm button[type="reset"]').click(function() {
+    $('#courseForm').hide();
+  });
 
   // Click event handler for delete button
   $(document).on('click', '.tools', function() {
@@ -168,3 +164,17 @@ $(document).ready(function() {
   });
 });
 
+////////////////////////////////
+$(document).ready(function() {
+    // Event handler for "btn_disable_scoring"
+    $("#btn_disable_scoring").on("click", function() {
+        // Set all switches to checked
+        $(".switch input[type='checkbox']").prop("checked", true);
+    });
+
+    // Event handler for "btn_enable_scoring"
+    $("#btn_enable_scoring").on("click", function() {
+        // Set all switches to unchecked
+        $(".switch input[type='checkbox']").prop("checked", false);
+    });
+});
