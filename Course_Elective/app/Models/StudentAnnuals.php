@@ -12,16 +12,16 @@ class StudentAnnuals extends Model
     protected $table = "student_annuals";
     protected $primarykey = 'id';
     protected $fillable = [
-        'group',
-        'active',
+        'student_id',
+        'academic_year_id',
         'promotion_id',
-        'department_id',
         'degree_id',
         'grade_id',
-        'academic_year_id',
-        'student_id',
+        'department_id',
+        'department_option_id',
+        'group',
         'history_id',
-        'department_option_id'
+        'scholarships_id'
     ];
 
     public function students(){

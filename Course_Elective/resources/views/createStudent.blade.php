@@ -143,7 +143,7 @@
                                         <div class="row mb-3">
                                             <label for="redie" class="col-sm-2 text-end col-form-label fw-bolder">Radie</label>
                                             <div class="col-sm-10 d-flex align-item-center">
-                                                <input type="checkbox" class="checkbox" name="redie" value="true" id="redie">
+                                                <input type="checkbox" class="checkbox" name="radie" value="true" id="redie">
                                             </div>
                                         </div>
 
@@ -276,7 +276,7 @@
                                             <div class="row mb-3">
                                                 <label for="hSchool" class="col-sm-2 col-form-label col-form-label-sm text-end fw-bolder">High School</label>
                                                 <div class="col-sm-10">
-                                                    <select class="form-select form-select-sm form-comtrol shadow-none" name="origin" id="origin">
+                                                    <select class="form-select form-select-sm form-comtrol shadow-none" name="hschool" id="hSchool">
                                                         <option selected disabled value="">Select your heighSchool</option>
                                                         @foreach ($heighSchoolOps as $hschool)
                                                             <option value="{{$hschool->id}}">{{$hschool->name_kh}}</option>
@@ -295,7 +295,7 @@
                                             <div class="row mb-3">
                                                 <label for="canId" class="col-sm-2 col-form-label col-form-label-sm text-end fw-bolder">Can ID</label>
                                                 <div class="col-sm-10">
-                                                    <input type="text" class="form-control form-control-sm shadow-none" name="canId" value="{{old('canId')}}" id="canId">
+                                                    <input type="text" class="form-control form-control-sm shadow-none" name="canid" value="{{old('canId')}}" id="canId">
                                                 </div>
                                             </div>
 
@@ -448,7 +448,6 @@
                                         </select>
                                     </div>
                                 </div>
-
                             </div>
                         </div>
                     </div>
