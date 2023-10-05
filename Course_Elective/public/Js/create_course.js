@@ -1,26 +1,19 @@
-// Initialize Select2
 $(document).ready(function() {
-    $('#Coure_name').select2();
-  });
-$(document).ready(function() {
-    $("#select_lecturer").select2({
-      minimumInputLength: 3,
-      placeholder: "Search for an option",
-      templateSelection: function(data, container) {
-        // If no data is selected, return the placeholder
-        if (data.id === "") {
-          return "Enter name ...";
-        }
+    // Initialize Select2
+    $("#Coure_name").select2({
+      placeholder: "Select a course program",
+      allowClear: true, // Enable the clear button
 
-        // Otherwise, return the selected option with a delete icon and clear button
-        return $('<span> </span>' + data.text + ' <span class="clear-selection"><i class="fas fa-times"></i></span>');
-      }
     });
+  });
 
-    // Clear selection when the clear button is clicked
-    $(document).on("click", ".clear-selection", function(e) {
-      e.stopPropagation();
-      $("#select_lecturer").val(null).trigger("change");
+  $(document).ready(function() {
+    // Initialize Select2 with search functionality and a minimum input length of 3 characters
+    $("#select_lecturer").select2({
+      placeholder: "Enter name...",
+      width: '610px', // Set the width as needed
+      allowClear: true, // Enable the clear button
+      minimumInputLength: 3 // Require at least 3 characters for searching
     });
   });
 
@@ -49,7 +42,3 @@ $(document).ready(function() {
     selectPercentage.trigger("change");
   });
 
-  // Initialize Select2
-$(document).ready(function() {
-    $('#Type_Course').select2();
-  });

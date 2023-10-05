@@ -36,10 +36,8 @@ Route::get('/studentAnnuals/show', function () {
 
 
 Route::get('/coursesAnnually',[CouresAnnuals::class, 'index'])->name('courseAnnuals');
-
-Route::get('CourseAnnually/create', function () {
-    return view('create_Coures');
-})->name('CourseAnnually/create');
+Route::get('/CourseAnnually/create',[CouresAnnuals::class, 'create'])->name('CourseAnnually/create');
+Route::post('/CourseAnnually',[CouresAnnuals::class, 'store'])->name('CourseAnnually.store');
 
 Route::get('/coursesAnnually/inputScore', [CouresAnnuals::class, 'inputScores'])->name('inputScore');
 

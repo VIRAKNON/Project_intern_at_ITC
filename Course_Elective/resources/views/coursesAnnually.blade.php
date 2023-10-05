@@ -55,35 +55,41 @@
                         <div class="row g-2 align-items-center mb-2">
                             <div class="col-auto">
                                 <select class="form-select shadow-none">
-                                    <option value="">2022-2023</option>
-                                    {{-- @foreach ($optionAc as $years)
+                                    @foreach ($optionAc as $years)
                                         <option value="{{ $years->id }}">{{ $years->name_kh }}</option>
-                                    @endforeach --}}
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="col-auto">
                                 <select class="form-select shadow-none">
-                                    <option selected="selected" value="">Department</option><option value="22">GTI</option><option value="21">GAR</option><option value="20">AMS</option><option value="19">IME</option><option value="18">GS</option><option value="17">OAC</option><option value="16">GTR</option><option value="13">SF</option><option value="12">SA</option><option value="8">TC</option><option value="7">GGG</option><option value="6">GRU</option><option value="5">GIM</option><option value="4">GIC</option><option value="3">GEE</option><option value="2">GCI</option><option value="1">GCA</option>
+                                    <option selected="selected" value="">Department</option>
+                                    @foreach ($departments as $e)
+                                        <option value="{{ $e->id}}">{{$e->code}}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="col-auto">
                                 <select class="form-select shadow-none">
-                                    <option selected="selected" value="">Semester</option><option value="1">semester 1</option><option value="2">emester 2</option>
+                                    <option selected="selected" value="">Semester</option>
+                                    @foreach ($semestersOption as $s)
+                                     <option value="{{$s->id}}">{{$s->name_en}}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="col-auto">
                                 <select class="form-select shadow-none">
                                     <option value="">Degree</option>
-                                    <option value="">Engineer</option>
-
-                                    {{-- @foreach ($optionDegrees as $op)
-                                        <option value="{{ $op->id }}">{{ $op->name_kh }}</option>
-                                    @endforeach --}}
+                                    @foreach ($optionDegrees as $de)
+                                        <option value="{{ $de->id }}">{{ $de->name_en }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="col-auto">
                                 <select class="form-select shadow-none">
-                                    <option selected="selected" value="">Year</option><option value="1">First Year</option><option value="2">Second Year</option><option value="3">Third Years</option><option value="4">Fourth Year</option><option value="5">Fifth Year</option>
+                                    <option selected="selected" value="">Year</option>
+                                    @foreach ($optionGrades as $gd)
+                                        <option value="{{$gd->id}}">{{$gd->name_en}}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             {{-- <div class="col-auto">
@@ -100,11 +106,10 @@
                 <div class="row">
                     <div class="col-7">
                         <select id="filter_lecturer" name="lecturer" style="margin-top: 10px;" tabindex="-1">
-                            <option value="" selected=""></option>
-                            <option value="190">CHOU Chandary | ជូ ច័ន្ទដារី</option>
-                            <option value="378">CHOUM Tival | ជុំ ទីវ៉ាល់</option>
-                            <option value="275">CHUM Pharino | ជុំ ផារីណូ</option>
-
+                            <option value="" selected></option>
+                            @foreach ($employees as $em)
+                                <option value="{{$em->id}}">{{$em->name_latin}} | {{$em->name_kh}}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
