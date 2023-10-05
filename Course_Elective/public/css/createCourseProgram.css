@@ -1,3 +1,16 @@
+body{
+    font-family: 'Catamaran', sans-serif;
+
+}
+.mainContent{
+    border-top: 4px solid #00ABE4;
+    border-radius: 5px;
+}
+/* Override Bootstrap styles */
+@import 'path/to/bootstrap-source/_reboot.scss';
+ol, ul {
+    padding-left:0;
+}
 .sidebar .nav_links li a.activeCoursesProgram{
     background: #2C3E50;
     border-left: 4px solid #157DEC;

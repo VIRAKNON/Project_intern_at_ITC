@@ -126,9 +126,11 @@
         @yield('createStudent')
         @yield('showStudent')
         @yield('editStudent')
-        @yield('coursesProgram')
         @yield('courseAnnualls')
         @yield('createCourse')
+        @yield('coursesProgram')
+        @yield('createCoursesProgram')
+        @yield('editCoursesProgram')
     </div>
     {{-- endcontent --}}
     <div class="footer">

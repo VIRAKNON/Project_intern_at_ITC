@@ -52,6 +52,10 @@ Route::get('/coursesProgram/create', function () {
     return view('createCoursesProgram');
 })->name('coursesProgram/create');
 
+Route::get('/coursesProgram/edit', function () {
+    return view('editCoursesProgram');
+})->name('coursesProgram/edit');
+
 Route::get('/admin/profile', function () {
     return view('profile');
 })->name('admin/profile');
