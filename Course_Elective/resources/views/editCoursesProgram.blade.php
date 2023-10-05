@@ -1,5 +1,5 @@
 @extends('layout.app')
-@section('createCoursesProgram')
+@section('editCoursesProgram')
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,16 +8,16 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="{{asset('css/createCourseProgram.css')}}">
 
-    <title>createCoursesProgram</title>
+    <title>editCoursesProgram</title>
 </head>
 <body>
     <div class="container-fluid
         <header class="py-2">
             <span class="fs-3">Course Program</span>
-            <span class="px-3">All existing course program</span>
+            <span class="px-3">Edit course program information</span>
         </header>
         <div class="mainContent">
-            <span class="fs-5 px-2">Create new course program</span>
+            <span class="fs-5 px-2">Edit course program information</span>
             <hr class="m-2">
 
             <div class="container mt-4 w-75">
@@ -218,12 +218,12 @@
 
 
                 <button class="btnCreate">
-                    <span>Create</span>
+                    <span>Update</span>
                     <span>
                         Sure ?
                     </span>
                     <span>
-                        Created !
+                        Updated !
                     <svg id="svg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><g stroke-width="0" id="SVGRepo_bgCarrier"></g><g stroke-linejoin="round" stroke-linecap="round" id="SVGRepo_tracerCarrier"></g><g id="SVGRepo_iconCarrier"> <path stroke-linecap="round" stroke-width="2" stroke="#ffffff" d="M8.00011 13L12.2278 16.3821C12.6557 16.7245 13.2794 16.6586 13.6264 16.2345L22.0001 6"></path> <path fill="#ffffff" d="M11.1892 12.2368L15.774 6.63327C16.1237 6.20582 16.0607 5.5758 15.6332 5.22607C15.2058 4.87635 14.5758 4.93935 14.226 5.36679L9.65273 10.9564L11.1892 12.2368ZM8.02292 16.1068L6.48641 14.8263L5.83309 15.6248L2.6 13.2C2.15817 12.8687 1.53137 12.9582 1.2 13.4C0.868627 13.8419 0.95817 14.4687 1.4 14.8L4.63309 17.2248C5.49047 17.8679 6.70234 17.7208 7.381 16.8913L8.02292 16.1068Z" clip-rule="evenodd" fill-rule="evenodd"></path></g></svg>
                     </span>
                 </button>

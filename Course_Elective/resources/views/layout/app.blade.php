@@ -126,10 +126,15 @@
         @yield('createStudent')
         @yield('showStudent')
         @yield('editStudent')
-        @yield('coursesProgram')
         @yield('courseAnnualls')
         @yield('createCourse')
+<<<<<<< HEAD
+        @yield('coursesProgram')
+        @yield('createCoursesProgram')
+        @yield('editCoursesProgram')
+=======
         @yield('inputScore')
+>>>>>>> 9032098ae01ece5a14a3250fe9977ebe2857ea12
     </div>
     {{-- endcontent --}}
     <div class="footer">
