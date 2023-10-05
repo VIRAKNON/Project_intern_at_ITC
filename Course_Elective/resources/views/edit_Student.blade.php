@@ -5,29 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    {{-- CDN --}}
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Catamaran&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    {{-- endCDN --}}
+    <link href="{{asset('css/libraries/bootstrap@5.3.1_dist_css_bootstrap.min.css')}}" rel="stylesheet">
+    <script src="{{asset('js/libraries/bootstrap@5.3.1_dist_js.bundle.min.js')}}"></script>
+    <link href="{{asset('css/libraries/fonts.googleapis.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset('css/libraries/bootstrap@4.6.2_dist.min.css')}}">
+    <link href="{{asset('css/libraries/select2@4.1.0-rc.0_dist.min.css')}}" rel="stylesheet">
+    <script src="{{asset('js/libraries/jquery@3.6.4_dist_jquery.slim.min.js')}}"></script>
+    <script src="{{asset('js/libraries/popper.js@1.16.1_dist_umd_popper.min.js')}}"></script>
+    <script src="{{asset('js/libraries/bootstrap@4.6.2_dist.bundle.min.js')}}"></script>
+    <script src="{{asset('js/libraries/jquery-3.6.0.min.js')}}"></script>
+    <script src="{{asset('js/libraries/select2@4.1.0_dist_js.min.js')}}"></script>
     <link rel="stylesheet" href="{{asset('css/createStudent.css')}}">
     <script src="{{asset("js/createStudent.js")}}"></script>
 
     <title>Document</title>
-    <style>
-        @import 'path/to/bootstrap-source/_reboot.scss';
-        /* Override Bootstrap styles */
-        ol, ul {
-            padding-left:0;
-        }
-    </style>
 </head>
 <body>
     {{-- header content --}}
@@ -39,7 +30,7 @@
         ">
             <header class="py-2">
                 <span class="fs-3">Edit Student</span>
-                <span class="px-3 ">Register new student</span>
+                <span class="px-3 ">Edit Register student</span>
             </header>
         </div>
 

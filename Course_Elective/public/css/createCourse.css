@@ -1,6 +1,17 @@
 body{
     font-family: 'Catamaran', sans-serif;
 }
+.sidebar .nav_links li a.activeCoursesAnnually{
+    background: #2C3E50;
+    border-left: 4px solid #157DEC;
+    color: #FFFFFF;
+}
+.sidebar .nav_links li a.activeCoursesAnnually i{
+    color: #FFFFFF;
+}
+.sidebar .nav_links li a.activeCoursesAnnually span{
+    color: #FFFFFF;
+}
 strong{
     color: red;
 }

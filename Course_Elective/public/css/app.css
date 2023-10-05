@@ -16,7 +16,7 @@
   width: 60px;
 }
 .sidebar .logo-details {
-  background-color: #157deccc;
+  background-color: #0866FF;
   height: 80px;
   display: flex;
   align-items: center;
@@ -185,13 +185,13 @@
     display: flex;
     justify-content: space-between;
     height: 80px;
-    background-color: #157DEC;
+    background-color: #0866FF;
     display: flex;
     align-items: center;
     position: fixed;
     width: calc(100% - 240px);
     left: 240px;
-    z-index: 100;
+    z-index: 99999999999999;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
     transition: all 0.5s ease;
 }
@@ -468,7 +468,7 @@ nav .sidebar-button i {
   display: flex;
   background-color: #fff;
   border-radius: 6px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow:  5px 5px 7px #d6d6d6;
 }
 .head_left{
   width: 92%;

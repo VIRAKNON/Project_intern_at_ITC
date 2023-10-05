@@ -45,7 +45,7 @@
                                     <p>Are you sure to change your name?</p>
                                     <div id="change">
                                         <a href="#">
-                                            <button>ok</button>
+                                            <button>Ok</button>
                                         </a>
                                     </div>
                                 </div>

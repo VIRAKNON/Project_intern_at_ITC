@@ -38,15 +38,12 @@
                     <div class="detail">
                        <form action="" method="POST">
                             <div class="mb-4 m-2 ">
-                                @csrf
                                 <input type="password" name="old_password" id="old_password" required class="form-control shadow-none" autocomplete="off">
                             </div>
                             <div class="mb-4 m-2">
-                                @csrf
                                 <input type="password" name="new_password" id="new_password" required class="form-control shadow-none" autocomplete="off" >   
                             </div>
                             <div class="mb-4 m-2">
-                                @csrf
                                 <input type="password" name="comfirm_password" id="comfirm_password" class="form-control shadow-none" autocomplete="off">
                             </div>
                             <button type="submit" class="btn btn-primary me-2 m-2">Save Change</button>

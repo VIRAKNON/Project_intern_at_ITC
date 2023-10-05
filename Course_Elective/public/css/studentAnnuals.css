@@ -25,40 +25,37 @@ ol, ul {
     border-top: 4px solid #274afcf2;
     border-radius: 5px;
 }
-
-/* search */
-.searchStu {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    max-width: 14em;
-    width: fit-content;
-    height: fit-content;
-    background-color: #5c6370;
-    border-radius: 0.8em;
-    overflow: hidden;
+.dataTables_length{
+    padding-bottom: 15px;
+}
+.dataTables_length .custom-select{
+    box-shadow: none;
 }
 
-.search_icon {
-    height: 1em;
-    padding: 0 0.5em 0 0.8em;
-    fill: #abb2bf;
+.dataTables_filter{
+    padding-bottom: 15px;
 }
-
-.search_stu {
-    background-color: transparent;
-    color: #ffffff;
-    outline: none;
-    width: 100%;
-    border: 0;
-    padding: 0.5em 1.5em 0.5em 0;
-    font-size: 1em;
+.dataTables_filter input[type='search']{
+    box-shadow: none;
+    padding-left: 15px;
+    border: 1px solid #2C3E50;
 }
-
-::placeholder {
-    color: #abb2bf;
+.dataTables_filter input[type='search']:focus{
+    width: 250px;
+    border-radius: 99999999px;
+    border: 1px solid #157DEC;
 }
-
+div.dataTables_wrapper div.dataTables_info{
+    padding-top: 20px;
+}
+div.dataTables_wrapper div.dataTables_paginate {
+    margin-top: 20px;
+    white-space: nowrap;
+    text-align: right;
+}
+.dataTables_paginate .page-link:focus{
+    box-shadow: none;
+}
 .box3{
     padding-top: 7px;
     padding-left: 10px;

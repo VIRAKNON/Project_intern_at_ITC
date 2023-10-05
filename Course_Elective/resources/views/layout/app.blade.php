@@ -41,7 +41,7 @@
             </a>
         </li>
         <li>
-            <a href="{{ route('coursesAnnually') }}">
+            <a href="{{ url('/coursesAnnually') }}" class="activeCoursesAnnually">
                 <i class="fas fa-book"></i>
                 <span>Curses Annually</span>
             </a>
@@ -128,9 +128,13 @@
         @yield('editStudent')
         @yield('courseAnnualls')
         @yield('createCourse')
+<<<<<<< HEAD
         @yield('coursesProgram')
         @yield('createCoursesProgram')
         @yield('editCoursesProgram')
+=======
+        @yield('inputScore')
+>>>>>>> 9032098ae01ece5a14a3250fe9977ebe2857ea12
     </div>
     {{-- endcontent --}}
     <div class="footer">
