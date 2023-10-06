@@ -1,6 +1,6 @@
 body{
     font-family: 'Catamaran', sans-serif;
-
+    background-color: #ffffff;
 }
 .mainContent{
     border-top: 4px solid #00ABE4;
@@ -128,7 +128,7 @@ ol, ul {
 .btnCreate span:nth-child(2),.btnCreate span:nth-child(3) {
     position: absolute;
     top: 40px;
-    color: #fff;
+    color: #ffffff;
 }
 
 .btnCreate span:nth-child(2) {

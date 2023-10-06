@@ -1,4 +1,4 @@
-@extends('layout.app')
+-@extends('layout.app')
 @section('coursesProgram')
 <!DOCTYPE html>
 <html lang="en">

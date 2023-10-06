@@ -235,3 +235,6 @@ tr:hover {
     border-top: thin solid #83B8EC !important;
     border-bottom: thin solid #83B8EC !important;
 }
+.dataTables_paginate paging_simple_numbers{
+    padding-top:10px;
+}

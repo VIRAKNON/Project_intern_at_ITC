@@ -11,7 +11,7 @@
     <title>createCoursesProgram</title>
 </head>
 <body>
-    <div class="container-fluid
+    <div class="container-fluid bg-light">
         <header class="py-2">
             <span class="fs-3">Course Program</span>
             <span class="px-3">All existing course program</span>
@@ -22,16 +22,16 @@
 
             <div class="container mt-4 w-75">
 
-                <form action="" class="w-100 ">
+                <form action="" class="w-100">
 
-                    <div class="mb-3 row">
+                    <div class="mb-3 row bg-light">
                         <label for="nameKh" class="col-sm-3 col-form-label text-end fw-bolder">Name in Khmer <sup class="text-danger">*</sup></label>
                         <div class="col-sm-9">
                         <input type="text" class="form-control form-control-sm  shadow-none w-75" id="nameKh">
                         </div>
                     </div>
 
-                    <div class="mb-3 row">
+                    <div class="mb-3 row bg-light">
                         <label for="nameEnglish" class="col-sm-3
                          col-form-label text-end fw-bolder">Name in English <sup class="text-danger">*</sup></label>
                         <div class="col-sm-9">
