@@ -25,20 +25,6 @@ class Helper{
             $zeros.="0";
         }
         return $prefix.$zeros.''.$last_number;
-
     }
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
 ?>
