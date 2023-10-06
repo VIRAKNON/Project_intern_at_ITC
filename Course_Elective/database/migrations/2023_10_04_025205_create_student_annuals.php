@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('student_annuals', function (Blueprint $table) {
             $table->id();
-            $table->text('student_id');
+            $table->text('student_id')->unsigned();
+            $table->foreign('student_id')->references('id')->on('students')->onUpdate('cascade')->onDelete('cascade');
             $table->integer('academic_year_id');
             $table->integer('promotion_id');
             $table->integer('degree_id');

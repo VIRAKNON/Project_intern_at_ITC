@@ -17,13 +17,19 @@ use App\Models\Promotions;
 use App\Models\Groups;
 use App\Models\Histories;
 use App\Models\Scholarships;
+use App\Models\StudentAnnuals;
 use App\Helpers\Helper;
+use DB;
 
 class StudentController extends Controller
 {
+    protected $student, $student_annual;
     public function __construct()
     {
         $this->middleware('auth');
+
+        $this->student = new Students();
+        $this->student_annual = new StudentAnnuals();
     }
 
     public function index(){
@@ -62,8 +68,75 @@ class StudentController extends Controller
         $request->validate([
             'photo'=>'required|image|mimes:png,jpg,jpeg,gig|max:2048'
         ]);
+        //cover
+        $extension = $request->file('photo')->extension(); //extension() use to get extension of file
+        // dd($extension);
+        $fileName = date('YmdHis').'.'.$extension; // 2023082632510.jpg
+        // dd($fileName);
+        $request->file('photo')->move(public_path('uploads/'), $fileName); // use for move fileName to folder uploads
 
-        // $id_card = Helper::id_card_generator(new Students, 'id_card', 4, 'e2023'); //id_card generator
+        DB::beginTransaction();
+        try{
+            $student = $this->student->create([
+                'id_card' => Helper::id_card_generator(new Students, 'id_card', 4, 'e2023'), //id_card generator
+                'name_kh' => $request->nameKh,
+                'name_latin' => $request->nameLatin,
+                'gender_id' => $request->gender,
+                'dob' => $request->dob,
+                'pob' => $request->pob,
+                'radie' => $request->radie,
+                'observation' => $request->observation,
+                'origin_id' => $request->origin,
+                'tel' => $request->phone,
+                'email' => $request->email,
+                'address_current' => $request->currentAddress,
+                'address_permanent' => $request->perAddress,
+                'parent_name' => $request->parentName,
+                'parent_occupation' => $request->parentOcc,
+                'parent_address' => $request->parentAddress,
+                'parent_tel' => $request->parentTel,
+                'highschool_id' => $request->hschool,
+                'mcs_no' => $request->mcsNo,
+                'can_id' => $request->canid,
+                'photo' => $fileName,
+            ]);
+            $student_annual = $this->student_annual->create([
+                'student_id' => $student->id,
+                'academic_year_id' => $request->acaYear,
+                'promotion_id' => $request->promotion,
+                'degree_id' => $request->degree,
+                'grade_id' => $request->grade,
+                'department_id' => $request->department,
+                'department_option_id' => $request->option,
+                'group' => $request->group,
+                'history_id' => $request->history,
+                'scholarships_id' => $request->scholarships,
+            ]);
+
+            if($student && $student_annual){
+                DB::commit();
+
+            }
+            else{
+                DB::rollback();
+            }
+            session()->flash('success', '✔ Student created successfully!');
+            return redirect()->back();
+        }
+        catch(Exception $ex){
+            DB::rollback();
+            return redirect()->back();
+        }
+
+
+
+
+
+
+
+
+
+        // $id_card =
 
         // return redirect()->route('studentAnnuals.store', compact('optionGenders','originOption','heighSchoolOps','optionAc','promotions','optionDegrees','optionGrades','departments','departmentOption','groups','histories','scholarships') );
     }

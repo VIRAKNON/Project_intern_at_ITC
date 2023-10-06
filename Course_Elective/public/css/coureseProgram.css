@@ -1,4 +1,8 @@
-
+@import 'path/to/bootstrap-source/_reboot.scss';
+/* Override Bootstrap styles */
+ol, ul {
+    padding-left:0;
+}
 .sidebar .nav_links li a.activeCoursesProgram{
     background: #2C3E50;
     border-left: 4px solid #157DEC;
@@ -9,4 +13,39 @@
 }
 .sidebar .nav_links li a.activeCoursesProgram span{
     color: #FFFFFF;
+}
+.dataTables_length{
+    padding-bottom: 15px;
+}
+.dataTables_length .custom-select{
+    box-shadow: none;
+}
+
+.dataTables_filter{
+    padding-bottom: 15px;
+}
+.dataTables_filter input[type='search']{
+    box-shadow: none;
+    padding-left: 15px;
+    border: 1px solid #2C3E50;
+}
+.dataTables_filter input[type='search']:focus{
+    width: 250px;
+    border-radius: 99999999px;
+    border: 1px solid #157DEC;
+}
+div.dataTables_wrapper div.dataTables_paginate {
+    margin-top: 20px;
+    white-space: nowrap;
+    text-align: right;
+}
+.dataTables_paginate .page-link:focus{
+    box-shadow: none;
+}
+.pagination > .active > a, .pagination > .active > a:hover, .pagination > .active > a:focus, .pagination > .active > span, .pagination > .active > span:hover, .pagination > .active > span:focus {
+    z-index: 3;
+    color: #fff;
+    cursor: default;
+    background-color: #337ab7;
+    border-color: #337ab7;
 }

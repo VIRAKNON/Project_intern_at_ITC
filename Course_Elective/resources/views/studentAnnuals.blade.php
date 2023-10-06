@@ -194,24 +194,9 @@
                     </div>
                 </div>
                 <form action="" class="mt-3">
-                    {{-- <table class="table table-bordered table-striped mb-0 table-hover">
-                        <thead>
-                            <tr>
-                                <th style="width: 10%">ID Card</th>
-                                <th style="width: 18%">Name KH</th>
-                                <th style="width: 18%">Name Latin</th>
-                                <th style="width: 12%">Date of Birth</th>
-                                <th style="width: 8.5%">Gender</th>
-                                <th style="width: 8.5%">Class</th>
-                                <th style="width: 8.5%">Option</th>
-                                <th style="width: 8.5%">Group</th>
-                                <th style="width: 8%">Action</th>
-                            </tr>
-                        </thead>
-                    </table> --}}
                     <div class="container-fluid p-0">
                         <div style="overflow-x: auto;">
-                            <table id="example" class="table table-bordered table-striped table-hover w-100">
+                            <table id="listStu" class="table table-bordered table-striped table-hover w-100">
                                 <thead class="thead-dark">
                                     <tr>
                                         <th style="width: 10%"  >ID Card</th>
@@ -311,7 +296,7 @@
             });
 
             $(document).ready(function() {
-                $('#example').DataTable({
+                $('#listStu').DataTable({
                     "scrollX": true, // Enable horizontal scrolling
                     "scrollY": "60hv", // Set the container wrapper's height to 400 pixels
                     "scrollCollapse": true // Enable scrollCollapse option
