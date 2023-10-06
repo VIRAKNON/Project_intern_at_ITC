@@ -120,6 +120,7 @@ class StudentController extends Controller
             else{
                 DB::rollback();
             }
+            session()->flash('success', '✔ Student created successfully!');
             return redirect()->back();
         }
         catch(Exception $ex){

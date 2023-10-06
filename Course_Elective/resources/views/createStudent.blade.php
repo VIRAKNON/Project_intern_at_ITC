@@ -1,5 +1,10 @@
 @extends('layout.app')
 @section('createStudent')
+@if(session('success'))
+    <div class="alert alert-success card border-1 text-end fs-5">
+        {{ session('success') }}
+    </div>
+@endif
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -475,5 +480,11 @@
         </div>
     </div>
 </body>
+<script>
+    $(document).ready(function () {
+        // Auto-dismiss the alert after 5 seconds (5000 milliseconds)
+        $(".alert").delay(6000).slideUp(600);
+    });
+</script>
 </html>
 @endsection

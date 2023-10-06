@@ -24,7 +24,7 @@ class Helper{
         for($i=0; $i<$og_length; $i++){
             $zeros.="0";
         }
-        return $prefix.$zeros.$last_number;
+        return $prefix.$zeros.''.$last_number;
 
     }
 
