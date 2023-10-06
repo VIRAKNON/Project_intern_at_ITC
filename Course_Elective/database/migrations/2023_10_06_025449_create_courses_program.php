@@ -11,19 +11,24 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('course_annually', function (Blueprint $table) {
+        Schema::create('courses_program', function (Blueprint $table) {
             $table->id();
-            $table->text('');
-            $table->text('name_kh');
-            $table->text('empoyee_id');
-            $table->text('academic_year_id');
-            $table->integer('semester_id');
+            $table->string('name_kh');
+            $table->string('name_en');
+            $table->string('name_fr');
+            $table->string('code');
+            $table->integer('time_course');
             $table->integer('time_td');
             $table->integer('time_tp');
             $table->integer('credit');
+            $table->boolean('is_counted_creditability');
             $table->integer('degree_id');
+            $table->integer('grade_id');
             $table->integer('department_id');
             $table->integer('department_option_id');
+            $table->integer('semester_id');
+            $table->boolean('active');
+            $table->integer('resposibility_id');
             $table->timestamps();
         });
     }
@@ -33,6 +38,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('course_annually');
+        Schema::dropIfExists('courses_program');
     }
 };

@@ -100,14 +100,12 @@
                     <div class="mb-3 row">
                         <label for="" class="col-sm-3 col-form-label text-end fw-bolder">Degree <sup class="text-danger">*</sup></label>
                         <div class="col-sm-9 ">
-                            <select class="form-control form-control-sm  shadow-none w-100" id="nameFre">
-                                <option value="">Engineer</option>
-                                <option value="">Associate</option>
-                                <option value="">Doctoral</option>
-                                <option value="">Master</option>
-                                <option value="">Bachelor</option>
-                                <option value="">International</option>
-                              </select>
+                            <select class="form-control form-select form-select-sm form-control-sm  shadow-none w-100" id="nameFre">
+                                <option value="">Degree</option>
+                                @foreach ($optionDegrees as $de)
+                                    <option value="{{ $de->id }}">{{ $de->name_en }}</option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
 
@@ -115,12 +113,11 @@
                     <div class="mb-3 row">
                         <label for="" class="col-sm-3 col-form-label text-end fw-bolder">Grade <sup class="text-danger">*</sup></label>
                         <div class="col-sm-9">
-                            <select class="form-control form-control-sm  shadow-none w-100" id="nameFre">
-                                <option value="">First Year</option>
-                                <option value="">Second Year</option>
-                                <option value="">Third Year</option>
-                                <option value="">Fourth Year</option>
-                                <option value="">Fifth Year</option>
+                            <select class="form-control form-select form-select-sm form-control-sm  shadow-none w-100" id="nameFre">
+                                <option selected="selected" value="">Year</option>
+                                @foreach ($optionGrades as $gd)
+                                    <option value="{{$gd->id}}">{{$gd->name_en}}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -129,24 +126,11 @@
                     <div class="mb-3 row">
                         <label for="code" class="col-sm-3 col-form-label text-end fw-bolder">Department<sup class="text-danger">*</sup></label>
                         <div class="col-sm-3">
-                            <select class="form-control form-control-sm  shadow-none " id="nameFre">
-                                <option value="">AMS</option>
-                                <option value="">GAR</option>
-                                <option value="">GCI</option>
-                                <option value="">GEE</option>
-                                <option value="">GGG</option>
-                                <option value="">GIC</option>
-                                <option value="">GIM</option>
-                                <option value="">GRU</option>
-                                <option value="">GS</option>
-                                <option value="">GTI</option>
-                                <option value="">GTR</option>
-                                <option value="">IME</option>
-                                <option value="">0AC</option>
-                                <option value="">SA</option>
-                                <option value="">SF</option>
-                                <option value="">TC</option>
-                                <option value="">Department</option>
+                            <select class="form-control form-select form-select-sm form-control-sm  shadow-none " id="nameFre">
+                                <option selected="selected" value="">Department</option>
+                                @foreach ($departments as $e)
+                                <option value="{{ $e->id}}">{{$e->code}}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="col-1"></div>
@@ -154,9 +138,11 @@
                             <div class="row">
                                 <label for="code" class="col-sm-3 col-form-label text-end fw-bolder">Option<sup class="text-danger">*</sup></label>
                                 <div class="col-sm-9">
-                                    <select class="form-control form-control-sm  shadow-none " id="nameFre">
-                                        <option value=""></option>
-                                        <option value=""></option>
+                                    <select class="form-control form-select form-select-sm form-control-sm  shadow-none " id="nameFre">
+                                        <option value="" selected>Department Option</option>
+                                        @foreach ($departmentOption as $e)
+                                        <option value="{{ $e->id}}">{{$e->code}}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
@@ -168,9 +154,11 @@
                     <div class="mb-3 row">
                         <label for="" class="col-sm-3 col-form-label text-end fw-bolder">Semester<sup class="text-danger">*</sup></label>
                         <div class="col-sm-9">
-                            <select class="form-control form-control-sm  shadow-none w-100" id="nameFre">
-                                <option value="">Semester1</option>
-                                <option value="">Semester2</option>
+                            <select class="form-control form-select form-select-sm form-control-sm  shadow-none w-100" id="nameFre">
+                                <option selected="selected" value="">Semester</option>
+                                @foreach ($semestersOption as $s)
+                                 <option value="{{$s->id}}">{{$s->name_en}}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -188,24 +176,11 @@
                     <div class="mb-3 row">
                         <label for="" class="col-sm-3 col-form-label  fw-bolder text-end">Permit responsibility to<sup class="text-danger">*</sup></label>
                         <div class="col-sm-9">
-                            <select class="form-control form-control-sm  shadow-none w-50" id="nameFre">
-                                <option value="">AMS</option>
-                                <option value="">GAR</option>
-                                <option value="">GCI</option>
-                                <option value="">GEE</option>
-                                <option value="">GGG</option>
-                                <option value="">GIC</option>
-                                <option value="">GIM</option>
-                                <option value="">GRU</option>
-                                <option value="">GS</option>
-                                <option value="">GTI</option>
-                                <option value="">GTR</option>
-                                <option value="">IME</option>
-                                <option value="">0AC</option>
-                                <option value="">SA</option>
-                                <option value="">SF</option>
-                                <option value="">TC</option>
-                                <option value="">Department</option>
+                            <select class="form-control form-select form-select-sm form-control-sm  shadow-none w-50" id="nameFre">
+                                <option value="" selected>Permit responsibility</option>
+                                @foreach ($departments as $e)
+                                <option value="{{ $e->id}}">{{$e->code}}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>

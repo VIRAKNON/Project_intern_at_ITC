@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\AcademicYearsController;
 use App\Http\Controllers\CouresAnnuals;
+use App\Http\Controllers\CourseProgramController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,13 +42,9 @@ Route::post('/CourseAnnually',[CouresAnnuals::class, 'store'])->name('CourseAnnu
 
 Route::get('/coursesAnnually/inputScore', [CouresAnnuals::class, 'inputScores'])->name('inputScore');
 
-Route::get('/coursesProgram', function () {
-    return view('coursesProgram');
-})->name('coursesProgram');
+Route::get('/coursesProgram',[CourseProgramController::class, 'index'] )->name('coursesProgram');
 
-Route::get('/coursesProgram/create', function () {
-    return view('createCoursesProgram');
-})->name('coursesProgram/create');
+Route::get('/coursesProgram/create',[CourseProgramController::class, 'create'] )->name('coursesProgram/create');
 
 Route::get('/coursesProgram/edit', function () {
     return view('editCoursesProgram');

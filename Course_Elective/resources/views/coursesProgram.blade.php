@@ -55,83 +55,46 @@
             </div>
             <div class="tab-content" id="nav-tabContent">
                 <div class="tab-pane fade show active py-4" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
-                    <div class="d-flex">
-                        <label class="form-label " for="">Show</label>
-                        <select name="" id="" style="width: 70px; margin-left: 10px; transform: translateY(-15%);font-size: 13px;" class="form-select shadow-none">
-                            <option value="">25</option>
-                            <option value="">10</option>
-                            <option value="">50</option>
-                            <option value="">75</option>
-                            <option value="">100</option>
-                        </select>
-                        <label class="form-label" for="" style="margin-left: 10px;">entries</label>
-                    </div>
-                    <div class="row">
-                        <div class="col-9">
-                            <div class="d-flex" style="margin-top: 5px;">
-                            <select name="" id="" style="width: 120px; transform: translateY(-15%); font-size: 13px;" class="form-select shadow-none">
-                            <option value="">Department</option>
-                            <option value="">AMS</option>
-                            <option value="">GAR</option>
-                            <option value="">GCA</option>
-                            <option value="">GCI</option>
-                            <option value="">GEE</option>
-                            <option value="">GGG</option>
-                            <option value="">GIC</option>
-                            <option value="">GIM</option>
-                            <option value="">GRU</option>
-                            <option value="">GS</option>
-                            <option value="">GTI</option>
-                            <option value="">GTR</option>
-                            <option value="">IME</option>
-                            <option value="">OAC</option>
-                            <option value="">SA</option>
-                            <option value="">SF</option>
-                            <option value="">TC</option>
-                            </select>
-                            <select name="" id="" style="width: 120px;margin-left: 5px; transform: translateY(-15%); font-size: 13px;" class="form-select shadow-none">
-                                <option value="">Semester</option>
-                                <option value="">Semester1</option>
-                                <option value="">Semester2</option>
-                            </select>
-                            <select name="" id="" style="width: 120px; margin-left: 5px; transform: translateY(-15%); font-size: 13px;" class="form-select shadow-none">
-                                <option value="">Degree</option>
-                                <option value="">Engineer</option>
-                                <option value="">Associate</option>
-                                <option value="">Doctoral</option>
-                                <option value="">Master</option>
-                                <option value="">Bachelor</option>
-                                <option value="">International</option>
-                            </select>
-                            <select name="" id="" style="width: 120px; margin-left: 5px; transform: translateY(-15%); font-size: 13px;" class="form-select shadow-none">
-                                <option value="">Year</option>
-                                <option value="">First Year</option>
-                                <option value="">Second YEAR</option>
-                                <option value="">Third Year</option>
-                                <option value="">Fourth Year</option>
-                                <option value="">Fifth Year</option>
-                            </select>
-                            <select name="" id="" style="width: 170px; margin-left: 5px; transform: translateY(-15%); font-size: 13px;" class="form-select shadow-none">
-                                <option value="">Permitted department</option>
-                                <option value="">AMS</option>
-                            <option value="">GAR</option>
-                            <option value="">GCA</option>
-                            <option value="">GCI</option>
-                            <option value="">GEE</option>
-                            <option value="">GGG</option>
-                            <option value="">GIC</option>
-                            <option value="">GIM</option>
-                            <option value="">GRU</option>
-                            <option value="">GS</option>
-                            <option value="">GTI</option>
-                            <option value="">GTR</option>
-                            <option value="">IME</option>
-                            <option value="">OAC</option>
-                            <option value="">SA</option>
-                            <option value="">SF</option>
-                            <option value="">TC</option>
+                    <div class="row mb-3 g-2">
+                        <div class="col-auto">
+                            <select class="form-select shadow-none">
+                                <option selected="selected" value="">Department</option>
+                                @foreach ($departments as $e)
+                                    <option value="{{ $e->id}}">{{$e->code}}</option>
+                                @endforeach
                             </select>
                         </div>
+                        <div class="col-auto">
+                            <select class="form-select shadow-none">
+                                <option selected="selected" value="">Semester</option>
+                                @foreach ($semestersOption as $s)
+                                 <option value="{{$s->id}}">{{$s->name_en}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="col-auto">
+                            <select class="form-select shadow-none">
+                                <option value="">Degree</option>
+                                @foreach ($optionDegrees as $de)
+                                    <option value="{{ $de->id }}">{{ $de->name_en }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="col-auto">
+                            <select class="form-select shadow-none">
+                                <option selected="selected" value="">Year</option>
+                                @foreach ($optionGrades as $gd)
+                                    <option value="{{$gd->id}}">{{$gd->name_en}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="col-auto">
+                            <select class="form-select shadow-none">
+                                <option selected="selected" value="">Permitted department</option>
+                                @foreach ($departments as $e)
+                                <option value="{{ $e->id}}">{{$e->code}}</option>
+                            @endforeach
+                            </select>
                         </div>
                     </div>
 
@@ -139,38 +102,41 @@
                         <table id="activate" class="table table-bordered table-striped table-hover w-100">
                             <thead>
                                 <tr>
-                                    <th style="width: 37%">Name in Khmer</th>
-                                    <th style="width: 8%" >Code</th>
+                                    <th style="width: 30%">Name in Khmer</th>
+                                    <th style="width: 10%">Code</th>
                                     <th style="width: 8%" >Class</th>
-                                    <th style="width: 11%">Permitted to</th>
-                                    <th style="width: 8%" >Semester</th>
-                                    <th style="width: 5%" >Course</th>
-                                    <th style="width: 5%" >TD</th>
-                                    <th style="width: 5%" >TP</th>
-                                    <th style="width: 5%" >Credit</th>
-                                    <th style="width: 8%" >Actions</th>
+                                    <th style="width: 12%">Permitted to</th>
+                                    <th style="width: 10%">Semester</th>
+                                    <th style="width: 6%" >Course</th>
+                                    <th style="width: 4%" >TD</th>
+                                    <th style="width: 4%" >TP</th>
+                                    <th style="width: 6%" >Credit</th>
+                                    <th style="width: 10%">Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td style="width: 37%" ><span>គីមីទឹក</span> <br><span>Water Chemistry</span> <br><span>Chimie des Eaux</span></td>
-                                    <td style="width: 8%"  ></td>
+                                    <td style="width: 30%" ><span>គីមីទឹក</span> <br><span>Water Chemistry</span> <br><span>Chimie des Eaux</span></td>
+                                    <td style="width: 10%" ></td>
                                     <td style="width: 8%"  >I4GCA</td>
-                                    <td style="width: 11%" ></td>
-                                    <td style="width: 8%"  >Semester 1</td>
-                                    <td style="width: 5%"  >16</td>
-                                    <td style="width: 5%"  >8</td>
-                                    <td style="width: 5%"  >24</td>
-                                    <td style="width: 5%"  >2</td>
-                                    <td style="width: 8%"  >
+                                    <td style="width: 12%" ></td>
+                                    <td style="width: 10%" >Semester 1</td>
+                                    <td style="width: 6%"  >16</td>
+                                    <td style="width: 4%"  >8</td>
+                                    <td style="width: 4%"  >24</td>
+                                    <td style="width: 6%"  >2</td>
+                                    <td style="width: 10%" >
                                         <a href="{{route('coursesProgram/edit')}}" class="btn p-0 border-0 shadow-none" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit">
                                             <svg width="25" height="25" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
                                                 <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
                                             </svg>
                                         </a>
+                                        <button class="btn btn-warning mx-1" style="font-size: 13px; padding:3 10;" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="deactive">
+                                            Deactive
+                                        </button>
                                         <!-- Button trigger modal -->
-                                        <button type="button" class="btn p-0 px-2 border-0" data-bs-toggle="modal" data-bs-target="#deleteStu">
+                                        <button type="button" class="btn p-0 border-0" data-bs-toggle="modal" data-bs-target="#deleteStu">
                                             <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M3 6h18"></path>
                                                 <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
@@ -204,11 +170,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <a href="{{ route('studentAnnuals/show') }}" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="View Detail">
-                                            <svg width="30" height="30" fill="#00aaff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" d="M16 8c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4ZM4 18c0-2.66 5.33-4 8-4s8 1.34 8 4v2H4v-2Z" clip-rule="evenodd"></path>
-                                            </svg>
-                                        </a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -216,72 +177,46 @@
                     </div>
                 </div>
                 <div class="tab-pane fade py-4" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
-                    <div class="row">
-                        <div class="col-9">
-                            <div class="d-flex" style="margin-top: 5px;">
-                            <select name="" id="" style="width: 120px; transform: translateY(-15%); font-size: 13px;" class="form-select shadow-none">
-                            <option value="">Department</option>
-                            <option value="">AMS</option>
-                            <option value="">GAR</option>
-                            <option value="">GCA</option>
-                            <option value="">GCI</option>
-                            <option value="">GEE</option>
-                            <option value="">GGG</option>
-                            <option value="">GIC</option>
-                            <option value="">GIM</option>
-                            <option value="">GRU</option>
-                            <option value="">GS</option>
-                            <option value="">GTI</option>
-                            <option value="">GTR</option>
-                            <option value="">IME</option>
-                            <option value="">OAC</option>
-                            <option value="">SA</option>
-                            <option value="">SF</option>
-                            <option value="">TC</option>
-                            </select>
-                            <select name="" id="" style="width: 120px;margin-left: 5px; transform: translateY(-15%); font-size: 13px;" class="form-select shadow-none">
-                                <option value="">Semester</option>
-                                <option value="">Semester1</option>
-                                <option value="">Semester2</option>
-                            </select>
-                            <select name="" id="" style="width: 120px; margin-left: 5px; transform: translateY(-15%); font-size: 13px;" class="form-select shadow-none">
-                                <option value="">Degree</option>
-                                <option value="">Engineer</option>
-                                <option value="">Associate</option>
-                                <option value="">Doctoral</option>
-                                <option value="">Master</option>
-                                <option value="">Bachelor</option>
-                                <option value="">International</option>
-                            </select>
-                            <select name="" id="" style="width: 120px; margin-left: 5px; transform: translateY(-15%); font-size: 13px;" class="form-select shadow-none">
-                                <option value="">Year</option>
-                                <option value="">First Year</option>
-                                <option value="">Second YEAR</option>
-                                <option value="">Third Year</option>
-                                <option value="">Fourth Year</option>
-                                <option value="">Fifth Year</option>
-                            </select>
-                            <select name="" id="" style="width: 170px; margin-left: 5px; transform: translateY(-15%); font-size: 13px;" class="form-select shadow-none">
-                                <option value="">Permitted department</option>
-                                <option value="">AMS</option>
-                            <option value="">GAR</option>
-                            <option value="">GCA</option>
-                            <option value="">GCI</option>
-                            <option value="">GEE</option>
-                            <option value="">GGG</option>
-                            <option value="">GIC</option>
-                            <option value="">GIM</option>
-                            <option value="">GRU</option>
-                            <option value="">GS</option>
-                            <option value="">GTI</option>
-                            <option value="">GTR</option>
-                            <option value="">IME</option>
-                            <option value="">OAC</option>
-                            <option value="">SA</option>
-                            <option value="">SF</option>
-                            <option value="">TC</option>
+                    <div class="row mb-3 g-2">
+                        <div class="col-auto">
+                            <select class="form-select shadow-none">
+                                <option selected="selected" value="">Department</option>
+                                @foreach ($departments as $e)
+                                    <option value="{{ $e->id}}">{{$e->code}}</option>
+                                @endforeach
                             </select>
                         </div>
+                        <div class="col-auto">
+                            <select class="form-select shadow-none">
+                                <option selected="selected" value="">Semester</option>
+                                @foreach ($semestersOption as $s)
+                                 <option value="{{$s->id}}">{{$s->name_en}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="col-auto">
+                            <select class="form-select shadow-none">
+                                <option value="">Degree</option>
+                                @foreach ($optionDegrees as $de)
+                                    <option value="{{ $de->id }}">{{ $de->name_en }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="col-auto">
+                            <select class="form-select shadow-none">
+                                <option selected="selected" value="">Year</option>
+                                @foreach ($optionGrades as $gd)
+                                    <option value="{{$gd->id}}">{{$gd->name_en}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="col-auto">
+                            <select class="form-select shadow-none">
+                                <option selected="selected" value="">Permitted department</option>
+                                @foreach ($departments as $e)
+                                <option value="{{ $e->id}}">{{$e->code}}</option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
 
@@ -290,38 +225,41 @@
                             <table id="deactivate" class="table table-bordered table-striped table-hover w-100">
                                 <thead class="thead-dark">
                                     <tr>
-                                        <th style="width: 37%">Name in Khmer</th>
-                                        <th style="width: 8%" >Code</th>
+                                        <th style="width: 30%">Name in Khmer</th>
+                                        <th style="width: 10%" >Code</th>
                                         <th style="width: 8%" >Class</th>
-                                        <th style="width: 11%">Permitted to</th>
-                                        <th style="width: 8%" >Semester</th>
-                                        <th style="width: 5%" >Course</th>
-                                        <th style="width: 5%" >TD</th>
-                                        <th style="width: 5%" >TP</th>
-                                        <th style="width: 5%" >Credit</th>
-                                        <th style="width: 8%">Actions</th>
+                                        <th style="width: 12%">Permitted to</th>
+                                        <th style="width: 10%" >Semester</th>
+                                        <th style="width: 6%" >Course</th>
+                                        <th style="width: 4%" >TD</th>
+                                        <th style="width: 4%" >TP</th>
+                                        <th style="width: 6%" >Credit</th>
+                                        <th style="width: 10%">Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td style="width: 37%" ><span>កម្មវិធីកុំព្យូទ័រសម្រាប់ប្រតិកម្មគីមី</span><br><span>Computing Software for Chemical Reaction</span><br><span>Logiciels de Calcul pour la Réaction Chimique</span></td>
-                                        <td style="width: 8%"  ></td>
+                                        <td style="width: 30%" ><span>កម្មវិធីកុំព្យូទ័រសម្រាប់ប្រតិកម្មគីមី</span><br><span>Computing Software for Chemical Reaction</span><br><span>Logiciels de Calcul pour la Réaction Chimique</span></td>
+                                        <td style="width: 10%"  ></td>
                                         <td style="width: 8%"  >I5GCA</td>
-                                        <td style="width: 11%" ></td>
-                                        <td style="width: 8%"  >Semester 1</td>
-                                        <td style="width: 5%"  >32</td>
-                                        <td style="width: 5%"  >0</td>
-                                        <td style="width: 5%"  >32</td>
-                                        <td style="width: 5%"  >3</td>
-                                        <td style="width: 8%" >
+                                        <td style="width: 12%" ></td>
+                                        <td style="width: 10%"  >Semester 1</td>
+                                        <td style="width: 6%"  >32</td>
+                                        <td style="width: 4%"  >0</td>
+                                        <td style="width: 4%"  >32</td>
+                                        <td style="width: 6%"  >3</td>
+                                        <td style="width: 10%" >
                                             <a href="{{route('coursesProgram/edit')}}" class="btn p-0 border-0 shadow-none" type="button" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Edit">
                                                 <svg width="25" height="25" fill="none" stroke="#007bff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
                                                     <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
                                                 </svg>
                                             </a>
+                                            <button class="btn btn-success mx-1" style="font-size: 13px; padding:3 13;" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="active">
+                                                Active
+                                            </button>
                                             <!-- Button trigger modal -->
-                                            <button type="button" class="btn p-0 px-2 border-0" data-bs-toggle="modal" data-bs-target="#delete2">
+                                            <button type="button" class="btn p-0 border-0" data-bs-toggle="modal" data-bs-target="#deleteStu">
                                                 <svg width="25" height="25" fill="none" stroke="#ff0000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M3 6h18"></path>
                                                     <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
@@ -330,7 +268,7 @@
                                                 </svg>
                                             </button>
                                             <!-- Modal -->
-                                            <div class="modal fade" id="delete2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                            <div class="modal fade" id="deleteStu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
                                                         <div class="btnClose d-flex flex-row-reverse">
@@ -355,11 +293,6 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <a href="{{ route('studentAnnuals/show') }}" class="btn p-0 border-0" type="button" data-bs-toggle="tooltip" data-bs-placement="top" title="View Detail">
-                                                <svg width="30" height="30" fill="#00aaff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" d="M16 8c0 2.21-1.79 4-4 4s-4-1.79-4-4 1.79-4 4-4 4 1.79 4 4ZM4 18c0-2.66 5.33-4 8-4s8 1.34 8 4v2H4v-2Z" clip-rule="evenodd"></path>
-                                                </svg>
-                                            </a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -392,6 +325,7 @@
             "scrollX": true, // Enable horizontal scrolling
             "scrollY": "60hv", // Set the container wrapper's height to 400 pixels
             "scrollCollapse": true // Enable scrollCollapse option
+            
         });
     });
 </script>
