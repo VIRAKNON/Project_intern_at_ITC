@@ -9,7 +9,7 @@ class DepartmentOptions extends Model
 {
     use HasFactory;
 
-    protected $table = 'departments';
+    protected $table = 'departmentOptions';
     protected $primarykey = 'id';
     protected $fillable = [
         'name_kh',
