@@ -43,6 +43,19 @@ class CouresAnnuals extends Controller
         return view("create_Coures", compact('optionAc', 'employees', 'semestersOption', 'optionDegrees', 'optionGrades', 'departments', 'departmentOption'));
     }
 
+    public function edit()
+    {
+        $employees = Employees::all();
+        $optionAc = AcademicYears::orderBy('id', 'desc')->get();
+        $optionDegrees = degrees::all();
+        $optionGrades = grades::all();
+        $departments = departments::orderBy('id', 'desc')->get();
+        $departmentOption = departmentOptions::all();
+        $semestersOption = semesters::all();
+
+
+        return view("edit_courseAnnuall", compact('optionAc', 'employees', 'semestersOption', 'optionDegrees', 'optionGrades', 'departments', 'departmentOption'));
+    }
     public function store(Request $request){
         dd($request->input());
     }

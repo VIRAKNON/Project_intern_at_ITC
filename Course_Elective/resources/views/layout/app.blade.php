@@ -128,6 +128,8 @@
         @yield('editStudent')
         @yield('courseAnnualls')
         @yield('createCourse')
+        @yield('inputScore')
+        @yield('edit_courseAnnuall')
         @yield('coursesProgram')
         @yield('createCoursesProgram')
         @yield('editCoursesProgram')

@@ -39,8 +39,10 @@ Route::get('/studentAnnuals/show', function () {
 Route::get('/coursesAnnually',[CouresAnnuals::class, 'index'])->name('courseAnnuals');
 Route::get('/CourseAnnually/create',[CouresAnnuals::class, 'create'])->name('CourseAnnually/create');
 Route::post('/CourseAnnually',[CouresAnnuals::class, 'store'])->name('CourseAnnually.store');
-
+// Route::post('/CourseAnnually/edit',[CouresAnnuals::class, 'edit'])->name('CourseAnnually/edit');
+Route::get('CourseAnnually/edit', function () {return view('edit_courseAnnuall');})->name('CourseAnnually/edit');
 Route::get('/coursesAnnually/inputScore', [CouresAnnuals::class, 'inputScores'])->name('inputScore');
+
 
 Route::get('/coursesProgram',[CourseProgramController::class, 'index'] )->name('coursesProgram');
 
