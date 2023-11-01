@@ -77,8 +77,11 @@ class StudentController extends Controller
 
         DB::beginTransaction();
         try{
+
+            $id_card = Helper::id_card_generator(new Students, 'e2023', 4); // Generate the custom ID card
             $student = $this->student->create([
-                'id_card' => Helper::id_card_generator(new Students, 'id_card', 4, 'e2023'), //id_card generator
+                // 'id_card' => Helper::id_card_generator(new Students, 'id_card', 4, 'e2023'), //id_card generator
+                'id_card' => $id_card,
                 'name_kh' => $request->nameKh,
                 'name_latin' => $request->nameLatin,
                 'gender_id' => $request->gender,
