@@ -1,6 +1,10 @@
-//search in selection option by one length
 $(document).ready(function() {
-    // Initialize Select2 with search functionality
+    $('#example').DataTable({
+        "scrollY": "530px", // Set the container wrapper's height to 400 pixels
+        "scrollCollapse": true // Enable scrollCollapse option
+    });
+});
+$(document).ready(function() {//search in selection option by one length
     $("#filter_lecturer").select2({
       width: '410px', // Set the width as needed
       placeholder: "Lecturer",
@@ -8,9 +12,7 @@ $(document).ready(function() {
     });
   });
 
-//search in selection option by 3 length
-$(document).ready(function() {
-    // Initialize Select2 with search functionality and a minimum input length of 3 characters
+$(document).ready(function() {//search in selection option by 3 length
     $("#select_lecturer").select2({
       width: '230px', // Set the width as needed
       placeholder: "Enter name...",
@@ -23,21 +25,6 @@ $(document).ready(function() {
     $('[data-bs-toggle="tooltip"]').tooltip();
   });
 
-
-
-  ///////////////////
-// $(document).ready(function () {
-
-//     $("tbody tr").click(function () {
-//         $("#toggleForm").show();
-//     });
-
-//      // Add a click event handler to each table row
-//      $('#myTable tr').click(function() {
-//         // Toggle the hover effect on the clicked row
-//         $(this).toggleClass('hovered');
-//       });
-// });
 $(document).ready(function () {
 
     $("tbody tr").click(function () {
@@ -63,7 +50,6 @@ $(document).ready(function() {
     });
 });
 
-
 $(document).ready(function () {
     let scoringEnabled = false;
 
@@ -86,14 +72,6 @@ $(document).ready(function () {
 
     $("#toggle-button").on("click", function () {
         toggleScoring();
-    });
-});
-
-// scroll data
-$(document).ready(function() {
-    $('#example').DataTable({
-        "scrollY": "530px", // Set the container wrapper's height to 400 pixels
-        "scrollCollapse": true // Enable scrollCollapse option
     });
 });
 
